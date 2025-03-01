@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoonifyWorld</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css"/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainHeader" data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true">
+
+<div class="page-wrapper">
+    <header class="" id="main-header">
+        <nav class="navbar navbar-light fixed-top bg-transparent">
+            <div class="container">
+                <div class="bg-white mx-auto rounded-pill overflow-hidden py-3 my-4 px-5 d-flex align-items-center">
+                    <a class="navbar-brand me-2" href="/" style="filter: none !important;">
+                        <img src="assets/images/logo/boonify-Icon.png" style="height: 28px;" alt="">
+                    </a>
+                    <div class="border-end me-1" style="height: 20px;"></div>
+                    <ul class="navbar-nav flex-row justify-content-center gap-3 gap-md-4 flex-grow-1 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/#why-boonify">Why Boonify </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/#what-boonify-offers">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap btn btn-primary text-white rounded-pill py-1 px-2 py-md-2 px-md-3"
+                               href="#">
+                                <span>Get the App</span>
+                                <svg width="24" height="25" class="icon-xs" viewBox="0 0 24 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M15.5383 3.28813C14.8162 3.19105 13.8583 3.18945 12.4805 3.18945H11.5212C10.1434 3.18945 9.18551 3.19105 8.46343 3.28813C7.76294 3.38231 7.39771 3.55381 7.13884 3.81267C6.87998 4.07154 6.70848 4.43676 6.6143 5.13726C6.51722 5.85934 6.51563 6.81725 6.51563 8.19506L6.51563 15.8692C6.51563 17.247 6.51722 18.2049 6.6143 18.927C6.70848 19.6275 6.87998 19.9927 7.13884 20.2516C7.39771 20.5105 7.76294 20.682 8.46343 20.7761C9.18551 20.8732 10.1434 20.8748 11.5212 20.8748L12.4805 20.8748C13.8583 20.8748 14.8162 20.8732 15.5383 20.7761C16.2388 20.6819 16.604 20.5105 16.8629 20.2516C17.1217 19.9927 17.2932 19.6275 17.3874 18.927C17.4845 18.2049 17.4861 17.247 17.4861 15.8692V8.19506C17.4861 6.81725 17.4845 5.85934 17.3874 5.13726C17.2932 4.43676 17.1217 4.07154 16.8629 3.81267C16.604 3.55381 16.2388 3.38231 15.5383 3.28813ZM15.7382 1.8015C16.605 1.91805 17.3395 2.16799 17.9235 2.75201C18.5076 3.33603 18.7575 4.07056 18.8741 4.93739C18.9861 5.77109 18.9861 6.83025 18.9861 8.14044V15.9238C18.9861 17.234 18.9861 18.2932 18.8741 19.1269C18.7575 19.9937 18.5076 20.7282 17.9235 21.3122C17.3395 21.8963 16.605 22.1462 15.7382 22.2628C14.9045 22.3748 13.8453 22.3748 12.5351 22.3748L11.4667 22.3748C10.1564 22.3748 9.09727 22.3748 8.26356 22.2628C7.39673 22.1462 6.66221 21.8963 6.07818 21.3122C5.49416 20.7282 5.24422 19.9937 5.12768 19.1269C5.01559 18.2932 5.0156 17.234 5.01563 15.9238L5.01563 8.14044C5.0156 6.83025 5.01559 5.77109 5.12767 4.93739C5.24422 4.07056 5.49416 3.33603 6.07818 2.75201C6.66221 2.16799 7.39673 1.91805 8.26356 1.8015C9.09727 1.68941 10.1564 1.68943 11.4666 1.68945H12.5351C13.8453 1.68943 14.9045 1.68942 15.7382 1.8015ZM15.149 5.31728C15.149 5.73149 14.8132 6.06728 14.399 6.06728L9.60262 6.06728C9.1884 6.06728 8.85262 5.73149 8.85262 5.31728C8.85262 4.90307 9.1884 4.56728 9.60262 4.56728H14.399C14.8132 4.56728 15.149 4.90307 15.149 5.31728ZM12.6896 17.3083C12.6896 16.9279 12.3812 16.6194 12.0007 16.6194C11.6202 16.6194 11.3118 16.9279 11.3118 17.3083C11.3118 17.6888 11.6202 17.9972 12.0007 17.9972C12.3812 17.9972 12.6896 17.6888 12.6896 17.3083ZM12.0007 15.1194C13.2096 15.1194 14.1896 16.0994 14.1896 17.3083C14.1896 18.5172 13.2096 19.4972 12.0007 19.4972C10.7918 19.4972 9.81178 18.5172 9.81178 17.3083C9.81178 16.0994 10.7918 15.1194 12.0007 15.1194Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container pt-16">
+        <div class="col-md-9 mx-4 mx-md-auto">
+            <h1 class="">PRIVACY POLICY</h1>
+            <p class="">Boonify Merchandise World (“We”, “Us”, “Our”) is the operator of the Website and Mobile
+                Application
+                called “Boonify” which provides a one-of-a-kind gifting platform that combines the convenience of
+                e-commerce
+                with the personal touch of gift card creation, gift customization and gift registry. (The
+                “Services”). </p>
+            <p class="">
+                At Boonify we are committed to protecting the privacy of the personal information that is provided to or
+                collected by us while using our Services. We acknowledge and comply with our legal obligations in
+                relation
+                to applicable data protection laws.
+            </p>
+            <p class="mb-0">This privacy policy explains:</p>
+            <ul class="">
+                <li class="">
+                    How we may collect, use, manage, and disclose information about clients, other businesses, and
+                    contacts
+                </li>
+                <li class="">
+                    How we may collect, manage, and use personal information obtained from you.
+                </li>
+                <li class="">
+                    The rights you may have in respect of your own personal information.
+                </li>
+            </ul>
+            <div class="">
+                <h2 class="">PURPOSE OF THIS PRIVACY POLICY</h2>
+                <p class="">The purpose of this privacy policy is to give you information about how we collect and
+                    process your personal data. This privacy policy supplements our Terms and Conditions that are
+                    currently on our website and such other notices that we may provide on specific occasions when we
+                    are collecting or processing your personal data. </p>
+            </div>
+            <div class="">
+                <h2 class="">THE INFORMATION THAT WE MAY COLLECT:</h2>
+                <p class="">The scope of information we may collect from persons using our Services includes:</p>
+                <ul class="">
+                    <li class="">
+                        All personal information obtained from persons using the Service.
+                    </li>
+
+                    <li class="">
+                        Information provided to us while making an inquiry on the use of the Service.
+                    </li>
+
+                    <li class="">
+                        Information provided to us while reporting a problem or making a complaint about the Service.
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <h2 class="">THE TYPE OF INFORMATION WE MAY COLLECT</h2>
+                <p class="">The specific types of personal Information that we may collect, use and store are as
+                    follows:</p>
+                <ul class="">
+                    <li class="">
+                        “Identity Data”: This includes your first name, middle names, maiden name, last name, gender,
+                        title and date of birth.
+                    </li>
+                    <li class="">
+                        “Contact Data”: This includes your home address, email address and telephone number.
+                    </li>
+                    <li class="">
+                        “Account Information”: This includes information such as usernames and passwords, authentication
+                        methods and roles, and similar data.
+                    </li>
+                    <li class="">
+                        “Technical Data”: This includes information collected when you access Boonify, your internet
+                        protocol (IP) address, your login data, browser type and version, time zone setting and
+                        location, browser plug-in types and versions, operating system and platform and other technology
+                        on the devices you are using.
+                    </li>
+                    <li class="">
+                        Marketing and Communication Data: This includes data relating to your preferences in receiving
+                        newsletters with respect to our products and Services from us as well as your communication
+                        preferences.
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <h2 class="">WHY WE COLLECT INFORMATION</h2>
+                <p class="">We collect information to enable us to provide you with our Services. We collect data to be
+                    able to communicate with you, to provide further information on our Services, and to assist you. We
+                    also collect data to be able to respond to questions or requests that you submit, as well as
+                    anticipate and resolve problems with any services we offer to you. </p>
+            </div>
+            <div class="">
+                <h2 class="">HOW WE COLLECT YOUR PERSONAL DATA</h2>
+                <p class="">
+                    We use different methods to collect data from and about you including through:</p>
+                <ul class="">
+                    <li class="">
+                        Direct collection: You may give us your data by filling in forms (e.g., the contact form on our
+                        website); creating your profile, by correspondence and conversations (including via email and
+                        telephone); or through contracts, we may enter with you.
+                    </li>
+                    <li class="">
+                        Automated technologies: As you interact with our website, we will automatically collect data
+                        about your equipment, browsing actions and patterns. We collect this personal data by using
+                        cookies and other similar technologies. We collect such data to be able to provide you with our
+                        Services properly.
+                    </li>
+                    <li class="">
+                        Third parties or publicly available sources: We also receive your personal data from third
+                        parties to whom you have legally provided such data to, such as your employer, benefactors, etc.
+                        To the extent that such data is disclosed by third parties, different rules may apply to their
+                        use or disclosure of your information. We do not control how they use or share your data, and we
+                        cannot make any representations or warranties. We, however, have control over data that you have
+                        voluntarily shared to us directly or through your usage of our website. With your consent, we
+                        use your information to fulfill requests to receive information or materials from us, to carry
+                        out Services for your benefit and to process applications and requests from you. We do not use
+                        your data for any other purpose than for the purposes listed in this policy.
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <h2 class="">LAWFUL BASIS FOR OUR USE OF YOUR PERSONAL DATA </h2>
+                <p class="">We will use your personal data only to the extent permitted by law. Under the Nigeria Data
+                    Protection Act 2023, personal data may be processed under any of the following lawful basis:</p>
+                <ul class="">
+                    <li class="">
+                        Where you consent to our use of your personal data
+                    </li>
+                    <li class="">
+                        Where your personal information is necessary for the performance of the contract to use our
+                        Services
+                    </li>
+                    <li class="">
+                        Where we need to comply with a legal obligation.
+                    </li>
+                    <li class="">
+                        Where we need to protect your vital interest or the vital interest of another individual
+                    </li>
+                    <li class="">
+                        Where it is in the interest of the general public to process your data
+                    </li>
+                </ul>
+                <p class="">
+                    While we mostly collect and process your data with your consent, we may collect and process your
+                    data
+                    under any identified lawful bases depending on the circumstance. We do not always need your consent
+                    to
+                    process your data. However, we do need your consent before we can process your data for purposes
+                    such as
+                    direct marketing communications. You are at liberty to withdraw your consent to such processing at
+                    any
+                    time. Where such withdrawal makes us unable to proceed with providing you with certain Services, we
+                    will
+                    inform you accordingly.</p>
+
+                <p class="">By using our Services, you agree to the terms of this Privacy Policy, as to allow us to
+                    utilize your
+                    data to serve you more accurately.</p>
+            </div>
+            <div class="">
+                <h2 class="">OUR ROLE AS DATA CONTROLLER</h2>
+                <p class="">A “controller” is a person or organization who alone or jointly determines the purposes for
+                    which, and the way any personal data is, or is likely to be, processed. With respect to any
+                    information provided to us by any users of Boonify, Boonify is the data controller.</p>
+            </div>
+            <div class="">
+                <h2 class="">DISCLOSURE OF YOUR INFORMATION</h2>
+                <p class="">We may disclose your personal information to any of our affiliates. We may also disclose
+                    your personal information to third parties if we are under a duty to disclose or share your personal
+                    data in order to comply with any legal obligation or in order to enforce or apply our Terms and
+                    Conditions and other agreements or to protect our rights, property, or safety or those of other
+                    users our clients or others.</p>
+            </div>
+            <div class="">
+                <h2 class="">DATA SECURITY</h2>
+                <p class="">We will take reasonable steps to protect personal information disclosed to us from loss,
+                    modification, misuse, unauthorized access and/or disclosure. While we do our best to protect your
+                    personal data, we cannot guarantee the security of your data transmitted to us over the internet as
+                    transmission over the internet is not completely secure; therefore, we note that any such
+                    transmission is at your own risk. However, we will use strict procedures and security features to
+                    prevent unauthorized access once we have collected your information. We are bound by international
+                    standards and best practices on information and cyber security as may be issued from time to
+                    time.</p>
+            </div>
+            <div class="">
+                <h2 class="">DATA RETENTION</h2>
+                <p class="">We retain your data for such a period as is necessary for the purpose for which it was
+                    collected. Storage of your data is also determined by legal, regulatory, administrative, or
+                    operational requirements. We only retain information that allows us to comply with legal and
+                    regulatory requests for certain data, meet business and audit requirements, respond to complaints
+                    and queries, or address disputes or claims that may arise. When data is no longer required for the
+                    purposes for which it was collected, we securely destroy it.</p>
+            </div>
+            <div class="">
+                <h2 class="">THIRD-PARTY SITES</h2>
+                <p class="">Our website and Services may contain links to third-party websites, products, and services.
+                    Our products and Services may also use or offer products or services from third parties. Information
+                    collected by third parties, which may include such things as location data or contact details are
+                    governed by their privacy practices and we will not be liable for any breach of confidentiality or
+                    privacy of your information on such third-party websites. We encourage you to learn about the
+                    privacy practices of those third parties.</p>
+            </div>
+            <div class="">
+                <h2 class="">PRIVACY POLICY CHANGE </h2>
+                <p class="">We may modify this Privacy Policy from time to time without prior notice by publishing a new
+                    version of the Privacy Policy on our website. Any changes to the Privacy Policy will be reflected on
+                    the website and will become effective immediately upon publication. We encourage you to periodically
+                    review this Privacy Policy to stay informed about how we are protecting the personally identifiable
+                    information we collect. If changes to the Privacy Policy are material, we will do our best to notify
+                    you via email or through a notification on our website.</p>
+            </div>
+            <div class="">
+                <h2 class="">ACCESS, CONSENT AND CORRECTION</h2>
+                <p class="">We will take reasonable steps to ensure that the personal information we collect remains
+                    accurate, up-to-date and complete. We will also provide you with access to your personal information
+                    held by us on your request unless we are otherwise permitted by applicable laws. If you wish to
+                    access or correct personal information that we hold about you, please contact us through the contact
+                    details provided below. You have the right to withdraw consent previously given for processing your
+                    data or restrict the processing of your personal data. We might however continue to process your
+                    data if there are valid legal or operational reasons.</p>
+                <p class="">
+                    It is important that the personal data we hold about you is accurate and current. Please keep us
+                    informed if your personal data changes during your relationship with us. Furthermore, if you
+                    discover any inaccuracies in your personal information, please promptly notify us by contacting us
+                    through the contact details provided below.</p>
+            </div>
+            <div class="">
+                <h2 class="">YOUR LEGAL RIGHTS</h2>
+                <p class="">In addition to being able to control the data you directly provide to us, you may exercise
+                    any of the below rights with respect to your data:</p>
+                <ul class="">
+                    <li class="">
+                        Request information about any of your personal data which we are processing, and request access
+                        to your personal information which we process.
+                    </li>
+                    <li class="">
+                        Request correction of personal information we hold about you to make them more accurate or to
+                        reflect the change in circumstances.
+                    </li>
+                    <li class="">
+                        Request us to refrain from doing certain things with your data or restrict the extent of our
+                        collection or processing of your data.
+                    </li>
+                    <li class="">
+                        Request partial or complete erasure of your personal information.
+                    </li>
+                    <li class="">
+                        Object to our processing of your personal information where we are processing your personal
+                        information for direct marketing purposes.
+                    </li>
+                    <li class="">
+                        Object to decisions being taken by automated means which produce legal effects concerning you or
+                        similarly significantly affect you.
+                    </li>
+                    <li class="">
+                        Request the transfer of your personal information to another party. If you wish to exercise any
+                        of the rights above, please contact us using the contact details provided below.
+                    </li>
+                </ul>
+            </div>
+            <div class="">
+                <h2 class="">CONTACT DETAILS</h2>
+                <p class="">If you have any questions about this privacy policy or our privacy practices, please contact
+                    us using the details provided below:</p>
+                <p class="">Full name of legal entity: Boonify Merchandise World</p>
+                <p class="">Email address:</p>
+                <p class="">Telephone:</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-8 position-relative overflow-hidden">
+        <div class="">
+            <img src="assets/images/cloud-bg.jpg" alt="" class="w-100 h-auto">
+        </div>
+        <div class="container">
+            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4">
+                <a href="#" class="nav-link text-uppercase text-primary">About Us</a>
+                <a href="/privacy-policy.html" class="nav-link text-uppercase text-primary">Privacy Policy</a>
+                <a href="/terms-of-use.html" class="nav-link text-uppercase text-primary">Terms of Use</a>
+                <a href="#" class="nav-link text-uppercase text-primary">Help Center</a>
+            </nav>
+            <ul class="d-flex list-unstyled justify-content-center gap-3 my-4">
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/instagram.svg" height="48px" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/facebook.svg" height="48px" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/x.svg" height="48px" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center my-12 mb-12">
+                <img src="assets/images/logo/boonify-logo-lg.svg" alt="" class="col-4">
+            </div>
+        </div>
+        <img src="assets/images/ribbon.png" alt="" class="img-fluid mb-2">
+        <div class="bg-primary py-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
+    </footer>
+</div>
+
+<!--Bootstrap JS-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper-element-bundle.min.js"></script>
+<!--Custom JS-->
+<script src="assets/js/script.js"></script>
+</body>
+</html>

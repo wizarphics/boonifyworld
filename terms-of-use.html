@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoonifyWorld</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.min.css"/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainHeader" data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true">
+
+<div class="page-wrapper">
+    <header class="" id="main-header">
+        <nav class="navbar navbar-light fixed-top bg-transparent">
+            <div class="container">
+                <div class="bg-white mx-auto rounded-pill overflow-hidden py-3 my-4 px-5 d-flex align-items-center">
+                    <a class="navbar-brand me-2" href="/" style="filter: none !important;">
+                        <img src="assets/images/logo/boonify-Icon.png" style="height: 28px;" alt="">
+                    </a>
+                    <div class="border-end me-1" style="height: 20px;"></div>
+                    <ul class="navbar-nav flex-row justify-content-center gap-3 gap-md-4 flex-grow-1 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/#why-boonify">Why Boonify </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/#what-boonify-offers">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="/#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap btn btn-primary text-white rounded-pill py-1 px-2 py-md-2 px-md-3"
+                               href="#">
+                                <span>Get the App</span>
+                                <svg width="24" height="25" class="icon-xs" viewBox="0 0 24 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M15.5383 3.28813C14.8162 3.19105 13.8583 3.18945 12.4805 3.18945H11.5212C10.1434 3.18945 9.18551 3.19105 8.46343 3.28813C7.76294 3.38231 7.39771 3.55381 7.13884 3.81267C6.87998 4.07154 6.70848 4.43676 6.6143 5.13726C6.51722 5.85934 6.51563 6.81725 6.51563 8.19506L6.51563 15.8692C6.51563 17.247 6.51722 18.2049 6.6143 18.927C6.70848 19.6275 6.87998 19.9927 7.13884 20.2516C7.39771 20.5105 7.76294 20.682 8.46343 20.7761C9.18551 20.8732 10.1434 20.8748 11.5212 20.8748L12.4805 20.8748C13.8583 20.8748 14.8162 20.8732 15.5383 20.7761C16.2388 20.6819 16.604 20.5105 16.8629 20.2516C17.1217 19.9927 17.2932 19.6275 17.3874 18.927C17.4845 18.2049 17.4861 17.247 17.4861 15.8692V8.19506C17.4861 6.81725 17.4845 5.85934 17.3874 5.13726C17.2932 4.43676 17.1217 4.07154 16.8629 3.81267C16.604 3.55381 16.2388 3.38231 15.5383 3.28813ZM15.7382 1.8015C16.605 1.91805 17.3395 2.16799 17.9235 2.75201C18.5076 3.33603 18.7575 4.07056 18.8741 4.93739C18.9861 5.77109 18.9861 6.83025 18.9861 8.14044V15.9238C18.9861 17.234 18.9861 18.2932 18.8741 19.1269C18.7575 19.9937 18.5076 20.7282 17.9235 21.3122C17.3395 21.8963 16.605 22.1462 15.7382 22.2628C14.9045 22.3748 13.8453 22.3748 12.5351 22.3748L11.4667 22.3748C10.1564 22.3748 9.09727 22.3748 8.26356 22.2628C7.39673 22.1462 6.66221 21.8963 6.07818 21.3122C5.49416 20.7282 5.24422 19.9937 5.12768 19.1269C5.01559 18.2932 5.0156 17.234 5.01563 15.9238L5.01563 8.14044C5.0156 6.83025 5.01559 5.77109 5.12767 4.93739C5.24422 4.07056 5.49416 3.33603 6.07818 2.75201C6.66221 2.16799 7.39673 1.91805 8.26356 1.8015C9.09727 1.68941 10.1564 1.68943 11.4666 1.68945H12.5351C13.8453 1.68943 14.9045 1.68942 15.7382 1.8015ZM15.149 5.31728C15.149 5.73149 14.8132 6.06728 14.399 6.06728L9.60262 6.06728C9.1884 6.06728 8.85262 5.73149 8.85262 5.31728C8.85262 4.90307 9.1884 4.56728 9.60262 4.56728H14.399C14.8132 4.56728 15.149 4.90307 15.149 5.31728ZM12.6896 17.3083C12.6896 16.9279 12.3812 16.6194 12.0007 16.6194C11.6202 16.6194 11.3118 16.9279 11.3118 17.3083C11.3118 17.6888 11.6202 17.9972 12.0007 17.9972C12.3812 17.9972 12.6896 17.6888 12.6896 17.3083ZM12.0007 15.1194C13.2096 15.1194 14.1896 16.0994 14.1896 17.3083C14.1896 18.5172 13.2096 19.4972 12.0007 19.4972C10.7918 19.4972 9.81178 18.5172 9.81178 17.3083C9.81178 16.0994 10.7918 15.1194 12.0007 15.1194Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="container pt-16">
+        <div class="col-md-9 mx-4 mx-md-auto">
+            <h1 class="">TERMS AND CONDITIONS</h1>
+            <div class="" id="about-boonify">
+                <h2 class="">ABOUT BOONIFY</h2>
+                <p class="">Welcome to Boonify, an e-gifting and e-retail company that offers custom, personalizable
+                    cards
+                    and general gifting items, personalized with unique designs and messages with a user-friendly
+                    platform
+                    that is easy to navigate and search for personalized gifting options. This Website/App is brought to
+                    you
+                    by Boonify Merchandise World Ltd ("Boonify", "we", "us", or "our").</p>
+            </div>
+            <div class="">
+                <h2 class="">THE AGREEMENT</h2>
+                <p class="">These are the terms and conditions (hereinafter referred to as "Terms") governing the supply
+                    of products by us to you (whether as a guest or registered user), encompassing both goods and
+                    digital content accessible on the website www.Boonify.com (hereinafter referred to as the "Website")
+                    or any Boonify Merchandise World Ltd (Boonify) application that you may utilize (hereinafter
+                    referred to as the "App").
+                    By accessing, using, or engaging with the Website/App, you hereby acknowledge and agree to be bound
+                    by these Terms in their entirety, without any modifications. In the event that you disagree with any
+                    provision of the Terms or our Privacy Policy, you acknowledge and agree that your only recourse is
+                    to cease using this Platform. Notwithstanding the foregoing, if you choose to continue browsing,
+                    accessing, or utilizing the Services in any manner, it shall be deemed as your unequivocal
+                    acceptance, without limitation or qualification, of both the Terms and our Privacy Policy for the
+                    Platform (referred to herein as the "Policy").
+                    These Terms constitute a legally binding agreement. It is essential that you carefully review these
+                    Terms prior to placing an order with us. They outline our identity, the manner in which we will
+                    provide products to you, the processes through which both parties can make modifications or
+                    terminate the contract, guidance on handling potential issues, and other pertinent details of
+                    importance.</p>
+            </div>
+            <div class="">
+                <h2 class="">DEFINITIONS AND INTERPRETATION</h2>
+                <p class="">
+                    In these Terms, a bold, capitalized word has a particular meaning. These relevant words can be found
+                    in brackets after their meaning. Any reference in these Terms and Conditions to “we”, “us” or “our”
+                    is a reference to Boonify. Any reference to “you” or “your” is a reference to any consumer and these
+                    references may be used interchangeably.
+                    “Intellectual Property” “IP” means all patents, inventions, copyrights and any related rights,
+                    design rights, performer’s rights, trademarks, business names and domain names, rights in get up,
+                    goodwill and right to sue for passing off, database rights, rights to use, and protect the
+                    confidentiality of and intellectual property rights in the foregoing, and all other intellectual
+                    property rights, whether registered or unregistered, including all applications and rights to apply
+                    for and be granted, renewals or extensions of, and rights to claim property from, such rights and
+                    all similar or equivalent rights or forms of protection which subsists or will subsist in the
+                    future, exercisable in any part of the world.
+                    “Content” means all text, software, applications, graphics, audio, visual and/or audio-visual
+                    material (including but not limited to, music, sound, still visual images, photographs and video),
+                    data, database content, page layouts, design and other multi-media content, information and
+                    material, including the metadata relating to such content.
+                </p>
+            </div>
+            <div class="">
+                <h2 class="">USER ACCOUNT</h2>
+                <p class="">
+                    In order to utilize the Platform, it is necessary to complete the registration process and establish
+                    an account ("Account"). To be eligible for creating an Account and accessing our Platform or any of
+                    our Services, you must be at least 16 (sixteen) years of age. By utilizing our Platform or agreeing
+                    to these terms and conditions, you affirm and guarantee to us that you meet the minimum age
+                    requirement of 16 years.
+                    During the Account setup, it will be mandatory for you to create login credentials by providing
+                    specific personal information ("Login Credentials").
+                    By registering for the Services, you agree:</p>
+                <ul class="">
+                    <li class="">
+                        (a) to furnish authentic, accurate, current, and comprehensive information about yourself as
+                        prompted by the Platform's registration form ("Registration Data"); and
+                    </li>
+                    <li class="">
+                        (b) to maintain and promptly update the Registration Data to keep it true, accurate, current and
+                        complete.
+                    </li>
+                </ul>
+                <p class="">
+                    You are responsible for maintaining the confidentiality of your Login Credentials and are solely
+                    responsible for all activities that occur using your Login Credentials. Under no circumstances
+                    should you permit a third party to utilize your Login Credentials.
+                </p>
+                <p class="">
+                    Boonify reserves the right to terminate any username and password which Boonify reasonably
+                    determines may have been used by an unauthorized third party. You agree not to establish an Account
+                    using false identification or information nor on behalf of someone other than yourself.</p>
+                <p class="">
+                    Furthermore, you undertake not to establish an Account or employ the Services if you have previously
+                    been banned from the Platform, except in cases where explicit approval has been granted by Boonify.
+                    Such approval will be determined on a case-by-case basis.
+                </p>
+            </div>
+            <div class="">
+                <h2 class="">USING BOONIFY</h2>
+                <div class="">
+                    <h3 class="">* How to place an order</h3>
+                    <p class="">An order is successfully placed on the Website or App by pressing the Checkout button
+                        and proceeding to make payment of the price of the product ( (which includes VAT) this will be
+                        the price indicated on the order pages when you placed your order). By confirming your order,
+                        you are agreeing to purchase the product you have selected which shall be subject to these
+                        Terms.
+                    </p>
+                    <p class="">
+                        You can pay for your products using credit card, debit card or any other payment method which we
+                        make available to you at the time of your order.
+                        We will then send you an order confirmation email detailing your order and any other information
+                        we must provide to you.</p>
+                </div>
+                <div class="">
+                    <h3 class="">* How we process your order</h3>
+                    <p class="">Acceptance: Your order is accepted by Boonify upon receipt of an acceptance email and an
+                        order number is issued.
+                        However, there may be circumstances in which we are unable to accept your order, because of
+                        something we discover after we send you an order confirmation email. If this is the case, we
+                        will inform you of this via email and will refund you for the product. We may be unable to
+                        accept your order because</p>
+                    <ul class="">
+                        <li class="">
+                            (a) we have identified an error in the price or description of the product;
+                        </li>
+                        <li class="">
+                            (b) it appears that the order mistakenly duplicates another order;
+                        </li>
+                        <li class="">
+                            (c) the use of images for a Personalised Product are corrupted, unsupported technically or
+                            inadequately pixelated;
+                        </li>
+                        <li class="">
+                            (d) your Personalised Product contravenes, or appears to contravene, our Content Rules;
+                        </li>
+                        <li class="">
+                            (e) with products containing alcohol, we know or suspect that you are not 18 years of age.
+                            We may refuse an order or a delivery of alcoholic items at our discretion. By placing an
+                            order for alcohol, you confirm that you and the recipient of the order, if different, are
+                            both aged 18 years or over;
+                        </li>
+                        <li class="">
+                            (f) there are unexpected limits on our resources that we could not reasonably plan for
+                        </li>
+                        <li class="">
+                            (g) a credit reference we have obtained for you does not meet our minimum requirements or we
+                            cannot obtain authorization for your payment;
+                        </li>
+                        <li class="">
+                            (h) we suspect that the order has been placed fraudulently;
+                        </li>
+                        <li class="">
+                            (i) we are unable to meet the delivery deadline you have specified;
+                        </li>
+                        <li class="">
+                            (j) the product is out of stock;
+                        </li>
+                        <li class="">
+                            (k) a promotional offer or discount code has been used outside of a valid promotion period
+                            or has expired; or
+                        </li>
+                        <li class="">
+                            (l) your order otherwise breaches any of the requirements of these Terms.
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="">* How to change your order</h3>
+                    <p class="">
+                        As a courtesy, we may allow you to make changes to your order on your Boonify Account. If you
+                        cannot make changes to your Boonify Account, then you will need to contact our Customer Service
+                        Team by Email. Please have your order number or the email address you registered with us
+                        available so we can answer your query as quickly as possible.</p>
+                    <p class="">
+                        We will let you know if the change is possible. If it is possible we will let you know about any
+                        changes to the price of the product, the timing of supply or anything else which would be
+                        necessary as a result of your requested change and ask you to confirm whether you wish to go
+                        ahead with the change.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* How we make changes</h3>
+                    <div class="">
+                        <h4 class=""> Minor changes</h4>
+                        <p class="">
+                            We may have to make minor changes to a product to reflect changes in relevant laws and
+                            regulatory requirements or to implement minor technical adjustments and improvements, for
+                            example, to address a security threat. Minor changes will not affect your use of the
+                            product.
+                        </p>
+                    </div>
+                    <div class="">
+                        <h4 class="">Significant changes</h4>
+                        <p class="">There may be circumstances where we have to make significant changes to our
+                            products. If we do need to make such changes, we will notify you of this. You may then
+                            contact us to end the contract before the changes take effect and receive a refund for any
+                            products paid for but not received.</p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Delivery</h4>
+                        <p class="">
+                            Boonify does not guarantee delivery dates or times unless a Special Delivery is requested
+                            (in which case we will guarantee the delivery date and time). We will make you aware of
+                            delivery charges (if any) before you place your order.</p>
+                        <p class="">
+                            For orders that are accepted, unless we inform you otherwise in the order process, we will
+                            dispatch the product you have ordered within 5 days of the order.</p>
+                        <p class="">
+                            It is your responsibility to ensure that the address you input for delivery is correct.</p>
+                        <p class="">
+                            Errors in the address may cause unnecessary delay and/or result in unsuccessful delivery of
+                            your items.
+                        </p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Delivery costs</h4>
+                        <p class="">The price of most products on our Website and App do not include delivery costs. We
+                            will notify you of the delivery cost at the checkout stage before you place your order.</p>
+                        <p class="">There may be occasions from time to time (for example, a promotion) where delivery
+                            costs are included in the price of our product. On these occasions, this information will be
+                            clearly stated on our Website or App.</p>
+                        <p class="">We reserve the right to change the delivery costs at any time</p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Delivery of Multiple Products</h4>
+                        <p class="">When ordering multiple products as part of the same order, we will inform you,
+                            within a reasonable time period, as to whether we will (or can) deliver on the same day or
+                            as part of the same delivery. Please note that we cannot guarantee that multiple products
+                            within the same order will be delivered in the same package or at the same timeWhen ordering
+                            multiple products as part of the same order, we will inform you, within a reasonable time
+                            period, as to whether we will (or can) deliver on the same day or as part of the same
+                            delivery. Please note that we cannot guarantee that multiple products within the same order
+                            will be delivered in the same package or at the same time</p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Delivery options and Estimated delivery time</h4>
+                        <p class="">For more information on the range of delivery options available, please click
+                            here. </p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Force Majeure </h4>
+                        <p class="">If our supply of the products may be delayed by an event outside our control (such
+                            as acts of God, natural disasters, epidemics or pandemics, terrorist attacks, war or threat
+                            of war, riots, imposition of sanctions, embargo, or breaking off of diplomatic relations,
+                            nuclear, chemical or biological contamination or sonic boom, any laws imposing an export or
+                            import restriction, quota or prohibition, or failing to grant necessary licence or consent,
+                            collapse of buildings, fire, explosion or accident, industrial action, interruption or
+                            failure of utility service) then we will contact you as soon as possible to let you know via
+                            email and we will take steps to minimize the effect of the delay. Provided we do this we
+                            will not be liable for delays caused by the event. However, if there is a risk of
+                            substantial delay you may contact us to cancel your order and receive a refund for any
+                            products you have paid for but not received. Your statutory rights as a consumer are not
+                            affected.</p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Re-arranging Delivery</h4>
+                        <p class="">If no one is available at the recipient's address and after contacting the
+                            recipient, delivery fails. It will be your responsibility to re-arrange delivery or make
+                            arrangements for collection with the carrier. Instructions on how to do so shall be left at
+                            the time of attempted delivery.</p>
+                    </div>
+                    <div class="">
+                        <h4 class="">* Required additional information</h4>
+                        <p class="">We may need certain information from you to ensure delivery of the products such as
+                            address. We will contact you to ask for this information. If you do not give us this
+                            information within a reasonable time of our asking for it, or if you give us incomplete or
+                            incorrect information, we may end the contract (the Termination Clause in the Terms shall
+                            apply). We will not be responsible for supplying the products late or not supplying any part
+                            of them if this is caused by you not giving us the information, we need within a reasonable
+                            time of us asking for it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">THE PRODUCTS</h2>
+                <div class="">
+                    <h3 class="">* The Packaging</h3>
+                    <p class="">The packaging of the product may vary from that shown in images on our website.</p>
+                </div>
+                <div class="">
+                    <h3 class="">* Personalised Products</h3>
+                    <p class="">
+                        If the product includes personalized content selected by you, it is a personalized product
+                        (Personalised Product). If it is a standard product that does not include any content selected
+                        by you, it is a non-personalized product (Non-Personalised Product).
+                    </p>
+                    <p class="">
+                        It is up to you to ensure the content you have contributed for inclusion in a Personalised
+                        Product is correct (for example the content is correctly spelled).
+                    </p>
+                    <p class="">
+                        Please double-check your order on screen and your acknowledgment email carefully to check that
+                        all the details are correct. It is your responsibility to ensure that your recipient’s name and
+                        address are correct.
+                    </p>
+                    <p class="">
+                        If you are uploading a photograph, video, or audio file you must ensure that you have obtained
+                        all relevant permissions to use the photograph, video, or audio file from any persons in the
+                        photograph, video, or audio file and the photograph, video or audio file is otherwise
+                        appropriate to upload.
+                    </p>
+                    <p class="">
+                        If you are uploading a photograph, images must be in JPEG or PNG format. Any other format such
+                        as Word documents and PDFs cannot be accepted. For best results, we advise that you make the
+                        image dimensions approximately 1,000 pixels for the smallest edge of your photos. We print
+                        images at 300DPI (Dots Per Inch), so if you are scanning the image, we recommend you use this
+                        setting. If you try to upload a photo that has a lower resolution or image size, we will accept
+                        it however we cannot accept responsibility if your Personalised Product does not meet your
+                        expectations.
+                    </p>
+                    <p class="">
+                        By uploading or including any content or material (including but not limited to photographs,
+                        graphics, text and other material) (Customer IP) in a Personalised Product, you grant us a
+                        non-exclusive, royalty-free, irrevocable license (including the right to grant sub-licenses
+                        through multiple tiers) to use, reproduce, adapt, distribute and communicate to the public that
+                        content or material solely for the purpose of performing our obligations under these Terms and
+                        exercising any rights you may grant to us. Please note that we may modify content or material in
+                        order to conform it to Boonify or the requirements of the product you have ordered (such as by
+                        cropping images).
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Personalised Products Rules</h3>
+                    <p class="">
+                        You should not use or include any content or material on any Personalised Products which:
+                    </p>
+                    <ul class="">
+                        <li class="">
+                            infringes anyone's Intellectual Property. In particular, you must ensure that you either own
+                            the IP in the Customer IP that you wish to include in a Personalised Product or that you
+                            have permission from the IP owner to include that Customer IP in the Personalised Product;
+                        </li>
+                        <li class="">
+                            contravenes any applicable law (including, without limitation, any criminal law) or
+                            regulation;
+                        </li>
+                        <li class="">
+                            is false, inaccurate, misleading, offensive, abusive, threatening or defamatory, or that
+                            might cause needless annoyance, inconvenience or distress to any person;
+                        </li>
+                        <li class="">
+                            misrepresents identity or impersonates any person;
+                        </li>
+                        <li class="">
+                            includes personal data about another person, such as their address, phone number, or email
+                            address, except with the written approval of that person;
+                        </li>
+                        <li class="">
+                            sexual orientation or age, or that may incite hatred or violence against any person or
+                            group;
+                        </li>
+                        <li class="">
+                            may harass, upset, embarrass or alarm any person;
+                        </li>
+                        <li class="">
+                            gives the impression that it originates from or has been approved by us, our partners and
+                            licensors, whether by reference to our/their name or otherwise;
+                        </li>
+                        <li class="">
+                            may violate the integrity and reputation of our name, and the names of our partners and
+                            licensors;
+                        </li>
+                        <li class="">
+                            advocates, promotes or assists any unlawful act;
+                        </li>
+                        <li class="">
+                            includes or makes reference to illegal drugs; or
+                        </li>
+                        <li class="">
+                            makes reference to politicians' names and/or political statements.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="">
+                    <h3 class="">* The Customer Intellectual Property</h3>
+                    <p class="">
+                        The rights and ownership to the Customer IP will remain yours, or the person who gave you
+                        permission to use the Customer IP.
+                    </p>
+                    <p class="">
+                        If you use third-party copyright in any Personalised Product, it is your responsibility to
+                        ensure that you seek permission from the copyright owner.
+                    </p>
+                    <p class="">
+                        We will not accept any liability whatsoever if any Customer IP infringes on third-party
+                        copyright. You agree to indemnify, defend and hold us harmless against any third party claim of
+                        infringement for the use of such third party’s intellectual property on the Personalised
+                        Product. You will be held responsible for any fees and third-party damages we may have to pay to
+                        a third party because of such infringement and you will be liable to reimburse these payments to
+                        us in full.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Offers, discounts and vouchers</h3>
+                    <p class="">
+                        To see our Terms and Conditions for offers and promotions, click https://www.Boonify.com/. To
+                        see our Terms and Conditions for vouchers, click https://www.Boonify.com/. Please note that
+                        promotional offers, discount codes and vouchers can only be applied to our specified products.
+                        They cannot be used for discounts on postage or delivery charges unless otherwise specified.
+                    </p>
+                    <p class="">
+                        Promotional offers and discount codes must be used within the valid offer time, but we reserve
+                        the right to dispatch products outside of this period.
+                        Boonify reserves the right to cancel, change or extend offers at any given time, without notice.
+                        Promotions cannot be backdated or applied retrospectively to orders already placed.
+                    </p>
+                    <p class="">
+                        The Products we sell through our Website and the App are manufactured and shipped from various
+                        in-house and third-party production facilities based in Nigeria.
+                    </p>
+                    <p class="">
+                        All goods excluding Boonify cards are manufactured independently by a third party and, with the
+                        exception of an Experience Product (as defined below), Boonify shall act as a reseller of these
+                        goods.
+                    </p>
+                    <p class="">
+                        The images of the products on our website are for illustrative purposes only. Although we have
+                        made every effort to display the colors accurately, we cannot guarantee that your device's
+                        display of the colors accurately reflects the color of the products. Your product may vary
+                        slightly from those images.
+                    </p>
+                </div>
+            </div>
+
+            <div class="">
+                <h2 class="">ENDING YOUR ORDER CONTRACT WITH US</h2>
+                <div class="">
+                    <p class="">
+                        If you are ending a contract for a reason set out below, the contract will end immediately, and
+                        we will refund you in full for any products which have not been provided. The reasons are:
+                    </p>
+                    <ul class="">
+                        <li class="">
+                            (a) We have told you about an upcoming change to the product or these Terms which you do not
+                            agree to;
+                        </li>
+                        <li class="">
+                            (b) we have told you about an error in the price or description of the product you have
+                            ordered and you do not wish to proceed;
+                        </li>
+                        <li class="">
+                            (c) there is a risk that the supply of the products may be significantly delayed because of
+                            events outside our control; or
+                        </li>
+                        <li class="">
+                            (d) we have suspended supply of the products for technical reasons, or notify you we are
+                            going to suspend them for technical reasons, in each case for a period of more than 48
+                            hours.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">REPORT A PROBLEM</h2>
+                <div class="">
+                    <p class="">
+                        If you have questions or are unhappy with your order, please contact our Customer Service Team
+                        via the provided contact details. You will need to quote your order number, the email address
+                        you have registered and the details of the problem with the order.
+                    </p>
+                    <p class="">
+                        We aim to acknowledge any complaint within 7 days and will do our best to resolve it within 28
+                        days. We may ask you to take a photograph of the product to help us communicate with our
+                        suppliers and to correct any future problems. Should it be necessary, we will then advise you on
+                        how to return your item.
+                    </p>
+                    <p class="">
+                        We offer 5 day of freshness guarantee for flowers. Please note, because flowers are perishable,
+                        we need to be informed of any problem with your order within five days of delivery to give us
+                        the best chance of resolving the issue. We reserve the right to refuse a refund or replacement.
+                    </p>
+                    <p class="">
+                        If you receive a product from us in error, you must inform our Customer Service Team
+                        immediately. Our Customer Service Team will then provide you with instructions on how to return
+                        or securely destroy the product.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">PROCEDURE FOR RETURN OR REFUND</h2>
+                <div class="">
+                    <p class="">
+                        We will refund you the price you paid for the products including delivery costs, by the method
+                        you used for payment within 14 days from the day on which we receive the product back from you
+                        or, if earlier, the day on which you provide us with evidence that you have sent the product
+                        back to us.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Personalized Products</h3>
+                    <p class="">
+                        Include cards, mugs, framed cards, t-shirts, alcohol gifts and cases.
+                    </p>
+                    <p class="">
+                        Where an item is faulty, please contact our Customer Service Team via the provided contact
+                        details. We will either ask you to return the item to us within three days of receipt or to take
+                        a photo of the item before returning it back to us. You can speak to our Customer Service Team
+                        for a return address if you do not have one. Your right to return items to us in accordance with
+                        these Terms is in addition to any other statutory rights you may have.
+                    </p>
+                    <p class="">
+                        If you are eligible for a refund, we will reimburse the price you have paid for the product(s)
+                        onto the account you provide us. Alternatively, we may offer to reprint (if applicable) and
+                        resend the item free of charge. Please note it is not our policy to offer both a refund and a
+                        resend.
+                    </p>
+                    <p class="">
+                        Refunds cannot be given if the fault is a result of your own actions such as product misuse or
+                        if personalization is misspelled or if you have uploaded an image of a low resolution or size.
+                    </p>
+                    <p class="">
+                        Flowers
+                    </p>
+                    <p class="">
+                        If the recipient receives damaged flowers or they fail to arrive, please contact us immediately
+                        so that we can arrange to resend the flowers on the next available delivery date or offer a full
+                        or partial refund. The amount of a partial refund will depend on the specific circumstances
+                        surrounding the flowers.
+                    </p>
+                    <p class="">
+                        As is the case with other gifts, it is not our policy to offer both a refund and a resend. Where
+                        flowers have been damaged we will normally ask for photographs clearly showing the problem so we
+                        can use them to determine what is going wrong with our system or our couriers. Refunds cannot be
+                        given for flowers that have died quickly unless we understand there to be a genuine problem. It
+                        is important that flowers are cared for correctly and in line with the instructions provided.
+                        Putting them by heat sources or draughts, or failing to change the water will damage them. We
+                        include instructions and flower food with all our arrangements. All flowers should normally last
+                        five days or longer, although this varies by variety. In some circumstances, flowers are sent in
+                        the bud and will not be fully open when they arrive. However, they should open once they have
+                        settled at room temperature.
+                    </p>
+                    <p class="">
+                        It is important that we are contacted as soon as possible regarding issues with your order or
+                        the product(s) you have ordered. We need to be informed of any issues within three days of the
+                        delivery to give us the best chance of successfully resolving the issue.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">Non-Personalised Products</h3>
+                    <p class="">
+                        Including soft toys, gift boxes, gift cards, food gifts, alcohol gifts, sealed beauty gifts, and
+                        sealed jewelry gifts.
+                    </p>
+                    <p class="">
+                        Where an item is faulty, please contact our Customer Service Team via the provided contact
+                        details. We will either ask you to return the item to us within three days of receipt or to take
+                        a photo of the item before returning it back to us. You can speak to our Customer Service Team
+                        for a return address if you do not have one. Your right to return items to us in accordance with
+                        these Terms is in addition to any other statutory rights you may have.
+                    </p>
+                    <p class="">
+                        If you are eligible for a refund, we will reimburse the price you have paid for the product(s)
+                        onto the account you provide us. Alternatively, we may offer to reprint (if applicable) and
+                        resend the item free of charge. Please note it is not our policy to offer both a refund and a
+                        resend.
+                    </p>
+                    <p class="">
+                        Please note that if the value of the product has been reduced by any handling of it beyond what
+                        is necessary to check whether the product is as expected, we may deduct an amount to reflect
+                        that reduction in value from the sum we refund to you. Note that the value of a product may be
+                        reduced to nothing if its seal (or similar) is broken.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* When we will pay the costs of the return</h3>
+                    <p class="">
+                        We will pay the costs of return if:
+                    </p>
+                    <ul class="">
+                        <li class="">
+                            (a) the products are faulty or misdescribed;
+                        </li>
+                        <li class="">
+                            (b) if you are ending the contract because we have told you of an upcoming change to the
+                            product or these terms, an error in pricing or description, a delay in delivery due to
+                            events outside our control, or because you have a legal right to do so as a result of
+                            something we have done wrong;
+                        </li>
+                        <li class="">
+                            (c) if we, or on behalf of our suppliers, have requested a return of the product due to a
+                            product recall.
+                        </li>
+                    </ul>
+                </div>
+                <div class="">
+                    <h3 class="">* Deductions from refunds if you are exercising your right to change your mind</h3>
+                    <p class="">
+                        We may reduce your refund of the price (excluding delivery costs) to reflect any reduction in
+                        the value of the goods if this has been caused by your handling them in a way that would not be
+                        permitted in a shop. If we refund you the price paid before we are able to inspect the goods and
+                        later discover you have handled them in an unacceptable way, you must pay us an appropriate
+                        amount.
+                    </p>
+                    <p class="">
+                        The maximum refund for delivery costs will be the costs of delivery by the least expensive
+                        delivery method we offer. For example, if we offer delivery of a product within 3-5 days at one
+                        cost but you choose to have the product delivered within 24 hours at a higher cost, then we will
+                        only refund what you would have paid for the cheaper delivery option.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">OUR RIGHTS TO TERMINATE YOUR ORDER</h2>
+                <div class="">
+                    <p class="">
+                        We may end the order contract for a product at any time by writing to you where you do not,
+                        within a reasonable time, allow us to deliver the products to you or the recipient or collect
+                        them from us/your local depot.
+                    </p>
+                    <p class="">
+                        We will refund any money you have paid in advance for products we have not provided, but we may
+                        deduct or charge you reasonable compensation for the net costs we will incur as a result of you
+                        frustrating the delivery.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">BOONIFY'S INTELLECTUAL PROPERTY</h2>
+                <div class="">
+                    <p class="">
+                        Unless otherwise stated, all Content and IP in relation to our Website and/or App is wholly
+                        owned by Boonify or its licensors.
+                    </p>
+                    <p class="">
+                        "Boonify" is our registered trademark, and you agree not to display or use it in any manner
+                        without our prior written consent.
+                    </p>
+                    <p class="">
+                        You may use and access our Website and/or App to the extent and purpose required for ordering
+                        any products and/or services made available by Boonify in accordance with these Terms.
+                    </p>
+                    <p class="">
+                        You are not allowed to:
+                    </p>
+                    <ul class="">
+                        <li class="">
+                            (a) remove any notices relating to IP contained in any Content, material and/or products
+                            taken from our Website, App or otherwise;
+                        </li>
+                        <li class="">
+                            (b) whether for a commercial purpose or otherwise, copy, distribute, show in public and/or
+                            create any derivative work from, any material, Content or IP owned by Boonify without the
+                            prior express written permission and licensing by us to do so; and
+                        </li>
+                        <li class="">
+                            (c )use Boonify, including but not limited to, its Website, Content, IP, products and/or
+                            services for any commercial purpose other than in accordance with these Terms.
+                        </li>
+                    </ul>
+                    <p class="">
+                        Any rights not granted in these Terms are reserved for our own benefit.
+                    </p>
+                    <p class="">
+                        If you believe that any content on the Platform infringes upon your intellectual property or
+                        privacy rights, please contact us through the contact details below.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">OUR WEBSITE/APP</h2>
+                <div class="">
+                    <p class="">
+                        We will always try to ensure that our Website and App are available 24 hours a day. However, we
+                        will not be liable if for any reason the Website or App is unavailable at any time, or for any
+                        period.
+                    </p>
+                    <p class="">
+                        Please note that we run price tests on our Website. This is a randomized process by Boonify
+                        servers when a customer visits our Website. This means that if you are randomly selected, you
+                        may have a slightly different browsing experience from other users.
+                    </p>
+                    <p class="">
+                        Occasionally, we may provide links to other websites or resources for your convenience. We do
+                        not endorse the contents of these websites and are not responsible for their availability or
+                        service. We will not be liable in any way for any loss or damage which you may suffer by using
+                        those websites. If you decide to access linked third-party websites, you do so at your own risk.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">Boonify REMINDERS</h2>
+                <div class="">
+                    <p class="">
+                        You can set up reminders for your upcoming events (Reminder) on your Boonify Account or during
+                        the checkout process and you may benefit from discounts from time to time.
+                    </p>
+                    <p class="">
+                        The Reminder must be set at least two (2) weeks before the date of your event (Event Date).
+                        Before your Event Date, we will send you a push/email notification to remind you of the Event
+                        Date. This push/email notification includes details about the Reminder Voucher offer (where
+                        applicable) which is valid for 7 days.
+                    </p>
+                    <p class="">
+                        Your Reminder Voucher (where applicable) will automatically be generated and applied to your
+                        session when you click on the email link or tap on the notification. When you log into your
+                        Boonify Account, the Reminder Voucher (where applicable) will be applied to your basket.
+                    </p>
+                    <p class="">
+                        Each Reminder is considered to be a marketing activity. By setting up Reminders, you are giving
+                        Boonify permission to email or notify you about the Event Date, even if you are opted out of
+                        other marketing activity (for instance, newsletters). To stop getting Reminders, you need to
+                        delete the Reminders that you have set up from your Boonify Account.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">GIFT CARDS</h2>
+                <div class="">
+                    <p class="">
+                        Physical gift cards may be purchased at our Website. Boonify acts as an agent for the physical
+                        gift cards purchased by you as the gift cards are supplied by external card providers. The
+                        relevant card provider's terms and conditions will apply and be shared with you at the point of
+                        purchase.
+                    </p>
+                    <p class="">
+                        Gift cards cannot be: (a) used to buy further gift cards reloaded; (b) resold; (c) transferred
+                        for value; or (d) redeemed for cash.
+                        Upon activation of a gift card, refunds or credits for the gift card will be the sole
+                        responsibility of the relevant card provider only.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">CUSTOMER REVIEWS</h2>
+                <div class="">
+                    <p class="">
+                        By submitting a review on our Website, App, or any other third-party websites you confirm and
+                        agree that you are the sole author of the review, your review is accurate and that you are at
+                        least 16 years old.
+                    </p>
+                    <p class="">
+                        For any review that you submit, you grant Boonify a perpetual, irrevocable, royalty-free,
+                        transferable right and license to use, copy, modify, delete in its entirety, adapt, publish,
+                        translate and create derivative works from that review in any medium or technology throughout
+                        the world.
+                    </p>
+                    <p class="">
+                        You must agree that you will not submit a review that:
+                    </p>
+                    <ul class="">
+                        <li class="">
+                            (a) you know to be false, inaccurate or misleading;
+                        </li>
+                        <li class="">
+                            (b) is confidential or personal information of a third party;
+                        </li>
+                        <li class="">
+                            (c) breaches any applicable law, or that advocate, promotes, or assists any unlawful act;
+                        </li>
+                        <li class="">
+                            (d) infringes anyone's intellectual property rights;
+                        </li>
+                        <li class="">
+                            (e) is or can be regarded as offensive, abusive, threatening, or defamatory;
+                        </li>
+                        <li class="">
+                            (f) promotes discrimination based on race, sex, religion, nationality, disability, sexual
+                            orientation or age, or that may incite hatred or violence against any person or group;
+                        </li>
+                        <li class="">
+                            (g) references any other website or service;
+                        </li>
+                        <li class="">
+                            (h) misrepresents the identity or impersonates any person;
+                        </li>
+                        <li class="">
+                            (i) pornographic, obscene or indecent;
+                        </li>
+                        <li class="">
+                            (j) may harass, upset, embarrass or alarm any person; or
+                        </li>
+                        <li class="">
+                            (k) comments on any other reviewer.
+                        </li>
+                    </ul>
+                    <p class="">
+                        We reserve the right to decline the publication of reviews or to remove reviews at our
+                        discretion.
+                        By submitting your email address in connection with your rating and review, you agree that
+                        Boonify may use your email address to contact you about your review. We will not pass your
+                        details on to
+                        any third parties without your consent. Boonify accepts no liability for your personal
+                        information
+                        in relation to reviews you leave on third-party websites.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">HOW WE MAY USE YOUR PERSONAL INFORMATION</h2>
+                <div class="">
+                    <p class="">
+                        We will only use your personal information as set out in our Privacy Policy and Cookie Policy,
+                        which are subject to change from time to time:
+                    </p>
+                    <p class="">
+                        Privacy Policy https://www.Boonify.com/privacy-notice/
+                    </p>
+                    <p class="">
+                        Cookie Policy https://www.Boonify.com/cookies/.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">DISCLAIMER</h2>
+                <div class="">
+                    <p class="">
+                        Boonify and its service providers, licensors and suppliers make no representations about the
+                        suitability, reliability, availability, timeliness, security or accuracy of the Platform or the
+                        Content for any purpose. To the maximum extent permitted by applicable law, all such
+                        information, software, products, service, and related graphics are provided "as is" without
+                        warranty or condition of any kind.
+                    </p>
+                    <p class="">
+                        Boonify and its service providers, licensors and suppliers hereby disclaim all warranties and
+                        conditions of any kind with regard to the Platform and the Content, including all implied
+                        warranties or conditions of merchantability, fitness for a particular purpose, title and
+                        non-infringement.
+                    </p>
+                    <p class="">
+                        No statement or information, whether oral or written, obtained from Boonify in any means or
+                        fashion will create any warranty not expressly and explicitly set forth in this agreement.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">INDEMNIFICATION AND LIMITATION OF LIABILITY</h2>
+                <div class="">
+                    <p class="">
+                        Except to the extent prohibited by any Applicable Law, you agree to defend, indemnify, and hold
+                        Boonify, its subsidiaries, affiliated companies, licensors, employees, agents, and any
+                        third-party information providers, harmless, including costs and legal fees, from any claim or
+                        demand made by any third party due to or arising out of:
+                    </p>
+                    <ul class="">
+                        <li class="">
+                            (a) your use, misuse, or inability to use the Platform or the Content,
+                        </li>
+                        <li class="">
+                            (b)your violation of these Terms, or
+                        </li>
+                        <li class="">
+                            (c )your violation of Applicable Laws.
+                        </li>
+                    </ul>
+                    <p class="">
+                        To the extent not prohibited by law, in no event shall Boonify be liable for any direct,
+                        indirect, incidental, special, punitive, exemplary, indirect, consequential or other types of
+                        damages whatsoever, including, without limitation, damages for loss of profits, loss of data,
+                        business interruption or any other commercial damages or losses, arising out of or related to
+                        your use or inability to use the Platform; any information available on the Platform; however
+                        caused, regardless of the theory of liability (contract, tort or otherwise) and even if Boonify
+                        has been advised of the possibility of such damages.
+                    </p>
+                    <p class="">
+                        In no event shall Boonify’s total liability to you for all damages (other than as may be
+                        required by applicable law in cases involving personal injury) exceed the amount paid by you for
+                        using the Platform. The foregoing limitations will apply even if the above-stated remedy fails
+                        its essential purpose.
+                    </p>
+                    <p class="">
+                        Boonify reserves the right to control the defense of any matter for which you are required to
+                        indemnify us, and you agree to cooperate with our defense of these claims.
+                    </p>
+                </div>
+            </div>
+
+            <div class="">
+                <h2 class="">GOVERNING LAW AND DISPUTE RESOLUTION</h2>
+                <div class="">
+                    <p class="">
+                        These Terms and any dispute or claim arising out of or in connection with it or its subject
+                        matter or formation (including non-contractual disputes or claims) shall be governed and
+                        construed in accordance with the laws of the Federal Republic of Nigeria.
+                    </p>
+                    <p class="">
+                        You agree that any dispute, difference, or claim arising out of or in connection with these
+                        Terms shall be resolved amicably by both parties within 30 days through negotiations failing
+                        which the dispute shall be settled exclusively and finally by Mediation. There shall be a
+                        mediator appointed by the Director of the Lagos Multi-Door Courthouse who shall settle such
+                        dispute.
+                    </p>
+                    <p class="">
+                        Both Parties agree that the decision of the mediator is final and that they shall be bound by
+                        same and keep the contents of the mediation proceedings strictly confidential.
+                    </p>
+                    <p class="">
+                        The language of the mediation shall be English, the venue of the mediation shall be Lagos,
+                        Nigeria and the cost of the mediation proceedings shall be borne by the breaching party as
+                        determined by the appointed mediator.
+                    </p>
+                </div>
+            </div>
+            <div class="">
+                <h2 class="">MISCELLANEOUS</h2>
+                <div class="">
+                    <h3 class="">* Your Boonify Account</h3>
+                    <p class="">
+                        Please note that we do not perform verification checks when you create a Boonify Account, and it
+                        is therefore important that you provide your real name and a valid email address when signing
+                        up. This is to ensure compliance with these Terms and so that our Customer Service Team can
+                        perform identity verification if you ever contact us about your order. A valid email address is
+                        also required to receive any other communications mentioned in these Terms. We will not be
+                        responsible for being unable to verify your identity or not being able to assist with your
+                        queries if you have used a fake name or email address.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Suspension</h3>
+                    <p class="">
+                        If you are found to be in breach of these Terms, we reserve the right to suspend your Boonify
+                        Account, your order and all access to Boonify's Website and App.
+                        In addition, we are entitled to suspend the provision of all or part of our services at any time
+                        if we are obliged or advised to comply with an order, instruction or request of any limb of
+                        government, or any regulator, court or other competent authority.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Change of Terms</h3>
+                    <p class="">
+                        These Terms may change from time to time and when they do, we will post the new version of the
+                        Terms on the Website and the App and flag it appropriately.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Entire Agreement</h3>
+                    <p class="">
+                        Unless otherwise agreed in writing between you and Boonify, this Terms constitutes the sole
+                        agreement between you and Boonify for your use and the provision of the Platform/Services and
+                        the subject matter hereof, and unless other agreed or incorporated herein, no representations,
+                        statements or inducements, oral or written, not contained in this Terms shall bind either you or
+                        Boonify.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Severance</h3>
+                    <p class="">
+                        If any provision of these Terms is prohibited by law or judged by a court to be unlawful, void
+                        or unenforceable, the provision shall, to the extent required, be severed from these Terms and
+                        rendered ineffective as far as possible without modifying the remaining provisions of this
+                        Terms, and shall not in any way affect any other circumstances of or the validity or enforcement
+                        of this Terms.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Waiver</h3>
+                    <p class="">
+                        Failure to insist on the performance of any of the terms will not operate as a waiver of any
+                        subsequent default. No waiver by Boonify of any right under this Terms will be deemed to be
+                        either a waiver of any other right or provision or a waiver of that same right or provision at
+                        any other time. Any waiver of any right or obligation under this Term shall only be valid if it
+                        is in writing and signed by the Party waiving such right.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Assignment</h3>
+                    <p class="">
+                        You shall not assign, transfer or novate your rights or obligations hereunder, in whole or in
+                        part without the prior written consent of Boonify.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">* Bindingness</h3>
+                    <p class="">
+                        These Terms shall be binding upon and inure to the benefit of each of the parties and the
+                        parties' respective successors and permitted assigns. A printed version of these Terms and of
+                        any related notice given in electronic form shall be valid and admissible in judicial or
+                        administrative proceedings based upon or relating to these Terms to the same extent and subject
+                        to the same conditions as other business documents and records originally generated and
+                        maintained in printed form.
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">How to Contact Us</h3>
+                    <p class="">
+                        In the case of any complaints or notice of dispute or any other notification, please contact us
+                        at:
+                    </p>
+                    <p class="">
+                        Instagram: Boonifyworld
+                    </p>
+                    <p class="">
+                        Twitter: @Boonify
+                    </p>
+                    <p class="">
+                        Facebook: @Boonify
+                    </p>
+                    <p class="">
+                        Email: help@Boonify.com
+                    </p>
+                    <p class="">
+                        Address: 16, Oba Yekini Elegushi, Lekki, Lagos
+                    </p>
+                </div>
+                <div class="">
+                    <h3 class="">How we may contact you</h3>
+                    <p class="">
+                        If we have to contact you, we will do so by telephone or via the email address provided to us by you.
+                    </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-8 position-relative overflow-hidden">
+        <div class="">
+            <img src="assets/images/cloud-bg.jpg" alt="" class="w-100 h-auto">
+        </div>
+        <div class="container">
+            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4">
+                <a href="#" class="nav-link text-uppercase text-primary">About Us</a>
+                <a href="/privacy-policy.html" class="nav-link text-uppercase text-primary">Privacy Policy</a>
+                <a href="/terms-of-use.html" class="nav-link text-uppercase text-primary">Terms of Use</a>
+                <a href="#" class="nav-link text-uppercase text-primary">Help Center</a>
+            </nav>
+            <ul class="d-flex list-unstyled justify-content-center gap-3 my-4">
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/instagram.svg" height="48px" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/facebook.svg" height="48px" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/x.svg" height="48px" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center my-12 mb-12">
+                <img src="assets/images/logo/boonify-logo-lg.svg" alt="" class="col-4">
+            </div>
+        </div>
+        <img src="assets/images/ribbon.png" alt="" class="img-fluid mb-2">
+        <div class="bg-primary py-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
+    </footer>
+</div>
+
+<!--Bootstrap JS-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper-element-bundle.min.js"></script>
+<!--Custom JS-->
+<script src="assets/js/script.js"></script>
+</body>
+</html>

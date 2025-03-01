@@ -1,0 +1,13 @@
+.card-preview-slide {
+    /* --swiper-navigation-color: var(--fc-primary); */
+    --swiper-theme-color: var(--fc-primary);
+
+    --swiper-pagination-bottom: -8px;
+}
+
+.card-preview-slide [class^=swiper-button-].swiper-button-disabled{
+    --swiper-navigation-color: #848186;
+}
+.card-preview-slide [class^=swiper-button-]::after{
+    content: '';
+}

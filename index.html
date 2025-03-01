@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoonifyWorld</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/theme.min.css"/>
+
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <!--    &lt;!&ndash; GSAP and ScrollTrigger &ndash;&gt;-->
+    <!--    <script src="assets/js/gsap_3.12.2_gsap.js"></script>-->
+    <!--    <script src="assets/js/gsap_3.12.2_ScrollTrigger.js"></script>-->
+    <style>
+        .bny-offer-card{
+            cursor: pointer;
+            transition: all ease-in 0.5s;
+        }
+        .bny-offer-card:hover{
+            margin-bottom: 0.5rem;
+            margin-left: -0.5rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainHeader" data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true">
+
+<div class="page-wrapper">
+    <header class="" id="main-header">
+        <nav class="navbar navbar-dark navbar-expand-md bg-transparent fixed-top onscroll-hide">
+            <div class="container py-3 py-md-0">
+                <a class="navbar-brand d-md-none" href="/" style="filter: none !important;">
+                    <img src="assets/images/logo/boonify-logo-white.png" class="bny-logo" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#menu" aria-controls="menu"
+                        aria-label="Toggle menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="menu"
+                     aria-labelledby="menuTitle">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="/" style="filter: none !important;">
+                            <h5 class="offcanvas-title visually-hidden" id="menuTitle">Boonify</h5>
+                            <img src="assets/images/logo/boonify-logo-white.svg" alt="">
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-4">
+                        <ul class="navbar-nav justify-content-md-center align-items-start gap-0 gap-md-12 flex-md-grow-1 align-items-md-center pe-3">
+                            <li class="nav-item d-none d-md-block">
+                                <a class="navbar-brand" href="/" style="filter: none !important;">
+                                    <img src="assets/images/logo/boonify-logo-white.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#why-boonify">Why Boonify </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#what-boonify-offers">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonials">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#waitlistModal" data-bs-toggle="modal"
+                                   data-bs-target="#waitlistModal">
+                                    <span>Get the App</span>
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M15.5383 3.28813C14.8162 3.19105 13.8583 3.18945 12.4805 3.18945H11.5212C10.1434 3.18945 9.18551 3.19105 8.46343 3.28813C7.76294 3.38231 7.39771 3.55381 7.13884 3.81267C6.87998 4.07154 6.70848 4.43676 6.6143 5.13726C6.51722 5.85934 6.51563 6.81725 6.51563 8.19506L6.51563 15.8692C6.51563 17.247 6.51722 18.2049 6.6143 18.927C6.70848 19.6275 6.87998 19.9927 7.13884 20.2516C7.39771 20.5105 7.76294 20.682 8.46343 20.7761C9.18551 20.8732 10.1434 20.8748 11.5212 20.8748L12.4805 20.8748C13.8583 20.8748 14.8162 20.8732 15.5383 20.7761C16.2388 20.6819 16.604 20.5105 16.8629 20.2516C17.1217 19.9927 17.2932 19.6275 17.3874 18.927C17.4845 18.2049 17.4861 17.247 17.4861 15.8692V8.19506C17.4861 6.81725 17.4845 5.85934 17.3874 5.13726C17.2932 4.43676 17.1217 4.07154 16.8629 3.81267C16.604 3.55381 16.2388 3.38231 15.5383 3.28813ZM15.7382 1.8015C16.605 1.91805 17.3395 2.16799 17.9235 2.75201C18.5076 3.33603 18.7575 4.07056 18.8741 4.93739C18.9861 5.77109 18.9861 6.83025 18.9861 8.14044V15.9238C18.9861 17.234 18.9861 18.2932 18.8741 19.1269C18.7575 19.9937 18.5076 20.7282 17.9235 21.3122C17.3395 21.8963 16.605 22.1462 15.7382 22.2628C14.9045 22.3748 13.8453 22.3748 12.5351 22.3748L11.4667 22.3748C10.1564 22.3748 9.09727 22.3748 8.26356 22.2628C7.39673 22.1462 6.66221 21.8963 6.07818 21.3122C5.49416 20.7282 5.24422 19.9937 5.12768 19.1269C5.01559 18.2932 5.0156 17.234 5.01563 15.9238L5.01563 8.14044C5.0156 6.83025 5.01559 5.77109 5.12767 4.93739C5.24422 4.07056 5.49416 3.33603 6.07818 2.75201C6.66221 2.16799 7.39673 1.91805 8.26356 1.8015C9.09727 1.68941 10.1564 1.68943 11.4666 1.68945H12.5351C13.8453 1.68943 14.9045 1.68942 15.7382 1.8015ZM15.149 5.31728C15.149 5.73149 14.8132 6.06728 14.399 6.06728L9.60262 6.06728C9.1884 6.06728 8.85262 5.73149 8.85262 5.31728C8.85262 4.90307 9.1884 4.56728 9.60262 4.56728H14.399C14.8132 4.56728 15.149 4.90307 15.149 5.31728ZM12.6896 17.3083C12.6896 16.9279 12.3812 16.6194 12.0007 16.6194C11.6202 16.6194 11.3118 16.9279 11.3118 17.3083C11.3118 17.6888 11.6202 17.9972 12.0007 17.9972C12.3812 17.9972 12.6896 17.6888 12.6896 17.3083ZM12.0007 15.1194C13.2096 15.1194 14.1896 16.0994 14.1896 17.3083C14.1896 18.5172 13.2096 19.4972 12.0007 19.4972C10.7918 19.4972 9.81178 18.5172 9.81178 17.3083C9.81178 16.0994 10.7918 15.1194 12.0007 15.1194Z"
+                                              fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="">
+                        <ul class="foot-links navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="/">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="/">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="/">Terms of Use</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="/">Help Center</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <div class="d-flex gap-2">
+                                    <a href="" class="">
+                                        <img src="assets/images/social-icons/instagram-alt.svg" alt="">
+                                    </a>
+                                    <a href="" class="">
+                                        <img src="assets/images/social-icons/facebook-alt.svg" alt="">
+                                    </a>
+                                    <a href="" class="">
+                                        <img src="assets/images/social-icons/x-alt.svg" alt="">
+                                    </a>
+                                </div>
+                                <a class="nav-link py-1" href="/">support@boonify.com</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-light d-none onscroll-show fixed-top bg-transparent">
+            <div class="container px-0">
+                <div class="bg-white mx-auto rounded-pill overflow-hidden py-2 py-md-3 my-4 px-5 d-flex align-items-center">
+                    <a class="navbar-brand me-4" href="/" style="filter: none !important;">
+                        <img src="assets/images/logo/boonify-Icon.png" class="bny-logo-nav" alt="">
+                    </a>
+                    <div class="border-end me-4" style="height: 20px;"></div>
+                    <ul class="navbar-nav flex-row justify-content-center gap-5 gap-md-8 flex-grow-1 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#why-boonify">Why Boonify </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#what-boonify-offers">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap btn btn-primary text-white rounded-pill py-2s px-1 py-md-2 px-md-3"
+                               href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal">
+                                <span>Get the App</span>
+                                <svg class="get-app-icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M15.5383 3.28813C14.8162 3.19105 13.8583 3.18945 12.4805 3.18945H11.5212C10.1434 3.18945 9.18551 3.19105 8.46343 3.28813C7.76294 3.38231 7.39771 3.55381 7.13884 3.81267C6.87998 4.07154 6.70848 4.43676 6.6143 5.13726C6.51722 5.85934 6.51563 6.81725 6.51563 8.19506L6.51563 15.8692C6.51563 17.247 6.51722 18.2049 6.6143 18.927C6.70848 19.6275 6.87998 19.9927 7.13884 20.2516C7.39771 20.5105 7.76294 20.682 8.46343 20.7761C9.18551 20.8732 10.1434 20.8748 11.5212 20.8748L12.4805 20.8748C13.8583 20.8748 14.8162 20.8732 15.5383 20.7761C16.2388 20.6819 16.604 20.5105 16.8629 20.2516C17.1217 19.9927 17.2932 19.6275 17.3874 18.927C17.4845 18.2049 17.4861 17.247 17.4861 15.8692V8.19506C17.4861 6.81725 17.4845 5.85934 17.3874 5.13726C17.2932 4.43676 17.1217 4.07154 16.8629 3.81267C16.604 3.55381 16.2388 3.38231 15.5383 3.28813ZM15.7382 1.8015C16.605 1.91805 17.3395 2.16799 17.9235 2.75201C18.5076 3.33603 18.7575 4.07056 18.8741 4.93739C18.9861 5.77109 18.9861 6.83025 18.9861 8.14044V15.9238C18.9861 17.234 18.9861 18.2932 18.8741 19.1269C18.7575 19.9937 18.5076 20.7282 17.9235 21.3122C17.3395 21.8963 16.605 22.1462 15.7382 22.2628C14.9045 22.3748 13.8453 22.3748 12.5351 22.3748L11.4667 22.3748C10.1564 22.3748 9.09727 22.3748 8.26356 22.2628C7.39673 22.1462 6.66221 21.8963 6.07818 21.3122C5.49416 20.7282 5.24422 19.9937 5.12768 19.1269C5.01559 18.2932 5.0156 17.234 5.01563 15.9238L5.01563 8.14044C5.0156 6.83025 5.01559 5.77109 5.12767 4.93739C5.24422 4.07056 5.49416 3.33603 6.07818 2.75201C6.66221 2.16799 7.39673 1.91805 8.26356 1.8015C9.09727 1.68941 10.1564 1.68943 11.4666 1.68945H12.5351C13.8453 1.68943 14.9045 1.68942 15.7382 1.8015ZM15.149 5.31728C15.149 5.73149 14.8132 6.06728 14.399 6.06728L9.60262 6.06728C9.1884 6.06728 8.85262 5.73149 8.85262 5.31728C8.85262 4.90307 9.1884 4.56728 9.60262 4.56728H14.399C14.8132 4.56728 15.149 4.90307 15.149 5.31728ZM12.6896 17.3083C12.6896 16.9279 12.3812 16.6194 12.0007 16.6194C11.6202 16.6194 11.3118 16.9279 11.3118 17.3083C11.3118 17.6888 11.6202 17.9972 12.0007 17.9972C12.3812 17.9972 12.6896 17.6888 12.6896 17.3083ZM12.0007 15.1194C13.2096 15.1194 14.1896 16.0994 14.1896 17.3083C14.1896 18.5172 13.2096 19.4972 12.0007 19.4972C10.7918 19.4972 9.81178 18.5172 9.81178 17.3083C9.81178 16.0994 10.7918 15.1194 12.0007 15.1194Z"
+                                          fill="white"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="hero-section">
+        <div class="px-4 pt-16 pt-md-18 col-10 col-md-6 mx-auto text-center border-bottom">
+            <h1 class="text-white">Transforming moments into
+                memories with gifting.</h1>
+            <div class="col-lg-6 mx-auto">
+                <div class="d-grid gap-2 d-flex justify-content-center gap-sm-3 mb-5 mt-8">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal" class="">
+                        <img src="assets/images/appstore-btn.svg" class="bny-store-btn" alt="App Store BTN">
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal" class="">
+                        <img src="assets/images/playstore.svg" class="bny-store-btn" alt="Play Store BTN">
+                    </a>
+                </div>
+            </div>
+            <div class="overflow-hidden">
+                <div class="container-fluid px-5">
+                    <img src="assets/images/phone-illustration.svg" height="700" class="img-fluid mb-4"
+                         alt="Example image" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <img src="assets/images/welcome-toboonify-text.svg" alt="" class="img-fluid d-none d-md-block w-100">
+            <div class="col-11 d-md-none mx-auto text-center my-8 position-relative" style="font-size: 18px">
+                <img src="assets/images/pink-heart.png" alt="" style="height: 36px;z-index: 3;"
+                     class="position-absolute animate-heart start-0 mt-n6 top-0 ms-n1"/>
+                <img src="assets/images/arrow-curl.svg" alt="" style="height: 28px;rotate: 60deg;"
+                     class="position-absolute start-50 translate-middle-x mb-n12 bottom-0 animate-curl-arrow"/>
+                <div id="welcome-boonify-text-container" style="font-weight: 800;color: black;"></div>
+            </div>
+        </div>
+    </section>
+    <section id="why-boonify">
+        <div class=" my-4 my-md-6">
+            <h3 class="text-center mb-8 fs-1 mb-8 mb-md-12">Why choose <br class="d-md-none"/>Boonify?</h3>
+            <div class="scroll-container d-none d-md-block">
+                <div class="scroll-content position-sticky top-0">
+                    <div class="why-choose-bny-card card">
+                        <header class="card-body text-center px-8 mt-3">
+                            <p><span class="fw-bold">Custom Gift Experience:</span> Tailor every gift to reflect your
+                                unique sentiments.</p>
+                        </header>
+                        <img src="assets/images/cs-gift-ex.png" class="card-img-bottom" alt="">
+                    </div>
+                    <div class="why-choose-bny-card card">
+                        <header class="card-body text-center mt-3">
+                            <p><span class="fw-bold">Video Messages:</span> Add a heartfelt video to
+                                connect beyond the distance.</p>
+                        </header>
+                        <img src="assets/images/video-msg.png" class="card-img-bottom" alt="">
+                    </div>
+                    <div class="why-choose-bny-card card">
+                        <header class="card-body text-center mt-3">
+                            <p><span class="fw-bold">AI Message Suggestions:</span> Get inspired with
+                                personalized, thoughtful message ideas.</p>
+                        </header>
+                        <img src="assets/images/ai-msg-sug.png" class="card-img-bottom" alt="">
+                    </div>
+                    <div class="why-choose-bny-card card">
+                        <header class="card-body text-center mt-3">
+                            <p><span class="fw-bold">Pay Now, Deliver Later:</span> Plan ahead and
+                                schedule deliveries for the perfect moment</p>
+                        </header>
+                        <img src="assets/images/scheduled-delivery.png" class="card-img-bottom" alt="">
+                    </div>
+                    <div class="why-choose-bny-card card">
+                        <header class="card-body text-center mt-3">
+                            <p><span class="fw-bold">Wish Notes:</span> Add a personal touch with custom
+                                messages</p>
+                        </header>
+                        <img src="assets/images/wish-notes.png" class="card-img-bottom" alt="">
+                    </div>
+                    <div class="why-choose-bny-card card">
+                        <header class="card-body text-center mt-3">
+                            <p><span class="fw-bold">Gift Registry:</span> Share your wishlist with family
+                                and friends</p>
+                        </header>
+                        <img src="assets/images/gift-registry.jpeg" class="card-img-bottom" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <swiper-container class="d-md-none" slides-per-view="1.3" centered-slides="true" space-between="10">
+                <swiper-slide class="why-choose-bny-card card">
+                    <header class="card-body text-center px-8 mt-3">
+                        <p><span class="fw-bold">Custom Gift Experience:</span> Tailor every gift to reflect your unique
+                            sentiments.</p>
+                    </header>
+                    <img src="assets/images/cs-gift-ex.png" class="card-img-bottom" alt="">
+                </swiper-slide>
+                <swiper-slide class="why-choose-bny-card card">
+                    <header class="card-body text-center mt-3">
+                        <p><span class="fw-bold">Video Messages:</span> Add a heartfelt video to
+                            connect beyond the distance.</p>
+                    </header>
+                    <img src="assets/images/video-msg.png" class="card-img-bottom" alt="">
+                </swiper-slide>
+                <swiper-slide class="why-choose-bny-card card">
+                    <header class="card-body text-center mt-3">
+                        <p><span class="fw-bold">AI Message Suggestions:</span> Get inspired with
+                            personalized, thoughtful message ideas.</p>
+                    </header>
+                    <img src="assets/images/ai-msg-sug.png" class="card-img-bottom" alt="">
+                </swiper-slide>
+                <swiper-slide class="why-choose-bny-card card">
+                    <header class="card-body text-center mt-3">
+                        <p><span class="fw-bold">Pay Now, Deliver Later:</span> Plan ahead and
+                            schedule deliveries for the perfect moment</p>
+                    </header>
+                    <img src="assets/images/scheduled-delivery.png" class="card-img-bottom" alt="">
+                </swiper-slide>
+                <swiper-slide class="why-choose-bny-card card">
+                    <header class="card-body text-center mt-3">
+                        <p><span class="fw-bold">Wish Notes:</span> Add a personal touch with custom
+                            messages</p>
+                    </header>
+                    <img src="assets/images/wish-notes.png" class="card-img-bottom" alt="">
+                </swiper-slide>
+                <swiper-slide class="why-choose-bny-card card">
+                    <header class="card-body text-center mt-3">
+                        <p><span class="fw-bold">Gift Registry:</span> Share your wishlist with family
+                            and friends</p>
+                    </header>
+                    <img src="assets/images/gift-registry.jpeg" class="card-img-bottom" alt="">
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </section>
+
+    <section id="what-boonify-offers" class="position-relative overflow-x-hidden">
+        <img src="assets/images/heart.svg" alt="" class="position-absolute heart-float-element">
+        <img src="assets/images/present.svg" alt=""
+             class="position-absolute d-none d-md-block top-50 ms-xxl-8 translate-middle-y start-0" style="width: 100px;">
+        <div class="container mb-14 mt-16 my-md-18">
+            <h2 class="text-center mb-8 fs-1 mb-md-14">What Boonify <br class="d-md-none"/>Offers</h2>
+            <div class="row col-md-11 mx-auto g-6 justify-content-between d-none d-md-flex">
+                <div class="col-5 rounded-5 card bny-offer-card py-0 px-0 mt-0" style="background:rgba(195, 178, 231, 1);">
+                    <h3 class="py-6 px-6">Customization</h3>
+                    <img src="assets/images/customization.png" alt="" style="height: 480px;width: 100%;"
+                         class="rounded-4 ms-n5 bg-transparent">
+                    <p class="py-3 px-6">
+                        Use a pre-designed template or<br/>
+                        personalize with video, stickers,<br/>
+                        fonts, and more
+                    </p>
+                </div>
+                <div class="col-7 row g-6 mt-0">
+                    <div class="col-12 card bny-offer-card p-0 rounded-5 mt-0 d-flex flex-row"
+                         style="background: rgba(246, 130, 165, 1);">
+                        <div class="p-8 pe-0 align-self-end">
+                            <h3 class="">Scheduling</h3>
+                            <p class="card-text text-nowrap">Schedule all your cards and gifts<br/>
+                                now and we’ll send them later</p>
+                        </div>
+                        <img src="assets/images/scheduling.png" alt="" class="w-100 mt-n10 ms-n14"
+                             style="height: 380px;">
+                    </div>
+                    <div class="d-flex gap-6 ps-0">
+                        <div class="col-6 card bny-offer-card rounded-5 p-3 pb-0" style="background: rgba(201, 218, 143, 1);">
+                            <img src="assets/images/%20cards.png" alt=""
+                                 style="height: auto;width: 100%;max-height: 250px;"
+                                 class="card-img-top mt-n10 mb-4 ms-n2">
+                            <div class="card-body">
+                                <h3 class="">Leisure</h3>
+                                <p class="">Access all your gift cards,<br/>
+                                    experience the best of activities</p>
+                            </div>
+                        </div>
+                        <div class="col-6 card bny-offer-card overflow-hidden rounded-5 p-0 pt-3"
+                             style="background: rgba(254, 223, 111, 1);">
+                            <div class="card-body px-6 mb-0 pb-0">
+                                <h3 class="">Wishlist</h3>
+                                <p class="">Drum up surprise gifts ahead<br/>
+                                    of your celebration</p>
+                            </div>
+                            <img src="assets/images/wishlist.png" alt="" class="w-100 p-0 card-img-bottom">
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-6 ps-0">
+                    <div class="col-8 card bny-offer-card overflow-hidden rounded-5 d-flex flex-row "
+                         style="background: rgba(249, 164, 116, 1);">
+                        <div class="col-3 card-body px-6 mb-0 pb-0 align-self-end">
+                            <h3 class="">Send Gifts</h3>
+                            <p class="">Send as a group with<br/>
+                                friends or individually</p>
+                        </div>
+                        <div class="col-9">
+                            <img src="assets/images/send-gifts.png" alt="" class="img-fluid h-100 object-fit-cover"
+                                 style="object-position: left center;">
+                        </div>
+                    </div>
+                    <div class="col-4 card bny-offer-card rounded-5 overflow-hidden" style="background: rgba(184, 206, 220, 1);">
+                        <div class="card-body p-6 mb-0 pb-0">
+                            <h3 class="">Reminders</h3>
+                            <p class="">Never miss a birthday<br/>
+                                again</p>
+                        </div>
+                        <img src="assets/images/reminders.png" alt="" class="w-100 p-0 ps-6 card-img-bottom">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex d-md-none flex-column gap-8">
+                <div class="col-10 mx-auto rounded-5 card bny-offer-card py-0 pb-5 px-0 mt-0"
+                     style="background:rgba(195, 178, 231, 1);">
+                    <h3 class="pt-6 fw-800 mb-0 px-6 text-magenta-25">Customization</h3>
+                    <p class="py-3 mb-0 px-6 text-magenta-25">
+                        Use a pre-designed template or
+                        personalize with video, stickers,
+                        fonts, and more
+                    </p>
+                    <img src="assets/images/customization-mb.png" alt="" style="height: 220px;width: 100%;"
+                         class="rounded-4 ms-n5 bg-transparent">
+                </div>
+                <div class="col-10 mx-auto card bny-offer-card p-0 pb-5 px-2 rounded-5 mt-0"
+                     style="background: rgba(246, 130, 165, 1);">
+                    <div class="p-8 ps-5 pe-7 pb-3">
+                        <h3 class="fw-800 text-magenta-25">Scheduling</h3>
+                        <p class="card-text text-magenta-25 lh-sm">Schedule all your cards and gifts
+                            now and we’ll send them later</p>
+                    </div>
+                    <img src="assets/images/scheduling.png" alt="" class="w-100"
+                         style="height: 220px;">
+                </div>
+                <div class="col-10 mx-auto card bny-offer-card rounded-5 p-3 pb-0" style="background: rgba(201, 218, 143, 1);">
+                    <div class="card-body mb-0">
+                        <h3 class="fw-800" style="color: #1C471F;">Leisure</h3>
+                        <p class="text-magenta-25">Access all your gift cards,<br/>
+                            experience the best of activities</p>
+                    </div>
+                    <img src="assets/images/%20cards.png" alt=""
+                         style="height: auto;width: 100%;max-height: 250px;"
+                         class="card-img-bottom mb-6 mt-n4">
+                </div>
+                <div class="col-10 mx-auto card bny-offer-card overflow-hidden rounded-5 p-0 pt-3"
+                     style="background: rgba(254, 223, 111, 1);">
+                    <div class="card-body px-6 mb-0 pb-0">
+                        <h3 class="fw-800" style="color: #1C471F;">Wishlist</h3>
+                        <p class="text-magenta-25">Drum up surprise gifts ahead<br/>
+                            of your celebration</p>
+                    </div>
+                    <img src="assets/images/wishlist-mb.png" alt="" class="w-100 p-0 px-8 card-img-bottom">
+                </div>
+                <div class="col-10 mx-auto card bny-offer-card overflow-hidden rounded-5"
+                     style="background: rgba(249, 164, 116, 1);">
+                    <div class="card-body px-6 mb-0 pb-0">
+                        <h3 class="fw-800" style="color: #1C471F;">Send Gifts</h3>
+                        <p class="text-magenta-25">Send as a group with<br/>
+                            friends or individually</p>
+                    </div>
+                    <div class="mt-n9">
+                        <img src="assets/images/send-gifts-mb.png" alt="" class="i"
+                             style="height: 280px; width: 100%;">
+                    </div>
+                </div>
+                <div class="col-10 mx-auto card bny-offer-card rounded-5 overflow-hidden" style="background: rgba(184, 206, 220, 1);">
+                    <div class="card-body p-6 mb-0 pb-0">
+                        <h3 class="fw-800" style="color: #184363;">Reminders</h3>
+                        <p class="" style="color: #184363;">Never miss a birthday<br/>
+                            again</p>
+                    </div>
+                    <img src="assets/images/reminders.png" alt="" class="w-100 p-0 ps-6 card-img-bottom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="steps-to-gift" class="pt-md-12 pb-16">
+        <img src="assets/images/bell.svg" alt="" class="position-absolute d-none d-md-block end-0 pe-16 top-0 animate__animated animate__shakeX animate__infinite">
+        <img src="assets/images/flowers.svg" alt=""
+             class="position-absolute d-none d-md-block  pe-8 flower-floating-element">
+        <img src="assets/images/gift-box.svg" alt="" class="position-absolute d-none d-md-block start-0 ps-8 animate__animated animate__backInLeft"
+             style="top: 60%;">
+        <div class="container">
+            <div class="mx-auto text-center d-md-none">
+                <img src="assets/images/flowers.svg" alt="" height="180">
+            </div>
+
+            <h2 class="text-center mb-8">Seamless Gifting in <br class="d-md-none"/>4 Easy Steps</h2>
+
+            <div class="col-md-7 mx-auto">
+                <div class="row gap-0 gx-3 gy-5">
+                    <div class="col-md-6 h-100 position-relative animate__animated animate__backInRight animate__delay-1s">
+                        <img class="img-fluid rounded-4 w-100" src="assets/images/steps/download-app.svg" alt="">
+                        <div class="position-absolute bottom-0 pb-3 start-50 translate-middle-x">
+                            <div class="d-grid gap-2 d-flex justify-content-center gap-sm-3 mb-5 mt-8">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal" class="">
+                                    <img src="assets/images/appstore-btn-alt.svg" style="height: 36px;"
+                                         alt="App Store BTN">
+                                </a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal" class="">
+                                    <img src="assets/images/playstore-alt.svg" style="height: 36px;"
+                                         alt="Play Store BTN">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 h-100 animate__animated animate__backInRight animate__delay-2s">
+                        <img class="img-fluid rounded-4 w-100" src="assets/images/steps/create-gift.png" alt="">
+                    </div>
+                    <div class="col-md-6 h-100 animate__animated animate__backInRight animate__delay-3s">
+                        <img class="img-fluid rounded-4 w-100" src="assets/images/steps/pick-the-moment.png" alt="">
+                    </div>
+                    <div class="col-md-6 h-100 animate__animated animate__backInRight animate__delay-4s">
+                        <img class="img-fluid rounded-4 w-100 h-100 object-fit-cover"
+                             src="assets/images/steps/celebrate-connection.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 mx-auto text-center mt-8">
+                <button class="btn btn-bny-secondary text-nowrap px-12 py-4 rounded-4">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="pb-0 pb-lg-14 pt-16 position-relative">
+        <img src="assets/images/boxed.svg" alt="" class="d-md-none position-absolute top-0 start-50 translate-middle-x"
+             style="height: 80px;">
+        <div class="container position-relative">
+            <img src="assets/images/boxed.svg" alt="" class="d-none d-md-block position-absolute top-0 mt-n8 end-0"
+                 style="height: 60px;">
+            <img src="assets/images/wapped-gift.svg" alt="" class="d-none d-md-block position-absolute top-0 mt-n12 start-0"
+                 style="height: 100px;">
+            <h2 class="text-center mb-8">What Our <br class="d-md-none"/>Users Say</h2>
+
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center my-8 gap-4">
+                <img src="assets/images/purple-stars.png" alt="" style="height: 28px">
+                <p class="mb-0 fw-800" style="font-size:16px;color: #1B1D20;">Rated 4.7/5 on the AppStore and Google
+                    Play</p>
+            </div>
+        </div>
+        <swiper-container class="d-none d-md-block" slides-per-view="5.3" autoplay="true" loop="true"
+                          centered-slides="false" slides-offset-before="250" cursor-grab="true" space-between="10">
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <swiper-container slides-per-view="1.5" class="d-md-none" autoplay="true" loop="true" centered-slides="false"
+                          slides-offset-before="25" cursor-grab="true" space-between="10">
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
+                <div class="mb-4">
+                    <p class="mb-0">Ada</p>
+                    <img src="assets/images/gold-stars.png" alt="" style="height: 24px;">
+                </div>
+                <div class="card-body p-0">ekwjgfqnnfkofn1oif1kofn1kfnfnfnkfknfnkmdwmqd w df wmf f df d
+                    qkjfnqkfnk1f1ioffkf3kekkkwkwkwkwkkwkwkwkwkwkwkwkw
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <div class="text-center mt-8 d-md-none">
+            <img src="assets/images/yellow-cake.png" alt="">
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container position-relative">
+            <img src="assets/images/yellow-cake.png" alt="" class="position-absolute start-0 top-50 translate-middle-y d-none d-md-block" style="height:
+            150px;">
+            <img src="assets/images/smile.png" alt="" class="position-absolute end-0 top-50 translate-middle-y d-none d-md-block" style="height:
+            150px;">
+            <div class="card p-8 col-md-9 mx-auto rounded-bottom-5 pt-14"
+                 style="background-size: 100% 100%;background-image:url(assets/images/Background.png);">
+                <h2 class="mx-auto col-10 mb-8 text-center">Make gifting an unforgettable experience. download Boonify
+                    and celebrate every connection meaningfully.</h2>
+                <div class="" style="height: 500px;">
+                    <img src="assets/images/phone-frame.png" alt="" class="h-100 w-100 object-fit-contain">
+                </div>
+                <div class="d-grid gap-2 d-sm-flex justify-content-center gap-sm-3 mb-5 mt-8">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal" class="">
+                        <img src="assets/images/appstore-btn-alt.svg" style="height: 48px;"
+                             alt="App Store BTN">
+                    </a>
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal" class="">
+                        <img src="assets/images/playstore-alt.svg" style="height: 48px;"
+                             alt="Play Store BTN">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pt-8 position-relative overflow-hidden">
+        <div class="">
+            <img src="assets/images/cloud-bg.jpg" alt="" class="w-100 h-auto">
+        </div>
+        <div class="container">
+            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4">
+                <a href="#" class="nav-link text-uppercase text-primary">About Us</a>
+                <a href="/privacy-policy.html" class="nav-link text-uppercase text-primary">Privacy Policy</a>
+                <a href="/terms-of-use.html" class="nav-link text-uppercase text-primary">Terms of Use</a>
+                <a href="#" class="nav-link text-uppercase text-primary">Help Center</a>
+            </nav>
+            <ul class="d-flex list-unstyled justify-content-center gap-3 my-4">
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/instagram.svg" height="48px" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/facebook.svg" height="48px" alt="">
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="">
+                        <img src="assets/images/social-icons/x.svg" height="48px" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="text-center my-12 mb-12">
+                <img src="assets/images/logo/boonify-logo-lg.svg" alt="" class="col-4">
+            </div>
+        </div>
+        <img src="assets/images/ribbon.png" alt="" class="img-fluid mb-2">
+        <div class="bg-primary py-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
+    </footer>
+
+    <div class="modal fade" id="waitlistModal" tabindex="-1" aria-labelledby="waitlistModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background-color:#F0E0ED;">
+                <div class="modal-header p-0 border-bottom-0">
+                    <img src="assets/images/modal-ribbon.png" class="w-100">
+                    <!--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center h-100">
+                    <div class="col-lg-6 col-10 mx-auto row align-items-center justify-content-center mt-14 mt-lg-0">
+                        <div class="col-lg-6 col-12 text-center text-lg-start">
+                            <img src="assets/images/logo/boonify-logo-lg.svg" class="bny-logo" height="75" alt="">
+                            <h2 class="">Ready to add your personal touch to every gift?</h2>
+                            <p class="">Be the first in line to experience the joy of personalized gift cards, custom
+                                gift boxes, and the ease of picking the perfect presents for your loved ones. </p>
+                            <h3 class="">Sign up today and let the fun begin!</h3>
+                            <label class="input-group mb-3 rounded-pill bg-white">
+                                <span class="input-group-text px-3 bg-white py-3 border-white rounded-start-pill"
+                                      style="height: 45px;">
+                                    <img src="assets/images/star-3d.png" height="18" alt="">
+                                </span>
+                                <input type="email" class="form-control border-0 ps-0"
+                                       style="height: 45px;border: none;box-shadow: none !important;z-index: 1;"
+                                       placeholder="Enter email">
+                                <button class="btn btn-bny-secondary rounded-pill px-5 px-lg-7 position-absolute end-0 me-n4 me-lg-n8 h-100"
+                                        style="z-index: 2;" type="button">Sign Me Up
+                                </button>
+                            </label>
+                        </div>
+                        <div class="col-lg-5 col-12 text-center">
+                            <img src="assets/images/app-mockup.png" class="phone-mockup" alt="" height="500"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer py-6 border-top" style="border-color: #0000001A!important;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Bootstrap JS-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper-element-bundle.min.js"></script>
+<script src="assets/js/scrollpsy.js"></script>
+<!--Custom JS-->
+<script src="assets/js/script.js"></script>
+<script>
+    // 👇 usage
+    ScrollSpy(document.body, document.querySelector(`nav`), {})
+</script>
+<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+<script>
+    const {animate, scroll} = Motion
+    // Ensure DOM content is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        // gsap.registerPlugin(ScrollTrigger);
+
+        const scrollContainer = document.querySelector(".scroll-container");
+        const scrollContent = document.querySelector(".scroll-content");
+
+        // Calculate total horizontal distance to scroll
+        const scrollDistance = (scrollContent.scrollWidth - scrollContainer.offsetWidth) + 300;
+        // Set up the ScrollTrigger to pin the slider section and animate horizontally
+
+        const animation = animate(scrollContent, {x: -scrollDistance, ease: "none"})
+        animation.speed = 0.2;
+        animation.time = 5;
+        scroll(animation, {target: scrollContainer, offset: ["end end", "start start"]})
+
+        // gsap.to(scrollContent, {
+        //     x: -scrollDistance,
+        //     ease: "none",s
+        //     scrollTrigger: {
+        //         trigger: scrollContainer,
+        //         start: "center center",
+        //         end: () => "+=" + scrollDistance
+        //         scrub: true,
+        //         pinSpacing: true,
+        //         pin: true,  // Pins the entire container so vertical scroll is fully dedicated to this section
+        //         // By not removing pinSpacing, GSAP will add vertical space to force users to scroll through the horizontal animation.
+        //     }
+        // });
+    });
+    //
+</script>
+<script>
+    const lines = [
+        `<p class="d-flex align-items-center justify-content-center"><span class="">Welcome to </span> <img src='assets/images/logo/boonify-Icon.png' class="ms-2" style="height: 25px;"/> <span class="text-primary me-2">oonify.</span><span>Here,</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span class="me-1">we believe that gifting is</span><span class="text-primary">about</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">creating moments that resonate,</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">memories that linger, and</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">connections that endure.</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">W</span><span>e don’t just deliver gifts—</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span>We deliver experiences, emotions,</span></p>`,
+        `<p class="d-flex align-items-center justify-content-center"><span>and memories that last a lifetime.</span></p>`,
+    ];
+
+    let currentLineIndex = 0;
+
+    function animateLine() {
+        const container = document.getElementById('welcome-boonify-text-container');
+
+        container.innerHTML = lines[currentLineIndex];
+
+        // Calculate total duration for animation
+        const totalDuration = 1500;
+
+        // Move the current line up after animation
+        setTimeout(() => {
+            container.style.transform = "translateY(-100%)";
+        }, totalDuration);
+
+        // Load next line after sliding out
+        setTimeout(() => {
+            // Move container below view instantly (without transition)
+            container.style.transition = "none";
+            container.style.transform = "translateY(100%)";
+
+            // Move to the next line (looping back if at the last one)
+            currentLineIndex = (currentLineIndex + 1) % lines.length;
+
+            // Force a reflow before re-enabling transition
+            void container.offsetWidth;
+
+            // Restore transition and slide new text into view
+            container.style.transition = "transform 1s ease-in-out";
+            container.style.transform = "translateY(0)";
+
+            // Animate next line
+            animateLine();
+        }, totalDuration + 500);
+    }
+
+    // Start animation on page load
+    animateLine();
+</script>
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.getElementById("main-header");
+        if (window.scrollY > 150) { // Adjust this value as needed
+            header.querySelector(".onscroll-show").classList.remove("d-none");
+            header.querySelector(".onscroll-hide").classList.add("d-none");
+        } else {
+            header.querySelector(".onscroll-hide").classList.remove("d-none");
+            header.querySelector(".onscroll-show").classList.add("d-none");
+        }
+    });
+</script>
+</body>
+</html>

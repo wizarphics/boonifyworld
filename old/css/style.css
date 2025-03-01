@@ -1,0 +1,1421 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+
+@font-face {
+  font-family: "Comforter";
+  src: url("../fonts/Comforter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.font-comforter {
+  font-family: "Comforter", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bny-logo {
+  width: 47px;
+  height: 18px;
+}
+
+.bny-header-search-input {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 0;
+}
+
+/* .bny-hero-slides {
+} */
+
+#bny-sd-delivery {
+  background-color: #f4f4f4;
+}
+
+.bny-tab-btn {
+  /* background: #000; */
+  /* border: 2px solid; */
+  /* border-image-source: linear-gradient(
+    270deg,
+    #652c91 0%,
+    #b271b7 57.84%,
+    #d591c9 100%
+  ); */
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* background: linear-gradient(270deg, #652c91 0%, #b271b7 57.84%, #d591c9 100%); */
+  background-color: var(--fc-primary);
+  font-size: 12px;
+  font-weight: 500;
+  /*font-family: Goldplay;*/
+  text-wrap: nowrap;
+  border-radius: 8px !important;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  padding: 1.5px;
+}
+
+.bny-tab-btn span {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  background-color: #f5eaf3;
+  border-radius: calc(8px - 2px) !important;
+  transition: background 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  font-size: 10px;
+  line-height: 14px;
+  color: var(--fc-primary) !important;
+}
+
+.bny-tab-btn span:before {
+  content: "";
+  position: absolute;
+  /* background: #383736; */
+  bottom: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-transition: top 0.4s ease-in-out;
+  background: linear-gradient(270deg, #652c91 0%, #b271b7 57.84%, #d591c9 100%);
+}
+
+.bny-tab-btn:is(:hover, :focus-visible) {
+  background: linear-gradient(270deg, #652c91 0%, #b271b7 57.84%, #d591c9 100%);
+}
+
+.bny-tab-btn:is(:hover, :focus-visible) span {
+  z-index: 1;
+  color: #ffffff !important;
+}
+
+.bny-tab-btn:is(:hover, :focus-visible) span::before {
+  top: 0;
+}
+
+.bny-slider-arrow {
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  box-shadow: 0px 8px 24px 0px #959da533;
+}
+.bny-slider-arrow-box {
+  background-color: #f5eaf3;
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  /* box-shadow: 0px 8px 24px 0px #959da533; */
+}
+
+#hero-section {
+  /* background-color: #f5eaf3; */
+}
+/* 
+#hero-section [class="carousel-control-next"] {
+  right: -50px;
+}
+
+#hero-section [class="carousel-control-prev"] {
+  left: -50px;
+} */
+
+.bny-hero-banner {
+  height: min(650px, 35vh);
+}
+
+@media screen and (min-width: 1024px) {
+  .bny-hero-banner {
+    height: max(600px, 40vh);
+  }
+}
+
+.bny-header-search-input > .form-control {
+  border-start-end-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+  height: 50px;
+}
+
+.bny-header-search-input > .btn {
+  height: 50px;
+}
+
+.dropdown-toggle:after {
+  content: none !important;
+}
+
+.bny-title {
+  font-size: 10px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #221c26;
+}
+
+[class*="bny-btn-"] {
+  height: 56px !important;
+}
+
+.bny-hero-btn {
+  font-size: 9px;
+  line-height: 18px;
+  font-weight: 600;
+  padding: 5px 15px;
+  white-space: nowrap;
+  /* padding-inline: 2.75rem; */
+  border-radius: 8px 8px 0px 8px;
+}
+
+.bny-btn-gradient {
+  color: white !important;
+  border: transparent;
+  background: linear-gradient(270deg, #652c91 0%, #b271b7 57.84%, #d591c9 100%);
+}
+
+#bny-mobile-app-banner p {
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 80%;
+}
+
+.bny-navbar {
+  gap: 1rem;
+}
+
+.bny-navbar .dropdown-fullwidth .dropdown-menu {
+  /* top: 60px; */
+  margin-top: 1.5rem;
+  padding-inline: 3rem !important;
+  /* margin-inline: 3rem !important; */
+}
+
+.bny-navbar .dropdown-fullwidth .dropdown-menu h6 {
+  font-size: 22px !important;
+  font-weight: 600;
+}
+
+.bny-navbar .dropdown-fullwidth .dropdown-menu .dropdown-item {
+  font-size: 16px !important;
+  font-weight: 500;
+  text-decoration: underline;
+  color: #000000;
+}
+
+.bny-disc-box {
+  background: #000;
+  height: 30px;
+  background-color: #280145;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.bny-best-offer-txt {
+  font-size: 10px;
+  line-height: 1;
+  transform: rotate(-20.19deg);
+  color: var(--fc-primary);
+  letter-spacing: 0.5%;
+}
+
+.bny-navbar .nav-item {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.bny-navbar .nav-link {
+  color: #221c26; /* grey-900 */
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+  transition: all 0.4s ease-in-out;
+}
+
+.bny-navbar .nav-link:is(:hover, :focus) {
+  border: 1px solid var(--fc-primary);
+  background-color: #f5eaf3;
+}
+
+.bny-gift-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  height: min(100%, 188px);
+}
+
+.bny-gift-card h4 {
+  font-size: clamp(12px, 2.5vw, 1.05rem);
+}
+
+.bny-gift-cards-sliders .slick-slide {
+  margin: 0 20px !important;
+}
+
+.bny-gift-cards-sliders .slick-slide.slick-current {
+  margin-left: 0;
+}
+
+.bny-slick-dotted .slick-dots {
+  position: relative;
+  bottom: -15px;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0.75rem 0 0 0;
+  padding: 0;
+  transform: translate(-50%, 0);
+}
+
+.bny-slick-dotted .slick-dots li {
+  padding: 5px;
+}
+
+.bny-slick-dotted .slick-dots button::before {
+  content: none;
+}
+
+.bny-slick-dotted .slick-dots button {
+  display: block;
+  width: 40px;
+  height: 5px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  background-color: #e0d5e9;
+  border-radius: var(--fc-border-radius-pill);
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bny-slick-dotted .slick-dots .slick-active button {
+  background-color: var(--fc-primary);
+}
+
+.bny-gift-card .bny-gift-card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#bny-mobile-app-banner {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url(../images/bg-pattern.png);
+  background-blend-mode: color;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#bny-mobile-app-banner h1 {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+#bny-mobile-app-banner h1 > .paint-text {
+  color: var(--fc-primary);
+}
+
+#bny-mobile-app-banner p {
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 100%;
+}
+
+#fav-cards-selections {
+  /* background-image: url(../images/blob-bg.png); */
+  position: relative;
+  /* overflow-x: hidden; */
+  /* background-size: 100% 100%; */
+  /* background-size: cover; */
+  /* background-position: center;  */
+  margin-top: -7rem;
+  /* padding-top: 6rem; */
+}
+
+#fav-cards-selections .blob-bg {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  /* min-height: 650px; */
+  height: auto;
+  max-height: 80vh;
+  /* z-index: -1; */
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  #fav-cards-selections .blob-bg {
+    background-image: url(../images/blob-bg.png);
+    /* z-index: -1; */
+  }
+}
+@media (min-width: 1200px) {
+  #fav-cards-selections .blob-bg {
+    width: 100%;
+    /* height: 100%; */
+    height: 750px;
+    /* z-index: -1; */
+  }
+}
+
+@media (min-width: 1350px) {
+  #fav-cards-selections .blob-bg {
+    width: 100%;
+    /* height: 100%; */
+    height: auto;
+    max-height: 73vh;
+    overflow: hidden;
+    /* z-index: -1; */
+  }
+}
+
+#fav-cards-selections #wavePath {
+  transition: d 2s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.fav-cards-slider .item {
+  max-height: 372px;
+}
+.fav-cards-slider .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+#fav-gift-selection,
+#fav-gift-basket,
+#fav-gift-box {
+  background-color: #f4f4f4;
+}
+
+.bny-v-product-card {
+  background-color: #fff;
+  border-radius: 17px;
+  border-color: #e6e6e7;
+  border: none;
+  padding: 0.5rem 0.85rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bny-h-product-card {
+  background-color: #fff;
+  border-radius: 17px;
+  border: none;
+  border-color: #e6e6e7;
+  padding: 0.5rem 0.85rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+}
+
+.bny-h-product-card .product_name {
+  color: #000000;
+  font-size: clamp(12px, 16px, 18px);
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.bny-h-product-card .product_price {
+  color: #000000;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.bny-h-product-card .add_to_cart {
+  margin-left: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--fc-primary) !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.bny-h-product-card .product_rating,
+.bny-v-product-card .product_rating {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.bny-h-product-card .product_rating .star,
+.bny-v-product-card .product_rating .star {
+  height: 12px;
+  width: 12px;
+}
+
+.bny-v-product-card .product_badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  background-color: #ce97c4;
+  border: 1px solid #e6e6e7;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .bny-h-product-card .product_rating .star.star-blank > path,
+  .bny-v-product-card .product_rating .star.star-blank > path {
+    fill: #ccc;
+  }
+
+  .bny-v-product-card .product_badge {
+    padding: 0.45rem 0.75rem;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 12px;
+    border-radius: 2.5px;
+  }
+}
+
+.bny-v-product-card .add_to_cart {
+  margin-left: 0;
+  padding: 0;
+  text-decoration: none;
+  color: var(--fc-primary) !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.bny-h-product-card .product_img {
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bny-h-product-card .product_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left;
+}
+
+.bny-v-product-card .product_img {
+  height: 120px;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .bny-v-product-card .product_img {
+    height: 164px;
+  }
+}
+
+.bny-v-product-card .product_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bny-v-product-card .product_name {
+  color: #3a363e;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-bottom: 0.5rem;
+}
+
+.bny-v-product-card .product_price {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.bny-card-list {
+  gap: 1rem;
+  --fc-gutter-x: 1rem;
+  --fc-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(var(--fc-gutter-x) * -0.5);
+  margin-right: calc(var(--fc-gutter-x) * -0.5);
+  margin-top: calc(var(--fc-gutter-y) * -1);
+  justify-content: space-evenly;
+  justify-content: safe;
+}
+
+.bny-showcase-card {
+  background-color: #f5eaf3;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  /* margin-inline: 0.35rem;  */
+  flex: 0 0 auto;
+  /* width: calc(50% - 1rem); */
+  aspect-ratio: 1/1.414;
+}
+
+.bny-showcase-card-img {
+  aspect-ratio: 1/1.414;
+  height: 200px;
+  width: 100%;
+}
+
+.bny-showcase-card-img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.bny-showcase-card-action {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex: 1;
+  align-items: center;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-inline: 1rem;
+  color: #000000;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600 !important;
+  transition: color 0.4s ease-in-out;
+}
+
+.bny-showcase-card-action:hover {
+  color: var(--fc-primary);
+}
+
+.bny-showcase-card-action svg {
+  transition: margin-right 0.3s ease-in-out;
+}
+
+.bny-showcase-card-action:hover svg {
+  margin-right: -0.5rem;
+}
+
+#subscription-form {
+  background-color: #75429c;
+}
+
+#subscription-form form {
+  border-radius: 8px 8px 0px 8px;
+  padding: 16px 24px 16px 24px;
+}
+
+#subscription-form h3 {
+  font-size: 28px;
+  color: #ffffff;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+#subscription-form p.bny-desc {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.5%;
+}
+
+#subscription-form .unsubscribe-info {
+  gap: 1rem;
+  display: flex;
+}
+
+#subscription-form .unsubscribe-info a {
+  font-weight: 500;
+  text-decoration: underline;
+  font-family: Poppins, sans-serif;
+}
+
+#subscription-form .unsubscribe-info:is(> p, > a) {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.4%;
+}
+
+#subscription-form form .form-control {
+  border: none;
+  box-shadow: none !important;
+}
+
+#card-banner {
+  background-color: #f5eaf3;
+}
+
+#card-banner .bny-hero-btn {
+  width: 65%;
+}
+
+#bny-header .offcanvas {
+  --fc-offcanvas-bg: #f5eaf3;
+}
+
+.bny-footer {
+  background-color: #fafaf9;
+  position: relative;
+}
+
+.bny-foot-link {
+  color: #000 !important;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.bny-foot-heading {
+  color: #000 !important;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+
+/* Bny Breadcrumb */
+.bny-breadcrumb {
+  --fc-breadcrumb-divider: none;
+  --fc-breadcrumb-item-padding-x: 0.5rem;
+}
+
+.bny-breadcrumb .breadcrumb > .breadcrumb-item:not(.active) {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: center;
+  color: var(--fc-heading-color);
+}
+
+.bny-breadcrumb .breadcrumb > .breadcrumb-item a {
+  color: var(--fc-heading-color) !important;
+}
+
+.bny-breadcrumb .breadcrumb > .breadcrumb-item.active {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 600;
+  color: var(--fc-primary);
+}
+
+.bny-breadcrumb .breadcrumb {
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .bny-breadcrumb .breadcrumb > .breadcrumb-item:not(.active) {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--fc-heading-color);
+  }
+
+  .bny-breadcrumb .breadcrumb > .breadcrumb-item.active {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: var(--fc-primary);
+  }
+}
+
+.bny-lead {
+  color: #221c26;
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+}
+
+.nav-item:has(> .bny-m-navlink) {
+  margin-bottom: 1rem;
+}
+
+.bny-m-navlink {
+  color: var(--fc-heading-color);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bny-foot-social-links a svg {
+  height: 24px;
+  width: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .bny-foot-social-links a svg {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+/* Text Colors */
+.text-grey-600 {
+  color: #3a363e;
+}
+
+.text-grey-700 {
+  color: #534f56;
+}
+
+.text-grey-900 {
+  color: #221c26;
+}
+
+.border-grey-100 {
+  border-color: #e6e6e7 !important;
+}
+.bny-explore-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.bny-explore-grid .loadmore-btn {
+  --fc-link-decoration: none !important;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 600;
+  display: inline;
+  text-align: center;
+}
+.bny-explore-grid-p {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.bny-explore-grid-rp {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.bny-explore-grid-l {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bny-explore-grid-l .bny-exp-card {
+  /* height: 250px; */
+  overflow: hidden;
+  /* aspect-ratio: 1.414/1; */
+  aspect-ratio: 16/9;
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.bny-explore-grid-l .bny-exp-card img, .bny-explore-grid-p .bny-exp-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bny-explore-grid-p .bny-exp-card,
+.bny-exp-card-p {
+  overflow: hidden;
+  aspect-ratio: 1/1.414;
+  position: relative;
+}
+
+.bny-exp-card .bny-add_to_wishlist_btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
+}
+
+.bny-add_to_wishlist_btn > svg {
+  height: 22px;
+  width: 24px;
+}
+
+.bny-tab-switch {
+  --fc-btn-padding-x: 2.5rem;
+  --fc-btn-padding-y: 0.85rem;
+  --fc-btn-font-family: ;
+  --fc-btn-font-size: 0.875rem;
+  --fc-btn-font-weight: 600;
+  --fc-btn-line-height: 1.6;
+  --fc-btn-color: #000000;
+  --fc-btn-bg: #ffffff;
+  --fc-btn-border-width: 2px;
+  --fc-btn-border-color: #9d9a9f;
+  --fc-btn-border-radius: 1rem;
+  --fc-btn-box-shadow: none;
+  --fc-btn-disabled-opacity: 0.65;
+  --fc-btn-focus-box-shadow: none;
+  --fc-btn-active-bg: #f0eaf4;
+  --fc-btn-active-color: #000000;
+  --fc-btn-active-border-color: #662d91;
+  --fc-btn-hover-bg: #f0eaf4;
+  --fc-btn-hover-border-color: #622591;
+  --fc-btn-hover-color: #000000;
+  --fc-btn-active-shadow: none;
+
+  background-color: var(--fc-btn-bg);
+  border: var(--fc-btn-border-width) solid var(--fc-btn-border-color);
+  border-radius: var(--fc-btn-border-radius);
+  color: var(--fc-btn-color);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--fc-btn-font-family);
+  font-size: var(--fc-btn-font-size);
+  font-weight: var(--fc-btn-font-weight);
+  line-height: var(--fc-btn-line-height);
+  padding: var(--fc-btn-padding-y) var(--fc-btn-padding-x);
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  min-width: 150px;
+}
+
+#card-details h2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.bny-radio-select,
+.bny-radio-select-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bny-radio-select-item {
+  /* border: 1px solid #BCAFD6; */
+  --fc-btn-focus-box-shadow: none;
+  --fc-btn-active-shadow: none;
+  --fc-btn-active-border-color: #662d91;
+}
+
+.bny-radio-select-alt .bny-radio-select-item label {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  --fc-btn-bg: rgba(206, 151, 196, 10%);
+  --fc-btn-color: #000000;
+  --fc-btn-border-radius: 0;
+  --fc-btn-border-width: 0.5px;
+  --fc-btn-border-color: #e6e6e7;
+  --fc-btn-active-bg: rgba(206, 151, 196, 10%);
+  --fc-btn-active-border-color: #e6e6e7;
+  --fc-btn-active-color: #000000;
+  height: 80px;
+}
+
+.bny-radio-select-item label .small {
+  color: #534f56;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.bny-radio-select-item label {
+  --fc-btn-color: #000000;
+  --fc-btn-border-radius: 0.5rem;
+  --fc-btn-border-color: rgba(188, 175, 214, 50%);
+  --fc-btn-active-color: #000000;
+
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.65rem;
+  padding-bottom: 1.25rem;
+}
+.bny-radio-select-item
+  .btn-check
+  + label.btn
+  > svg:first-child
+  .active-indicator {
+  opacity: 0;
+  transition: opacity 0.8ms ease-in-out;
+}
+
+.bny-radio-select-item
+  .btn-check:checked
+  + label.btn
+  > svg:first-child
+  .active-indicator {
+  opacity: 1;
+}
+
+.card-desc h3 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #280145;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.card-desc p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3a363e;
+  font-weight: 500;
+}
+
+.card-info p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3a363e;
+  font-weight: 600;
+}
+
+.card-info p > span:last-child {
+  color: #ce97c4;
+}
+
+#customer-feedbacks header {
+  background-color: #f0eaf4;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+}
+
+#customer-feedbacks header h2 {
+  font-size: 16px;
+  line-height: 24px;
+  color: #3a363e;
+  /* font-weight: 500; */
+  margin-bottom: 0;
+}
+
+#bny-review-card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#bny-review-card-grid .bny-review-card {
+  flex: 0 0 auto;
+  width: calc(100% - 0.5rem);
+  background-color: #f4f4f4;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1024px) {
+  #bny-review-card-grid .bny-review-card {
+    flex: 0 0 auto;
+    width: calc(50% - 1.5rem);
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+}
+
+#bny-review-card-grid .bny-review-card .date {
+  color: var(--fc-primary);
+}
+
+@media screen and (max-width: 468px) {
+  .bny-gift-cards-sliders {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .bny-gift-cards-sliders .item {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  .bny-logo {
+    width: min(25vw, 140px);
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bny-logo {
+    width: 128px;
+    height: auto;
+  }
+}
+
+svg.bny-h-bow {
+  animation: rotate360 5s both 3s 2 ease-in-out;
+}
+
+.bny-subheadline:has(~ svg) {
+  margin-bottom: 0;
+}
+
+.bny-add_to_wishlist_btn > svg > path {
+  cursor: pointer;
+  transition: fill 0.5s ease-in-out;
+}
+
+.bny-add_to_wishlist_btn {
+  background: none;
+  border: none !important;
+  padding: 0;
+}
+
+.bny-add_to_wishlist_btn:is(:focus, :focus-visible) {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.bny-add_to_wishlist_btn:is(:focus-visible) > svg > path {
+  fill: #ff0000;
+  stroke: #000000;
+}
+
+.bny-add_to_wishlist_btn:hover > svg > path,
+.bny-add_to_wishlist_btn.active > svg > path {
+  fill: #ff0000;
+  stroke: none;
+}
+
+@keyframes rotate360 {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bny-explore-grid-p {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .bny-explore-grid-l {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .bny-copywright-text {
+    font-size: 8px;
+    line-height: 24px;
+  }
+  .bny-view-all-btn {
+    border: none;
+    padding: 5px !important;
+    background-color: transparent !important;
+  }
+  .bny-foot-icon-grid {
+    gap: 0.15rem;
+    max-width: 96px;
+    justify-content: start;
+  }
+  .bny-foot-icon-grid svg {
+    height: 16px;
+  }
+
+  .bny-subheadline {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  svg.bny-h-bow {
+    height: 24px;
+    width: 24px;
+  }
+
+  .bny-headline {
+    font-size: 22px;
+    line-height: 28px;
+    color: #221c26;
+    font-weight: 600;
+  }
+
+  .fav-cards-grid .item {
+    max-height: 250px;
+  }
+
+  .fav-cards-grid .item > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .bny-footer .bny-logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .bny-showcase-card-action svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  .bny-card-list .bny-showcase-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bny-add_to_wishlist_btn > svg {
+    height: 28px;
+    width: 32px;
+  }
+  .bny-explore-grid-p .bny-exp-card {
+    height: 400px;
+  }
+  .bny-explore-grid-rp .bny-exp-card {
+    height: 350px;
+  }
+  .bny-disc-box {
+    height: 45px !important;
+  }
+  .bny-lead {
+    color: var(--fc-heading-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .bny-showcase-card {
+    background-color: #f5eaf3;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* margin-inline: 0.35rem;  */
+    flex: 0 0 auto;
+    /* width: calc(25% - 1.5rem); */
+  }
+
+  .bny-showcase-card-img {
+    height: 350px;
+    width: 100%;
+  }
+
+  .bny-card-list {
+    gap: 1.5rem;
+    --fc-gutter-x: 1.5rem;
+    --fc-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(var(--fc-gutter-x) * -0.5);
+    margin-right: calc(var(--fc-gutter-x) * -0.5);
+    margin-top: calc(var(--fc-gutter-y) * -1);
+    justify-content: space-evenly;
+  }
+
+  .bny-showcase-card-action {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding-inline: 1rem;
+    color: #000000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    transition: color 0.4s ease-in-out;
+  }
+
+  .bny-foot-link {
+    color: #000 !important;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .bny-foot-heading {
+    color: #000 !important;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+    display: block;
+  }
+
+  .bny-tab-btn span {
+    font-size: 12px;
+    display: block;
+    padding: 0.65rem 1.5rem;
+    background-color: #f5eaf3;
+    color: var(--fc-primary);
+    border-radius: calc(8px - 2px) !important;
+    transition: background 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+  }
+
+  .bny-slider-arrow-box {
+    background-color: #f5eaf3;
+    border-radius: 10px;
+    border: none;
+    height: 91px;
+    width: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    /* box-shadow: 0px 8px 24px 0px #959da533; */
+  }
+
+  .bny-headline {
+    /* font-size: calc(1.575rem + 3.9vw); */
+    line-height: 1;
+    font-weight: 700;
+  }
+
+  .bny-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .bny-hero-btn {
+    height: 56px !important;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding-inline: 2.75rem;
+    border-radius: 8px 8px 0px 8px;
+  }
+  .bny-best-offer-txt {
+    font-size: 16px;
+    line-height: 1;
+    transform: rotate(-20.19deg);
+    color: var(--fc-primary);
+    letter-spacing: 0.5%;
+  }
+
+  #bny-mobile-app-banner h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  #bny-mobile-app-banner h1 > .paint-text {
+    color: inherit;
+  }
+
+  #fav-cards-selection {
+    padding-top: 9rem;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+#card-top-heading {
+  background-color: #f5eaf3;
+}
+.bny-card-effect {
+  transition: all 0.4s ease-in, margin-bottom 0.6s ease-in-out;
+}
+.bny-card-effect:hover {
+  opacity: 0.98;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin-bottom: 2px; */
+  scale: 0.95;
+}
+
+a {
+  color: var(--fc-primary) !important;
+}
+
+[class*="bny-btn-"] {
+  --fc-btn-padding-x: 1rem;
+  --fc-btn-padding-y: 0.55rem;
+  --fc-btn-font-family: ;
+  --fc-btn-font-size: 16px;
+  --fc-btn-font-weight: 600;
+  --fc-btn-line-height: 24px;
+  --fc-btn-color: #5c6c75;
+  --fc-btn-bg: transparent;
+  --fc-btn-border-width: 2px;
+  --fc-btn-border-color: transparent;
+  --fc-btn-border-radius: 0.5rem;
+  --fc-btn-hover-border-color: transparent;
+  --fc-btn-box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  --fc-btn-disabled-opacity: 0.65;
+  --fc-btn-focus-box-shadow: 0 0 0 0.25rem
+    rgba(var(--fc-btn-focus-shadow-rgb), 0.5);
+  height: 35px;
+
+  border-radius: 8px 8px 0px 8px;
+  transition: scale 0.4s ease-in;
+}
+
+[class*="bny-btn-"]:hover {
+  scale: 0.95;
+}
+
+.bny-btn-primary {
+  --fc-btn-color: #fff;
+  --fc-btn-bg: #662d91;
+  --fc-btn-border-color: #662d91;
+  --fc-btn-hover-color: #fff;
+  --fc-btn-hover-bg: #622591;
+  --fc-btn-hover-border-color: #622591;
+  --fc-btn-focus-shadow-rgb: 102, 45, 145;
+  --fc-btn-active-color: #fff;
+  --fc-btn-active-bg: #622591;
+  --fc-btn-active-border-color: #662d91;
+  --fc-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --fc-btn-disabled-color: #fff;
+  --fc-btn-disabled-bg: #662d91;
+  --fc-btn-disabled-border-color: #662d91;
+}
+
+.bny-btn-outline-primary {
+  --fc-btn-color: #662d91;
+  --fc-btn-border-color: #662d91;
+  --fc-btn-hover-color: #fff;
+  --fc-btn-hover-bg: #662d91;
+  --fc-btn-hover-border-color: #662d91;
+  --fc-btn-focus-shadow-rgb: 10, 173, 10;
+  --fc-btn-active-color: #fff;
+  --fc-btn-active-bg: #662d91;
+  --fc-btn-active-border-color: #662d91;
+  --fc-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --fc-btn-disabled-color: #662d91;
+  --fc-btn-disabled-bg: transparent;
+  --fc-btn-disabled-border-color: #662d91;
+  --fc-gradient: none;
+}

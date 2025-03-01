@@ -1,0 +1,444 @@
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+}
+
+body, html {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.font-manrope {
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.text-magenta-25{
+    color: #52225E;
+}
+
+.fw-800{
+    font-weight: 800;
+}
+
+body > .page-wrapper {
+    background-color: #F0E0ED;
+}
+
+.bny-logo {
+    height: 40px;
+    width: auto;
+}
+
+.bny-store-btn {
+    height: 40px;
+}
+
+.page-body {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#hero-section {
+    position: relative;
+    width: 100%;
+    /*height: 1000px;*/
+    background-image: url(../images/hero-bg-gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.why-choose-bny-card {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 40px;
+    background: white;
+    padding: 5px;
+}
+
+#why-boonify {
+    padding: 2rem 0;
+}
+
+#why-boonify h3 {
+    background: linear-gradient(270deg, #D591C9 1%, #B271B7 49%, #652C91 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: calc(1.34375rem + 1.125vw) !important;
+    line-height: 1.2;
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#what-boonify-offers h2 {
+    background: linear-gradient(270deg, #652C91 0%, #B271B7 51%, #D591C9 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    /*font-size: calc(1.34375rem + 1.125vw) !important;*/
+    line-height: 1.2;
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+#testimonials h2 {
+    background: linear-gradient(270deg, #D591C9 0%, #B271B7 49%, #652C91 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+#steps-to-gift h2 {
+    background: linear-gradient(270deg, #652C91 0%, #B271B7 51%, #D591C9 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 2rem;
+    line-height: 1.2;
+    font-family: "Manrope", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 15px;
+    margin-left: 150px;
+    will-change: transform;
+}
+
+.why-choose-bny-card .card-img-bottom {
+    /*height: 300px;*/
+    height: 220px;
+    width: auto;
+    object-fit: fill;
+    margin-bottom: 8px;
+}
+
+#hero-section h1 {
+    font-size: calc(1.625rem + 4.5vw);
+    font-weight: 800;
+    line-height: 1.2;
+    font-family: "Manrope", serif;
+}
+
+.nav-link.active,
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+    color: rgba(102, 45, 145, 1);
+    font-weight: 800;
+}
+
+.bny-logo-nav {
+    height: 16px !important;
+}
+
+.get-app-icon {
+    height: 16px;
+}
+
+.nav-link {
+    border-bottom: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        /*background-image: url(../images/hero-bg-gradient.png);*/
+        background-color: #662D91;
+    }
+
+    .offcanvas-body .nav-link {
+        font-size: 24px;
+    }
+
+    nav + nav .nav-link {
+        font-size: 8px;
+    }
+
+    #what-boonify-offers h2 {
+        font-size: 50px;
+    }
+}
+
+
+#waitlistModal p {
+    font-size: 11px;
+    color: #1e1e1e;
+}
+
+#waitlistModal button {
+    font-size: 8px;
+}
+
+#waitlistModal .bny-logo {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+#waitlistModal .phone-mockup {
+    height: 400px;
+}
+
+#waitlistModal h2 {
+    font-size: 18px;
+}
+
+#waitlistModal h3 {
+    font-size: 14px;
+    color: #662D91;
+    margin-bottom: 12px;
+}
+
+.heart-float-element {
+    top: -125px;
+    scale: 0.6;
+    left: 50%;
+    transform: translateX(-70%) !important;
+}
+
+@media screen and (min-width: 768px) {
+
+    .navbar-nav.foot-links {
+        display: none;
+    }
+
+    .get-app-icon {
+        height: 24px;
+    }
+
+    .bny-logo-nav {
+        height: 28px;
+    }
+
+    .flower-floating-element {
+        scale: 1;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) !important;
+    }
+
+    .heart-float-element {
+        /*scale: 1;*/
+        left: unset;
+        right: -100px;
+        transform: translateY(-50%) !important;
+        top: 50%;
+    }
+
+    .why-choose-bny-card {
+        flex: 0 0 calc(100% / 3.3); /* ~3.2 slides per view */
+        max-width: calc(100% / 3.3);
+    }
+
+    .bny-logo {
+        height: 56px;
+        width: auto;
+    }
+
+    .bny-store-btn {
+        height: 56px;
+    }
+
+    #hero-section {
+        background-size: 100%;
+        background-position: center top;
+    }
+
+    #hero-section h1 {
+        font-size: calc(1.475rem + 2.7vw);
+    }
+
+    .why-choose-bny-card .card-img-bottom {
+        height: 420px;
+    }
+
+    #waitlistModal p {
+        font-size: 13px;
+        color: #1e1e1e;
+    }
+
+    #waitlistModal button {
+        font-size: 12px;
+    }
+
+    #waitlistModal .phone-mockup {
+        height: 500px;
+    }
+
+    #waitlistModal h2 {
+        font-size: 22px;
+    }
+
+    #waitlistModal h3 {
+        font-size: 14px;
+        color: #662D91;
+        margin-bottom: 12px;
+        line-height: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #hero-section h1 {
+        font-size: 3.5rem;
+    }
+}
+
+#steps-to-gift {
+    position: relative;
+    overflow: hidden;
+    /*background-image: url(../images/section-3.png);*/
+    /*background-size: 100%;*/
+    /*background-position: center top;*/
+}
+
+.onscroll-show, .onscroll-hide {
+    transition: all ease-in-out 3s;
+}
+
+.btn-primary {
+    --fc-btn-color: #fff;
+    --fc-btn-bg: #7800F0;
+    --fc-btn-border-color: #7800F0;
+    --fc-btn-hover-color: #fff;
+    --fc-btn-hover-bg: #5C02B6F7;
+    --fc-btn-hover-border-color: #5C02B6F7;
+    --fc-btn-focus-shadow-rgb: 102, 45, 145;
+    --fc-btn-active-color: #fff;
+    --fc-btn-active-bg: #5C02B6F7;
+    --fc-btn-active-border-color: #5C02B6F7;
+    --fc-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --fc-btn-disabled-color: #fff;
+    --fc-btn-disabled-bg: #7800F0;
+    --fc-btn-disabled-border-color: #7800F0;
+}
+
+.btn-bny-secondary {
+    --fc-btn-color: #fff;
+    --fc-btn-bg: #ce97c4;
+    --fc-btn-border-color: #000;
+    --fc-btn-hover-color: #fff;
+    --fc-btn-hover-bg: #662D91;
+    --fc-btn-hover-border-color: #662D91;
+    --fc-btn-focus-shadow-rgb: 154, 163, 167;
+    --fc-btn-active-color: #fff;
+    --fc-btn-active-bg: #662D91;
+    --fc-btn-active-border-color: #662D91;
+    --fc-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --fc-btn-disabled-color: #fff;
+    --fc-btn-disabled-bg: #889397;
+    --fc-btn-disabled-border-color: #889397;
+}
+
+.animate-curl-arrow{
+    --animate-duration: 2s;
+    --animate-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: animateCurlArrow;
+    animation-name: animateCurlArrow;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+}
+
+@keyframes animateCurlArrow {
+    0%{
+        rotate: 15deg;
+        margin-right: -15px;
+    }
+    to {
+        rotate: 75deg;
+        margin-right: 0;
+    }
+}
+
+.animate-heart {
+    --animate-duration: 1.5s;
+    --animate-delay: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: heart;
+    animation-name: heart;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out
+}
+
+.animate-shake-x {
+    scale: 1.35;
+    --animate-duration: 1s;
+    --animate-delay: 5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: var(--animate-duration);
+    animation-duration: var(--animate-duration);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: headShake;
+    animation-name: headShake;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    animation-delay: var(--animate-delay);
+}
+
+@keyframes headShake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@keyframes heart {
+    0% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+    50% {
+        -webkit-transform: scale3d(1.35, 1.35, 1.35);
+        transform: scale3d(1.35, 1.35, 1.35)
+    }
+    to {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1)
+    }
+}

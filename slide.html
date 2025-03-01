@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f0f0;
+        }
+
+        .container {
+            overflow: hidden;
+            position: relative;
+            height: 2em; /* Adjust based on font size */
+            width: 80%;
+            text-align: center;
+        }
+
+        #text-container {
+            transition: transform 0.5s ease-in-out;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        #text-container span {
+            opacity: 0.3; /* Start faint */
+            margin-right: 5px;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="text-container"></div>
+</div>
+
+<script>
+    const lines = [
+        "Welcome to our website",
+        "Bringing ideas to reality",
+        "Empowering innovation daily",
+        "Achieve greatness with us",
+        "Your journey starts here"
+    ];
+
+    let currentLineIndex = 0;
+
+    function animateLine() {
+        const container = document.getElementById('text-container');
+        const words = lines[currentLineIndex].split(" "); // Split the line into words
+
+        // Generate new spans for words
+        container.innerHTML = words.map(word => `<span>${word}</span>`).join(" ");
+
+        const wordElements = container.querySelectorAll("span");
+
+        // Reset word opacities to faint
+        wordElements.forEach(word => (word.style.opacity = 0.3));
+
+        // Animate words to fade in sequentially
+        wordElements.forEach((word, index) => {
+            setTimeout(() => {
+                word.style.opacity = 1;
+            }, index * 500); // Adjust delay per word
+        });
+
+        // Calculate total duration for animation
+        const totalDuration = words.length * 500 + 500;
+
+        // Move the current line up after animation
+        setTimeout(() => {
+            container.style.transform = "translateY(-100%)";
+        }, totalDuration);
+
+        // Load next line after sliding out
+        setTimeout(() => {
+            // Move container below view instantly (without transition)
+            container.style.transition = "none";
+            container.style.transform = "translateY(100%)";
+
+            // Move to the next line (looping back if at the last one)
+            currentLineIndex = (currentLineIndex + 1) % lines.length;
+
+            // Force a reflow before re-enabling transition
+            void container.offsetWidth;
+
+            // Restore transition and slide new text into view
+            container.style.transition = "transform 0.5s ease-in-out";
+            container.style.transform = "translateY(0)";
+
+            // Animate next line
+            animateLine();
+        }, totalDuration + 500);
+    }
+
+    // Start animation on page load
+    animateLine();
+</script>
+
+</body>
+</html>

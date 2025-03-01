@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blob Background with Wave Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .blob-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    #wavePath{
+    transition: d 2s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob-bg">
+    <svg id="waveSVG" width="1416" height="743" viewBox="0 0 1416 743" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="wavePath" fill="#F5EAF3" d="M1461.31 743C1469.55 547.058 1515 136.209 1515 118.221C1515 118.221 1277.25 106.857 958.468 52.898C30.8527 -104.116 -27 138.426 -27 138.426V743H1461.31Z"></path>
+    </svg>
+  </div>
+  <script>
+    const wavePath = document.getElementById('wavePath');
+    const svgNamespace = "http://www.w3.org/2000/svg";
+    
+    let waveArray = [
+      "M1461.31 743C1469.55 547.058 1515 136.209 1515 118.221C1515 118.221 1277.25 106.857 958.468 52.898C30.8527 -104.116 -27 138.426 -27 138.426V743H1461.31Z",
+      "M1461.31 743C1475.55 547.058 1535 136.209 1535 118.221C1535 118.221 1307.25 106.857 968.468 72.898C60.8527 -84.116 -17 158.426 -17 158.426V743H1461.31Z",
+      "M1461.31 743C1481.55 547.058 1555 136.209 1555 118.221C1555 118.221 1337.25 106.857 978.468 82.898C70.8527 -74.116 -7 168.426 -7 168.426V743H1461.31Z",
+      "M1461.31 743C1469.55 547.058 1515 136.209 1515 118.221C1515 118.221 1277.25 106.857 958.468 52.898C30.8527 -104.116 -27 138.426 -27 138.426V743H1461.31Z"
+    ];
+
+    let currentWave = 0;
+
+    function animateWave() {
+    if(currentWave != waveArray.length - 1){
+      currentWave = (currentWave + 1) % waveArray.length;
+      }else{
+            currentWave = (currentWave - 1) % waveArray.length;
+}
+      wavePath.setAttribute('d', waveArray[currentWave]);
+           setTimeout(animateWave, 2000);
+    }
+
+    animateWave();
+     setInterval(animateWave, 15000);
+  </script>
+</body>
+</html>

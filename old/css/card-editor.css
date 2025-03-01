@@ -1,0 +1,70 @@
+#bny-card-editor{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#bny-card-editor .bny-card-editor-header{
+    background-color: #f5eaf3;
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+
+#bny-card-editor .bny-card-editor-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex: 1;
+}
+
+#bny-card-editor .bny-card-editor-sidebar {
+    width: 450px;
+    display: flex;
+    flex-direction: row;
+    background-color: #F0EAF4;
+}
+
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tools{
+    width: 100px;
+    height: fit-content;
+    background-color: #D1C0DE;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tools .bny-card-editor-tool-btn {
+    text-align: center;
+    margin: auto 0;
+    padding: 0.85rem 0.5rem;
+    transition: all 0.6s ease-in;
+}
+
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tools .bny-card-editor-tool-btn .bny-card-editor-tool-icon{
+    margin-bottom: 0.5rem;
+}
+
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tools .bny-card-editor-tool-btn p{
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+}
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tools .bny-card-editor-tool-btn:is(.active,:hover){
+    background-color: #F0EAF4;
+}
+
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tool-options{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+#bny-card-editor .bny-card-editor-sidebar .bny-card-editor-tool-options .bny-card-editor-tool-options-body{
+    flex: 1;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#bny-card-editor .bny-card-editor-body{
+    flex: 1;
+}
