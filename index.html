@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link rel="stylesheet" href="assets/css/animate.min.css">
+<!--    <link rel="stylesheet" href="assets/css/animate.min.css">-->
+    <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/theme.min.css"/>
 
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -24,10 +25,10 @@
             cursor: pointer;
             transition: all ease-in 0.5s;
         }
-        .bny-offer-card:hover{
+        .bny-offer-card:hover {
             margin-bottom: 0.5rem;
             margin-left: -0.5rem;
-            box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
         }
     </style>
 </head>
@@ -176,7 +177,11 @@
             </div>
             <div class="overflow-hidden">
                 <div class="container-fluid px-5">
-                    <img src="assets/images/phone-illustration.svg" height="700" class="img-fluid mb-4"
+                    <img src="assets/images/phone-illustration.svg"
+                         data-aos="fade-up"
+                         data-aos-easing="ease-in-sine"
+                         data-aos-duration="700"
+                         height="700" class="img-fluid mb-4"
                          alt="Example image" loading="lazy">
                 </div>
             </div>
@@ -184,7 +189,10 @@
     </section>
     <section>
         <div class="container">
-            <img src="assets/images/welcome-toboonify-text.svg" alt="" class="img-fluid d-none d-md-block w-100">
+            <img src="assets/images/welcome-toboonify-text.svg" alt="" data-aos="fade-up"
+                 data-aos-duration="500"
+                 data-aos-offset="30"
+                 data-aos-easing="ease-in-sine" class="img-fluid d-none d-md-block w-100">
             <div class="col-11 d-md-none mx-auto text-center my-8 position-relative" style="font-size: 18px">
                 <img src="assets/images/pink-heart.png" alt="" style="height: 36px;z-index: 3;"
                      class="position-absolute animate-heart start-0 mt-n6 top-0 ms-n1"/>
@@ -292,7 +300,7 @@
     </section>
 
     <section id="what-boonify-offers" class="position-relative overflow-x-hidden">
-        <img src="assets/images/heart.svg" alt="" class="position-absolute heart-float-element">
+        <img src="assets/images/heart.svg" alt="" class="position-absolute animate__animated animate__pulse animate__infinite heart-float-element">
         <img src="assets/images/present.svg" alt=""
              class="position-absolute d-none d-md-block top-50 ms-xxl-8 translate-middle-y start-0" style="width: 100px;">
         <div class="container mb-14 mt-16 my-md-18">
@@ -432,11 +440,11 @@
     <section id="steps-to-gift" class="pt-md-12 pb-16">
         <img src="assets/images/bell.svg" alt="" class="position-absolute d-none d-md-block end-0 pe-16 top-0 animate__animated animate__shakeX animate__infinite">
         <img src="assets/images/flowers.svg" alt=""
-             class="position-absolute d-none d-md-block  pe-8 flower-floating-element">
+             class="position-absolute d-none d-md-block animate__animated animate__slideInUp pe-8 flower-floating-element">
         <img src="assets/images/gift-box.svg" alt="" class="position-absolute d-none d-md-block start-0 ps-8 animate__animated animate__backInLeft"
              style="top: 60%;">
         <div class="container">
-            <div class="mx-auto text-center d-md-none">
+            <div class="mx-auto text-center d-md-none nimate__animated animate__slideInUp">
                 <img src="assets/images/flowers.svg" alt="" height="180">
             </div>
 
@@ -444,7 +452,7 @@
 
             <div class="col-md-7 mx-auto">
                 <div class="row gap-0 gx-3 gy-5">
-                    <div class="col-md-6 h-100 position-relative animate__animated animate__backInRight animate__delay-1s">
+                    <div class="col-md-6 h-100 steps-to-gift-card position-relative animate__animated animate__backInRight">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/download-app.svg" alt="">
                         <div class="position-absolute bottom-0 pb-3 start-50 translate-middle-x">
                             <div class="d-grid gap-2 d-flex justify-content-center gap-sm-3 mb-5 mt-8">
@@ -459,13 +467,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 h-100 animate__animated animate__backInRight animate__delay-2s">
+                    <div class="col-md-6 h-100 steps-to-gift-card animate__animated animate__backInRight animate__delay-1s">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/create-gift.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 animate__animated animate__backInRight animate__delay-3s">
+                    <div class="col-md-6 h-100 steps-to-gift-card animate__animated animate__backInRight animate__delay-2s">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/pick-the-moment.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 animate__animated animate__backInRight animate__delay-4s">
+                    <div class="col-md-6 h-100 steps-to-gift-card animate__animated animate__backInRight animate__delay-3s">
                         <img class="img-fluid rounded-4 w-100 h-100 object-fit-cover"
                              src="assets/images/steps/celebrate-connection.png" alt="">
                     </div>
@@ -617,7 +625,7 @@
         <div class="container position-relative">
             <img src="assets/images/yellow-cake.png" alt="" class="position-absolute start-0 top-50 translate-middle-y d-none d-md-block" style="height:
             150px;">
-            <img src="assets/images/smile.png" alt="" class="position-absolute end-0 top-50 translate-middle-y d-none d-md-block" style="height:
+            <img src="assets/images/smile.png" alt="" class="position-absolute end-0 top-50 translate-middle-y d-none animate__animated animate__swing animate__slower animate__infinite d-md-block" style="height:
             150px;">
             <div class="card p-8 col-md-9 mx-auto rounded-bottom-5 pt-14"
                  style="background-size: 100% 100%;background-image:url(assets/images/Background.png);">
@@ -677,14 +685,14 @@
     </footer>
 
     <div class="modal fade" id="waitlistModal" tabindex="-1" aria-labelledby="waitlistModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content" style="background-color:#F0E0ED;">
                 <div class="modal-header p-0 border-bottom-0">
                     <img src="assets/images/modal-ribbon.png" class="w-100">
                     <!--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
                 </div>
-                <div class="modal-body d-flex justify-content-center align-items-center h-100">
-                    <div class="col-lg-6 col-10 mx-auto row align-items-center justify-content-center mt-14 mt-lg-0">
+                <div class="modal-body d-flex justify-content-between gap-4 align-items-center h-100">
+                    <div class="col-lg-8 col-10 mx-auto row align-items-center justify-content-between mt-14 mt-lg-0">
                         <div class="col-lg-6 col-12 text-center text-lg-start">
                             <img src="assets/images/logo/boonify-logo-lg.svg" class="bny-logo" height="75" alt="">
                             <h2 class="">Ready to add your personal touch to every gift?</h2>
@@ -720,6 +728,10 @@
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/swiper-element-bundle.min.js"></script>
 <script src="assets/js/scrollpsy.js"></script>
+<script src="assets/js/aos.js"></script>
+<script>
+    AOS.init()
+</script>
 <!--Custom JS-->
 <script src="assets/js/script.js"></script>
 <script>
@@ -763,9 +775,9 @@
 </script>
 <script>
     const lines = [
-        `<p class="d-flex align-items-center justify-content-center"><span class="">Welcome to </span> <img src='assets/images/logo/boonify-Icon.png' class="ms-2" style="height: 25px;"/> <span class="text-primary me-2">oonify.</span><span>Here,</span></p>`,
-        `<p class="d-flex align-items-center justify-content-center"><span class="me-1">we believe that gifting is</span><span class="text-primary">about</span></p>`,
-        `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">creating moments that resonate,</span></p>`,
+        `<p class="mb-1 d-flex align-items-center justify-content-center"><span class="">Welcome to </span><img src='assets/images/logo/boonify-Icon.png' class="ms-2" style="height: 25px;"/> <span class="text-primary me-2">oonify.</span><span>Here,</span></p>
+        <p class="mb-1 d-flex align-items-center justify-content-center"><span class="me-1">we believe that gifting is</span><span class="text-primary">about</span></p>
+        <p class="d-flex align-items-center justify-content-center"><span class="text-primary">creating moments that resonate,</span></p>`,
         `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">memories that linger, and</span></p>`,
         `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">connections that endure.</span></p>`,
         `<p class="d-flex align-items-center justify-content-center"><span class="text-primary">W</span><span>e don’t just deliver gifts—</span></p>`,
@@ -805,7 +817,7 @@
             container.style.transform = "translateY(0)";
 
             // Animate next line
-            animateLine();
+            // animateLine();
         }, totalDuration + 500);
     }
 
