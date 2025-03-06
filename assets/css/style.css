@@ -136,8 +136,8 @@ body > .page-wrapper {
 }
 
 .why-choose-bny-card .card-img-bottom {
-    /*height: 300px;*/
-    height: 220px;
+    height: 300px;
+    /*height: 220px;*/
     width: auto;
     object-fit: fill;
     margin-bottom: 8px;
