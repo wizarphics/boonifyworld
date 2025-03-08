@@ -398,7 +398,7 @@
                             <p><span class="fw-bold">Gift Registry:</span> Share your wishlist with family
                                 and friends</p>
                         </header>
-                        <img src="assets/images/gift-registry.jpeg" class="card-img-bottom" alt="">
+                        <img src="assets/images/gift-registry.png" class="card-img-bottom mt-n8" alt="">
                     </div>
                 </div>
             </div>
@@ -647,7 +647,7 @@
             </div>
 
             <div class="col-6 mx-auto text-center mt-8" data-aos="fade-up" data-aos-delay="50">
-                <button class="btn btn-bny-secondary text-nowrap px-12 py-4 rounded-4">Get Started</button>
+                <button class="btn btn-primary text-nowrap px-12 py-4 rounded-4">Get Started</button>
             </div>
         </div>
     </section>
@@ -882,7 +882,7 @@
                                 <input type="email" class="form-control border-0 ps-0"
                                        style="height: 45px;border: none;box-shadow: none !important;z-index: 1;"
                                        placeholder="Enter email">
-                                <button class="btn btn-bny-secondary rounded-pill px-5 px-lg-7 position-absolute end-0 me-n4 me-lg-n8 h-100"
+                                <button class="btn btn-bny-secondary btn-bny-sign-me-up rounded-pill px-5 px-lg-7 position-absolute end-0 me-n4 me-lg-n8 h-100"
                                         style="z-index: 2;" type="button">Sign Me Up
                                 </button>
                             </label>
@@ -954,10 +954,10 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
-                motion(entry.target, {y: 0, opacity: 1}, {duration: 0.8});
+                animate(entry.target, {y: 0, opacity: 1}, {duration: 0.8});
             } else {
                 entry.target.classList.remove("active");
-                motion(entry.target, {y: 20, opacity: 0.6}, {duration: 0.5});
+                animate(entry.target, {y: 20, opacity: 0.6}, {duration: 0.5});
             }
         });
     }, {threshold: 0.5});
