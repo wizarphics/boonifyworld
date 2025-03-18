@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-
     <!-- Theme CSS -->
     <!--    <link rel="stylesheet" href="assets/css/animate.min.css">-->
     <link rel="stylesheet" href="assets/css/aos.css">
@@ -21,15 +20,17 @@
     <!--    <script src="assets/js/gsap_3.12.2_gsap.js"></script>-->
     <!--    <script src="assets/js/gsap_3.12.2_ScrollTrigger.js"></script>-->
     <style>
-        .bny-offer-card {
+        .bny-offer-card, .steps-to-gift-card {
             cursor: pointer;
-            transition: all ease-in 0.5s;
+            transition: all ease-in-out 0.3s;
+            scale: 0.98;
         }
 
-        .bny-offer-card:hover {
-            margin-bottom: 0.5rem;
-            margin-left: -0.5rem;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        .bny-offer-card:hover, .steps-to-gift-card:hover {
+            /*margin-bottom: 0.5rem;*/
+            /*margin-left: -0.5rem;*/
+            /*box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;*/
+            scale: 1;
         }
 
 
@@ -165,7 +166,7 @@
     </header>
     <section id="hero-section">
         <div class="px-4 pt-16 pt-md-18 col-10 col-md-6 mx-auto text-center border-bottom">
-            <h1 class="text-white" data-aos="fade-down" data-aos-delay="50">Transforming moments into
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="50">Transforming moments into
                 memories with gifting.</h1>
             <div class="col-lg-6 mx-auto" data-aos="fade-up" data-aos-delay="250">
                 <div class="d-grid gap-2 d-flex justify-content-center gap-sm-3 mb-5 mt-8">
@@ -191,7 +192,7 @@
     </section>
     <section>
         <div class="container">
-            <div class="welcome-boonify-text-container mx-5 mx-md-0 my-18">
+            <div class="welcome-boonify-text-container mx-5 mx-md-0 my-18" data-aos="fade-up" data-aos-delay="200">
                 <div class="heart animate-heart">
                     <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -283,25 +284,25 @@
                     that endure.
                 </p>
                 <p class="mb-0 d-md-none">
-                We don't just
+                    We don't just
                 </p>
                 <p class="mb-0 d-md-none">
-                deliver gifts-
+                    deliver gifts-
                 </p>
                 <p class="mb-0 d-md-none">
-                we deliver
+                    we deliver
                 </p>
                 <p class="mb-0 d-md-none">
                     experiences,
                 </p>
                 <p class="mb-0 d-md-none">
-                emotions, and
+                    emotions, and
                 </p>
                 <p class="mb-0 d-md-none">
-                memories that
+                    memories that
                 </p>
                 <p class="mb-0 d-md-none">
-                last a lifetime.
+                    last a lifetime.
                 </p>
                 <p class="mb-1 d-none d-md-block">
                     <span class="me-2">Welcome to </span>
@@ -353,47 +354,48 @@
             </div>
         </div>
     </section>
+
     <section id="why-boonify">
         <div class=" my-4 my-md-6">
-            <h3 class="text-center mb-8 fs-1 mb-8 mb-md-12">Why choose <br class="d-md-none"/>Boonify?</h3>
-            <div class="scroll-container d-none d-md-block">
+            <h3 class="text-center mb-8 fs-1 mb-8 mb-md-12" data-aos="fade-up" data-aos-delay="100">Why choose <br class="d-md-none"/>Boonify?</h3>
+            <div class="scroll-container d-none d-md-block" data-aos="fade-up" data-aos-delay="200">
                 <div class="scroll-content position-sticky top-0">
-                    <div class="why-choose-bny-card card" data-aos="fade-left" data-aos-delay="0">
+                    <div class="why-choose-bny-card card">
                         <header class="card-body text-center px-8 mt-3">
                             <p><span class="fw-bold">Custom Gift Experience:</span> Tailor every gift to reflect your
                                 unique sentiments.</p>
                         </header>
                         <img src="assets/images/cs-gift-ex.png" class="card-img-bottom" alt="">
                     </div>
-                    <div class="why-choose-bny-card card" data-aos="fade-left" data-aos-delay="100">
+                    <div class="why-choose-bny-card card">
                         <header class="card-body text-center mt-3">
                             <p><span class="fw-bold">Video Messages:</span> Add a heartfelt video to
                                 connect beyond the distance.</p>
                         </header>
                         <img src="assets/images/video-msg.png" class="card-img-bottom" alt="">
                     </div>
-                    <div class="why-choose-bny-card card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="why-choose-bny-card card">
                         <header class="card-body text-center mt-3">
                             <p><span class="fw-bold">AI Message Suggestions:</span> Get inspired with
                                 personalized, thoughtful message ideas.</p>
                         </header>
                         <img src="assets/images/ai-msg-sug.png" class="card-img-bottom" alt="">
                     </div>
-                    <div class="why-choose-bny-card card" data-aos="fade-left" data-aos-delay="400">
+                    <div class="why-choose-bny-card card">
                         <header class="card-body text-center mt-3">
                             <p><span class="fw-bold">Pay Now, Deliver Later:</span> Plan ahead and
                                 schedule deliveries for the perfect moment</p>
                         </header>
                         <img src="assets/images/scheduled-delivery.png" class="card-img-bottom" alt="">
                     </div>
-                    <div class="why-choose-bny-card card" data-aos="fade-left" data-aos-delay="600">
+                    <div class="why-choose-bny-card card">
                         <header class="card-body text-center mt-3">
                             <p><span class="fw-bold">Wish Notes:</span> Add a personal touch with custom
                                 messages</p>
                         </header>
                         <img src="assets/images/wish-notes.png" class="card-img-bottom" alt="">
                     </div>
-                    <div class="why-choose-bny-card card" data-aos="fade-left" data-aos-delay="800">
+                    <div class="why-choose-bny-card card">
                         <header class="card-body text-center mt-3">
                             <p><span class="fw-bold">Gift Registry:</span> Share your wishlist with family
                                 and friends</p>
@@ -456,12 +458,12 @@
         <img src="assets/images/present.svg" alt=""
              class="position-absolute d-none d-md-block top-50 ms-xxl-8 translate-middle-y start-0"
              style="width: 100px;">
-        <div class="container mb-14 mt-16 my-md-18">
-            <h2 class="text-center mb-8 fs-1 mb-md-14">What Boonify <br class="d-md-none"/>Offers</h2>
+        <div class="container mb-14 mt-16 mt-md-12 mb-md-16">
+            <h2 class="text-center mb-8 fs-1 mb-md-16">What Boonify <br class="d-md-none"/>Offers</h2>
             <div class="row col-md-11 mx-auto g-6 justify-content-between d-none d-md-flex">
                 <div class="col-5 rounded-5 card bny-offer-card py-0 px-0 mt-0"
                      style="background:rgba(195, 178, 231, 1);"
-                     data-aos="zoom-out-left" data-aos-delay="250">
+                     data-aos="fade-up" data-aos-delay="100">
                     <h3 class="py-6 px-6">Customization</h3>
                     <img src="assets/images/customization.png" alt="" style="height: 480px;width: 100%;"
                          class="rounded-4 ms-n5 bg-transparent">
@@ -473,7 +475,7 @@
                 </div>
                 <div class="col-7 row g-6 mt-0">
                     <div class="col-12 card bny-offer-card p-0 rounded-5 mt-0 d-flex flex-row" data-aos="fade-up"
-                         data-aos-delay="450"
+                         data-aos-delay="100"
                          style="background: rgba(246, 130, 165, 1);">
                         <div class="p-8 pe-0 align-self-end">
                             <h3 class="">Scheduling</h3>
@@ -484,8 +486,8 @@
                              style="height: 380px;">
                     </div>
                     <div class="d-flex gap-6 ps-0">
-                        <div class="col-6 card bny-offer-card rounded-5 p-3 pb-0" data-aos="fade-left"
-                             data-aos-delay="200" style="background: rgba(201, 218, 143, 1);">
+                        <div class="col-6 card bny-offer-card rounded-5 p-3 pb-0" data-aos="fade-up"
+                             data-aos-delay="150" style="background: rgba(201, 218, 143, 1);">
                             <img src="assets/images/%20cards.png" alt=""
                                  style="height: auto;width: 100%;max-height: 250px;"
                                  class="card-img-top mt-n10 mb-4 ms-n2">
@@ -495,8 +497,8 @@
                                     experience the best of activities</p>
                             </div>
                         </div>
-                        <div class="col-6 card bny-offer-card overflow-hidden rounded-5 p-0 pt-3" data-aos="fade-left"
-                             data-aos-delay="400"
+                        <div class="col-6 card bny-offer-card overflow-hidden rounded-5 p-0 pt-3" data-aos="fade-up"
+                             data-aos-delay="150"
                              style="background: rgba(254, 223, 111, 1);">
                             <div class="card-body px-6 mb-0 pb-0">
                                 <h3 class="">Wishlist</h3>
@@ -509,7 +511,7 @@
                 </div>
                 <div class="d-flex gap-6 ps-0">
                     <div class="col-8 card bny-offer-card overflow-hidden rounded-5 d-flex flex-row " data-aos="fade-up"
-                         data-aos-delay="100"
+                         data-aos-delay="200"
                          style="background: rgba(249, 164, 116, 1);">
                         <div class="col-3 card-body px-6 mb-0 pb-0 align-self-end">
                             <h3 class="">Send Gifts</h3>
@@ -522,7 +524,7 @@
                         </div>
                     </div>
                     <div class="col-4 card bny-offer-card rounded-5 overflow-hidden"
-                         style="background: rgba(184, 206, 220, 1);" data-aos="fade-left" data-aos-delay="200">
+                         style="background: rgba(184, 206, 220, 1);" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-body p-6 mb-0 pb-0">
                             <h3 class="">Reminders</h3>
                             <p class="">Never miss a birthday<br/>
@@ -532,7 +534,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex d-md-none flex-column gap-8">
+            <div class="d-flex d-md-none flex-column gap-8" id="what-boonify-offers-cards-mb">
                 <div class="col-10 mx-auto rounded-5 card bny-offer-card py-0 pb-5 px-0 mt-0"
                      style="background:rgba(195, 178, 231, 1);">
                     <h3 class="pt-6 fw-800 mb-0 px-6 text-magenta-25">Customization</h3>
@@ -599,7 +601,7 @@
         </div>
     </section>
 
-    <section id="steps-to-gift" class="pt-md-12 pb-16">
+    <section id="steps-to-gift" class="pt-md-0 pb-12">
         <img src="assets/images/bell.svg" alt=""
              class="position-absolute d-none d-md-block end-0 pe-16 top-0 animate__animated animate__shakeX animate__infinite">
         <img src="assets/images/flowers.svg" alt=""
@@ -612,12 +614,12 @@
                 <img src="assets/images/flowers.svg" alt="" height="180">
             </div>
 
-            <h2 class="text-center mb-8">Seamless Gifting in <br class="d-md-none"/>4 Easy Steps</h2>
+            <h2 class="text-center mb-8" data-aos="fade-up" data-aos-delay="150">Seamless Gifting in <br class="d-md-none"/>4 Easy Steps</h2>
 
             <div class="col-md-7 mx-auto">
                 <div class="row gap-0 gx-3 gy-5">
                     <div class="col-md-6 h-100 steps-to-gift-card position-relative"
-                         data-aos="fade-left"
+                         data-aos="fade-up" data-aos-delay="100"
                     >
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/download-app.svg" alt="">
                         <div class="position-absolute bottom-0 pb-3 start-50 translate-middle-x">
@@ -633,13 +635,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-left" data-aos-delay="250">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="100">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/create-gift.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-left" data-aos-delay="350">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/pick-the-moment.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-left" data-aos-delay="500">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200">
                         <img class="img-fluid rounded-4 w-100 h-100 object-fit-cover"
                              src="assets/images/steps/celebrate-connection.png" alt="">
                     </div>
@@ -652,7 +654,7 @@
         </div>
     </section>
 
-    <section id="testimonials" class="pb-0 pb-lg-14 pt-16 position-relative">
+    <section id="testimonials" class="pb-0 pb-lg-12 pt-12 position-relative">
         <img src="assets/images/boxed.svg" alt="" class="d-md-none position-absolute top-0 start-50 translate-middle-x"
              style="height: 80px;">
         <div class="container position-relative">
@@ -661,12 +663,50 @@
             <img src="assets/images/wapped-gift.svg" alt=""
                  class="d-none d-md-block position-absolute top-0 mt-n12 start-0"
                  style="height: 100px;">
-            <h2 class="text-center mb-8" data-aos="fade-right" data-aos-delay="0">What Our <br class="d-md-none"/>Users
+            <h2 class="text-center mb-8" data-aos="fade-up" data-aos-delay="0">What Our <br class="d-md-none"/>Users
                 Say</h2>
 
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center my-8 gap-4"
                  data-aos="fade-up" data-aos-delay="50">
-                <img src="assets/images/purple-stars.png" alt="" style="height: 28px">
+                <!--                <img src="assets/images/purple-stars.png" alt="" style="height: 28px">-->
+                <div class="d-flex" style="color:#662D91;">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                         style="height:24px;width: 24px;">
+                        <path fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                              clip-rule="evenodd"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                         style="height:24px;width: 24px;">
+                        <path fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                              clip-rule="evenodd"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                         style="height:24px;width: 24px;">
+                        <path fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                              clip-rule="evenodd"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                         style="height:24px;width: 24px;">
+                        <path fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                              clip-rule="evenodd"/>
+                    </svg>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                         style="height:24px;width: 24px;">
+                        <path fill-rule="evenodd"
+                              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                              clip-rule="evenodd"/>
+                    </svg>
+
+                </div>
                 <p class="mb-0 fw-800" style="font-size:16px;color: #1B1D20;">Rated 4.7/5 on the AppStore and Google
                     Play</p>
             </div>
@@ -824,7 +864,7 @@
     </section>
 
     <footer class="pt-8 position-relative overflow-hidden">
-        <div class="" data-aos="zoom-out-up" data-aos-delay="300" data-aos-duration="200">
+        <div class="" data-aos="fade-up" data-aos-delay="300" data-aos-duration="200">
             <img src="assets/images/cloud-bg.jpg" alt="" class="w-100 h-auto">
         </div>
         <div class="container">
@@ -862,18 +902,22 @@
     <div class="modal fade" id="waitlistModal" tabindex="-1" aria-labelledby="waitlistModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content" style="background-color:#F0E0ED;">
-                <div class="modal-header p-0 border-bottom-0">
+                <div class="modal-header p-0 border-bottom-0 position-relative">
                     <img src="assets/images/modal-ribbon.png" class="w-100">
-                    <!--                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                        <button type="button" class="position-absolute top-0 end-0 p-8 pe-6" data-bs-dismiss="modal"
+                                aria-label="Close">
+
+                        </button>
                 </div>
                 <div class="modal-body d-flex justify-content-between gap-4 align-items-center h-100">
-                    <div class="col-lg-8 col-10 mx-auto row align-items-center justify-content-between mt-14 mt-lg-0">
+                    <div class="col-10 mx-auto row align-items-center justify-content-between mt-14 mt-lg-0">
                         <div class="col-lg-6 col-12 text-center text-lg-start">
-                            <img src="assets/images/logo/boonify-logo-lg.svg" class="bny-logo" height="75" alt="">
-                            <h2 class="">Ready to add your personal touch to every gift?</h2>
-                            <p class="">Be the first in line to experience the joy of personalized gift cards, custom
+                            <img src="assets/images/logo/boonify-logo-lg.svg" class="bny-logo mb-3" height="75" alt="">
+                            <h2 class="mb-3">Ready to add your personal touch to every gift?</h2>
+                            <p class="mb-8">Be the first in line to experience the joy of personalized gift cards,
+                                custom
                                 gift boxes, and the ease of picking the perfect presents for your loved ones. </p>
-                            <h3 class="">Sign up today and let the fun begin!</h3>
+                            <h3 class="mb-4">Sign up today and let the fun begin!</h3>
                             <label class="input-group mb-3 rounded-pill bg-white">
                                 <span class="input-group-text px-3 bg-white py-3 border-white rounded-start-pill"
                                       style="height: 45px;">
@@ -882,7 +926,7 @@
                                 <input type="email" class="form-control border-0 ps-0"
                                        style="height: 45px;border: none;box-shadow: none !important;z-index: 1;"
                                        placeholder="Enter email">
-                                <button class="btn btn-bny-secondary btn-bny-sign-me-up rounded-pill px-5 px-lg-7 position-absolute end-0 me-n4 me-lg-n8 h-100"
+                                <button class="btn btn-primary btn-bny-sign-me-up rounded-pill px-5 px-lg-7 position-absolute end-0 me-n4 me-lg-n8 h-100"
                                         style="z-index: 2;" type="button">Sign Me Up
                                 </button>
                             </label>
@@ -970,9 +1014,11 @@
         if (window.scrollY > 50) { // Adjust this value as needed
             header.querySelector(".onscroll-show").classList.remove("d-none");
             header.querySelector(".onscroll-hide").classList.add("d-none");
+            header.querySelector('.onscroll-hide').style.backgroundColor = 'red';
         } else {
             header.querySelector(".onscroll-hide").classList.remove("d-none");
             header.querySelector(".onscroll-show").classList.add("d-none");
+            header.querySelector('.onscroll-hide').classList.remove('bg-primary');
         }
     });
 </script>
