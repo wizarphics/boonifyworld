@@ -223,6 +223,15 @@ body > .page-wrapper {
     transition: all ease-in-out 3s;
 }
 
+#waitlist-close-btn{
+    background: none;
+    outline: none;
+    border: none;
+}
+#waitlist-close-btn > svg{
+    height: 36px;
+    width: 36px;
+}
 
 @media screen and (max-width: 768px) {
     .btn-bny-sign-me-up{
