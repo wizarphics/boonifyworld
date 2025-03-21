@@ -229,7 +229,7 @@ body > .page-wrapper {
         font-size: 14px;
     }
     .welcome-boonify-text-container {
-        font-size: 44px;
+        font-size: 2.15rem;
         line-height: 1.2;
     }
 
@@ -264,10 +264,19 @@ body > .page-wrapper {
         transition: all ease-in-out 0.2s;
     }
 
-    .onscroll-hide:not(:has(.offcanvas.show),:has(.offcanvas.showing)) {
+    .onscroll-hide.d-none {
+        --fc-navbar-toggler-icon-bg: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(102, 45, 145, 0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .onscroll-hide.d-none .bny-logo:first-child {
+        display: none !important;
+    }
+    .onscroll-hide.d-none .bny-logo+.bny-logo {
+        display: block !important;
+    }
+    .onscroll-hide.d-none {
         display: block !important;
         /*background-color: rgba(0, 0, 0, 0.1) !important;*/
-        backdrop-filter: blur(8px); /* 4px */
+        /*backdrop-filter: blur(8px); !* 4px *!*/
     }
 
     .onscroll-show {

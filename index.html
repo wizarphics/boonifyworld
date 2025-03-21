@@ -45,12 +45,13 @@
             <div class="container pt-2 py-md-0">
                 <a class="navbar-brand d-md-none" href="/" style="filter: none !important;">
                     <img src="assets/images/logo/boonify-logo-white.png" class="bny-logo" alt="">
+                    <img src="assets/images/logo/boonify-logo.png" class="bny-logo d-none" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
                         aria-controls="menu" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="menu"
+                <div class="offcanvas offcanvas-end" tabindex="0" id="menu"
                      aria-labelledby="menuTitle">
                     <div class="offcanvas-header">
                         <a class="navbar-brand" href="/" style="filter: none !important;">
@@ -619,7 +620,7 @@
             <div class="col-md-7 mx-auto">
                 <div class="row gap-0 gx-3 gy-5">
                     <div class="col-md-6 h-100 steps-to-gift-card position-relative"
-                         data-aos="fade-up" data-aos-delay="100"
+                         data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200"
                     >
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/download-app.svg" alt="">
                         <div class="position-absolute bottom-0 pb-3 start-50 translate-middle-x">
@@ -635,20 +636,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/create-gift.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/pick-the-moment.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
                         <img class="img-fluid rounded-4 w-100 h-100 object-fit-cover"
                              src="assets/images/steps/celebrate-connection.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="col-6 mx-auto text-center mt-8" data-aos="fade-up" data-aos-delay="50">
+            <div class="col-6 mx-auto text-center mt-8" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1200">
                 <button class="btn btn-primary text-nowrap px-12 py-4 rounded-4">Get Started</button>
             </div>
         </div>
@@ -896,7 +897,7 @@
             </div>
         </div>
         <img src="assets/images/ribbon.png" alt="" class="img-fluid mb-2">
-        <div class="bg-primary py-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
+        <div class="bg-primary py-1 py-md-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
     </footer>
 
     <div class="modal fade" id="waitlistModal" tabindex="-1" aria-labelledby="waitlistModalLabel" aria-hidden="true">
@@ -944,8 +945,8 @@
 </div>
 
 <!--Bootstrap JS-->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/swiper-element-bundle.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/scrollpsy.js"></script>
 <script src="assets/js/aos.js"></script>
 <script>
@@ -1013,12 +1014,14 @@
         const header = document.getElementById("main-header");
         if (window.scrollY > 50) { // Adjust this value as needed
             header.querySelector(".onscroll-show").classList.remove("d-none");
+            header.querySelector(".onscroll-hide").classList.remove("bg-transparent");
             header.querySelector(".onscroll-hide").classList.add("d-none");
-            header.querySelector('.onscroll-hide').style.backgroundColor = 'red';
+            header.querySelector(".onscroll-hide").classList.add("bg-white");
         } else {
             header.querySelector(".onscroll-hide").classList.remove("d-none");
             header.querySelector(".onscroll-show").classList.add("d-none");
-            header.querySelector('.onscroll-hide').classList.remove('bg-primary');
+            header.querySelector('.onscroll-hide').classList.remove('bg-white');
+            header.querySelector(".onscroll-hide").classList.add("bg-transparent");
         }
     });
 </script>
