@@ -313,6 +313,10 @@ body > .page-wrapper {
         font-size: 12px !important;
         text-wrap: nowrap;
     }
+    #footer-links>.nav-link{
+        font-size: 10px !important;
+        text-wrap: nowrap;
+    }
 }
 
 
