@@ -33,8 +33,60 @@
             scale: 1;
         }
 
+        #what-boonify-offers-cards-mb {
+            position: relative !important;
+            /*height: 400vh;*/
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card {
+            position: sticky;
+            /*top: 10%;*/
+            opacity: 1;
+            transform: translateY(40px);
+            transition:transform 0.5s ease-in-out;
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card:not(.visible):nth-child(1) {
+            transform: translateY(0);
+            z-index: 1;
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card:not(.visible):nth-child(3) {
+            z-index: 2;
+            transform: translateY(-300px);
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card:not(.visible):nth-child(5) {
+            z-index: 3;
+            transform: translateY(-700px);
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card:not(.visible):nth-child(7) {
+            z-index: 4;
+            transform: translateY(-1100px);
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card:not(.visible):nth-child(9) {
+            z-index: 5;
+            transform: translateY(-1550px);
+        }
+
+        #what-boonify-offers-cards-mb .bny-offer-card:not(.visible):nth-child(11) {
+            z-index: 5;
+            transform: translateY(-1950px);
+        }
+
+        .spacer {
+            height: 5px;
+        }
 
     </style>
+
 </head>
 <body data-bs-spy="scroll" data-bs-target="#mainHeader" data-bs-root-margin="0px 0px -40%"
       data-bs-smooth-scroll="true">
@@ -358,8 +410,10 @@
 
     <section id="why-boonify">
         <div class=" my-4 my-md-6">
-            <h3 class="text-center mb-8 fs-1 mb-8 mb-md-12" data-aos="fade-up" data-aos-delay="100">Why choose <br class="d-md-none"/>Boonify?</h3>
-            <div class="scroll-container d-none d-md-block" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            <h3 class="text-center mb-8 fs-1 mb-8 mb-md-12" data-aos="fade-up" data-aos-delay="100">Why choose <br
+                    class="d-md-none"/>Boonify?</h3>
+            <div class="scroll-container d-none d-md-block" data-aos="fade-up" data-aos-delay="200"
+                 data-aos-duration="1000">
                 <div class="scroll-content position-sticky top-0">
                     <div class="why-choose-bny-card card">
                         <header class="card-body text-center px-8 mt-3">
@@ -406,7 +460,8 @@
                 </div>
             </div>
 
-            <swiper-container class="d-md-none"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" slides-per-view="1.3" centered-slides="true" space-between="10">
+            <swiper-container class="d-md-none" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"
+                              slides-per-view="1.3" centered-slides="true" space-between="10">
                 <swiper-slide class="why-choose-bny-card card">
                     <header class="card-body text-center px-8 mt-3">
                         <p><span class="fw-bold">Custom Gift Experience:</span> Tailor every gift to reflect your unique
@@ -460,7 +515,8 @@
              class="position-absolute d-none d-md-block top-50 ms-xxl-8 translate-middle-y start-0"
              style="width: 100px;">
         <div class="container mb-14 mt-16 mt-md-12 mb-md-16">
-            <h2 class="text-center mb-8 fs-1 mb-md-16"  data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">What Boonify <br class="d-md-none"/>Offers</h2>
+            <h2 class="text-center mb-8 fs-1 mb-md-16" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                What Boonify <br class="d-md-none"/>Offers</h2>
             <div class="row col-md-11 mx-auto g-6 justify-content-between d-none d-md-flex">
                 <div class="col-5 rounded-5 card bny-offer-card py-0 px-0 mt-0"
                      style="background:rgba(195, 178, 231, 1);"
@@ -535,7 +591,8 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex d-md-none flex-column gap-8"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" id="what-boonify-offers-cards-mb">
+
+            <div class="d-flex d-md-none flex-column gap-8" id="what-boonify-offers-cards-mb">
                 <div class="col-10 mx-auto rounded-5 card bny-offer-card py-0 pb-5 px-0 mt-0"
                      style="background:rgba(195, 178, 231, 1);">
                     <h3 class="pt-6 fw-800 mb-0 px-6 text-magenta-25">Customization</h3>
@@ -547,6 +604,7 @@
                     <img src="assets/images/customization-mb.png" alt="" style="height: 250px;width: 100%;"
                          class="rounded-4 ms-n5 bg-transparent">
                 </div>
+                <div class="spacer"></div>
                 <div class="col-10 mx-auto card bny-offer-card p-0 pb-5 px-2 rounded-5 mt-0"
                      style="background: rgba(246, 130, 165, 1);">
                     <div class="p-8 ps-5 pe-7 pb-3">
@@ -557,6 +615,7 @@
                     <img src="assets/images/scheduling.png" alt="" class="w-100"
                          style="height: 230px;">
                 </div>
+                <div class="spacer"></div>
                 <div class="col-10 mx-auto card bny-offer-card rounded-5 p-3 pb-0"
                      style="background: rgba(201, 218, 143, 1);">
                     <div class="card-body mb-0">
@@ -568,6 +627,7 @@
                          style="height: auto;width: 100%;max-height: 250px;"
                          class="card-img-bottom mb-6 mt-n4">
                 </div>
+                <div class="spacer"></div>
                 <div class="col-10 mx-auto card bny-offer-card overflow-hidden rounded-5 p-0 pt-3"
                      style="background: rgba(254, 223, 111, 1);">
                     <div class="card-body px-6 mb-0 pb-0">
@@ -577,6 +637,7 @@
                     </div>
                     <img src="assets/images/wishlist-mb.png" alt="" class="w-100 p-0 px-8 card-img-bottom">
                 </div>
+                <div class="spacer"></div>
                 <div class="col-10 mx-auto card bny-offer-card overflow-hidden rounded-5"
                      style="background: rgba(249, 164, 116, 1);">
                     <div class="card-body px-6 mb-0 pb-0">
@@ -589,6 +650,7 @@
                              style="height: 280px; width: 100%;">
                     </div>
                 </div>
+                <div class="spacer"></div>
                 <div class="col-10 mx-auto card bny-offer-card rounded-5 overflow-hidden"
                      style="background: rgba(184, 206, 220, 1);">
                     <div class="card-body p-6 mb-0 pb-0">
@@ -615,7 +677,8 @@
                 <img src="assets/images/flowers.svg" alt="" height="180">
             </div>
 
-            <h2 class="text-center mb-8" data-aos="fade-up" data-aos-delay="150">Seamless Gifting in <br class="d-md-none"/>4 Easy Steps</h2>
+            <h2 class="text-center mb-8" data-aos="fade-up" data-aos-delay="150">Seamless Gifting in <br
+                    class="d-md-none"/>4 Easy Steps</h2>
 
             <div class="col-md-7 mx-auto">
                 <div class="row gap-0 gx-3 gy-5">
@@ -636,13 +699,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="100"
+                         data-aos-duration="1200">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/create-gift.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200"
+                         data-aos-duration="1200">
                         <img class="img-fluid rounded-4 w-100" src="assets/images/steps/pick-the-moment.png" alt="">
                     </div>
-                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+                    <div class="col-md-6 h-100 steps-to-gift-card" data-aos="fade-up" data-aos-delay="200"
+                         data-aos-duration="1200">
                         <img class="img-fluid rounded-4 w-100 h-100 object-fit-cover"
                              src="assets/images/steps/celebrate-connection.png" alt="">
                     </div>
@@ -664,7 +730,8 @@
             <img src="assets/images/wapped-gift.svg" alt=""
                  class="d-none d-md-block position-absolute top-0 mt-n12 start-0"
                  style="height: 100px;">
-            <h2 class="text-center mb-8 mt-12 mb-md-0" data-aos="fade-up" data-aos-delay="0">What Our <br class="d-md-none"/>Users
+            <h2 class="text-center mb-8 mt-12 mb-md-0" data-aos="fade-up" data-aos-delay="0">What Our <br
+                    class="d-md-none"/>Users
                 Say</h2>
 
             <div class="d-flex flex-column flex-md-row align-items-center justify-content-center my-8 gap-4"
@@ -712,7 +779,8 @@
                     Play</p>
             </div>
         </div>
-        <swiper-container class="d-none d-md-block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1200" slides-per-view="5.3"
+        <swiper-container class="d-none d-md-block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1200"
+                          slides-per-view="5.3"
                           autoplay="true" loop="true"
                           centered-slides="false" slides-offset-before="250" cursor-grab="true" space-between="10">
             <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
@@ -770,7 +838,8 @@
                 </div>
             </swiper-slide>
         </swiper-container>
-        <swiper-container slides-per-view="1.5" class="d-md-none" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1200" autoplay="true" loop="true" centered-slides="false"
+        <swiper-container slides-per-view="1.5" class="d-md-none" data-aos="fade-up" data-aos-delay="150"
+                          data-aos-duration="1200" autoplay="true" loop="true" centered-slides="false"
                           slides-offset-before="25" cursor-grab="true" space-between="10">
             <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
                 <div class="mb-4">
@@ -841,7 +910,8 @@
                  class="position-absolute end-0 top-50 translate-middle-y d-none animate__animated animate__swing animate__slower animate__infinite d-md-block"
                  style="height:
             150px;">
-            <div class="card p-8 col-md-9 mx-auto rounded-bottom-5 pt-14" data-aos-duration="1000" data-aos-delay="100" data-aos="fade-up"
+            <div class="card p-8 col-md-9 mx-auto rounded-bottom-5 pt-14" data-aos-duration="1000" data-aos-delay="100"
+                 data-aos="fade-up"
                  style="background-size: 100% 100%;background-image:url(assets/images/Background.png);">
                 <h2 class="mx-auto col-10 mb-8 text-center">Make gifting an unforgettable experience. download Boonify
                     and celebrate every connection meaningfully.</h2>
@@ -869,7 +939,8 @@
             <img src="assets/images/cloud-bg.jpg" alt="" class="w-100 h-auto">
         </div>
         <div class="container" data-aos-delay="250" data-aos="fade-up" data-aos-duration="1200">
-            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4" id="footer-links">
+            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4"
+                 id="footer-links">
                 <a href="#" class="nav-link text-uppercase text-primary">About Us</a>
                 <a href="/privacy-policy.html" class="nav-link text-uppercase text-primary">Privacy Policy</a>
                 <a href="/terms-of-use.html" class="nav-link text-uppercase text-primary">Terms of Use</a>
@@ -905,12 +976,15 @@
             <div class="modal-content" style="background-color:#F0E0ED;">
                 <div class="modal-header p-0 border-bottom-0 position-relative">
                     <img src="assets/images/modal-ribbon.png" class="w-100">
-                        <button type="button" class="position-absolute top-0 end-0 p-8 pe-6" data-bs-dismiss="modal"
-                                aria-label="Close" id="waitlist-close-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-primary">
-                                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
-                            </svg>
-                        </button>
+                    <button type="button" class="position-absolute top-0 end-0 p-8 pe-6" data-bs-dismiss="modal"
+                            aria-label="Close" id="waitlist-close-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                             class="size-6 text-primary">
+                            <path fill-rule="evenodd"
+                                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                                  clip-rule="evenodd"/>
+                        </svg>
+                    </button>
                 </div>
                 <div class="modal-body d-flex justify-content-between gap-4 align-items-center h-100">
                     <div class="col-10 mx-auto row align-items-center justify-content-between mt-14 mt-lg-0">
@@ -956,6 +1030,43 @@
 </script>
 <!--Custom JS-->
 <script src="assets/js/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const parent = document.querySelector('#what-boonify-offers-cards-mb');
+        const cards = document.querySelectorAll('#what-boonify-offers-cards-mb .bny-offer-card');
+        let lastScrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        function isElementExitingViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top >= window.innerHeight; // Checks if element is leaving from the bottom
+        }
+
+        function isElementEnteringViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return rect.top <= window.innerHeight / 1.2 && rect.bottom >= 0;
+        }
+
+        function handleScroll() {
+            let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
+            let scrollingDown = currentScrollTop > lastScrollTop;
+
+            const targetCard = parent.children[1]; // Select the second third child (index 1 for zero-based index)
+
+            cards.forEach(card => {
+                if (scrollingDown && isElementEnteringViewport(card)) {
+                    card.classList.add('visible');
+                } else if (!scrollingDown && isElementExitingViewport(targetCard)) {
+                    card.classList.remove('visible');
+                }
+            });
+
+            lastScrollTop = currentScrollTop;
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Run once on load
+    });
+</script>
 <script>
     // 👇 usage
     ScrollSpy(document.body, document.querySelector(`nav`), {})
