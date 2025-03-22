@@ -22,7 +22,7 @@
     <style>
         .bny-offer-card, .steps-to-gift-card {
             cursor: pointer;
-            transition: all ease-in-out 0.3s;
+            transition: all ease 0.2s;
             scale: 0.98;
         }
 
@@ -31,6 +31,7 @@
             /*margin-left: -0.5rem;*/
             /*box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;*/
             scale: 1;
+            transition: all ease 0.2s;
         }
 
         #what-boonify-offers-cards-mb {
@@ -779,9 +780,9 @@
                     Play</p>
             </div>
         </div>
-        <swiper-container class="d-none d-md-block" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1200"
+        <swiper-container class="d-none d-md-block"
                           slides-per-view="5.3"
-                          autoplay="true" loop="true"
+                          autoplay="800" loop="true"
                           centered-slides="false" slides-offset-before="250" cursor-grab="true" space-between="10">
             <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
                 <div class="mb-4">
@@ -838,8 +839,7 @@
                 </div>
             </swiper-slide>
         </swiper-container>
-        <swiper-container slides-per-view="1.5" class="d-md-none" data-aos="fade-up" data-aos-delay="150"
-                          data-aos-duration="1200" autoplay="true" loop="true" centered-slides="false"
+        <swiper-container slides-per-view="1.5" class="d-md-none" autoplay="800" loop="true" centered-slides="false"
                           slides-offset-before="25" cursor-grab="true" space-between="10">
             <swiper-slide class="card bg-white rounded-4 p-5 testimonial-card">
                 <div class="mb-4">
@@ -1050,7 +1050,7 @@
             let currentScrollTop = window.scrollY || document.documentElement.scrollTop;
             let scrollingDown = currentScrollTop > lastScrollTop;
 
-            const targetCard = parent.children[1]; // Select the second third child (index 1 for zero-based index)
+            const targetCard = parent.children[2]; // Select the second third child (index 1 for zero-based index)
 
             cards.forEach(card => {
                 if (scrollingDown && isElementEnteringViewport(card)) {
