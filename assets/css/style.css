@@ -227,6 +227,7 @@ body > .page-wrapper {
     background: none;
     outline: none;
     border: none;
+    z-index: 99;
 }
 #waitlist-close-btn > svg{
     height: 36px;
@@ -234,8 +235,12 @@ body > .page-wrapper {
 }
 
 @media screen and (max-width: 768px) {
+    #waitlist-close-btn > svg{
+        height: 24px;
+        width: 24px;
+    }
     .btn-bny-sign-me-up{
-        font-size: 14px;
+        font-size: 12px !important;
     }
     .welcome-boonify-text-container {
         font-size: 2.15rem;
@@ -317,11 +322,15 @@ body > .page-wrapper {
         font-size: 10px !important;
         text-wrap: nowrap;
     }
+
+
+    #waitlistModal .modal-body {
+        padding-top: 10px;
+    }
 }
 
-
 #waitlistModal p {
-    font-size: 11px;
+    font-size: 8px;
     color: #1e1e1e;
 }
 
@@ -330,20 +339,24 @@ body > .page-wrapper {
 }
 
 #waitlistModal .bny-logo {
-    height: 40px;
+    height: 25px;
     margin-bottom: 1rem;
 }
 
 #waitlistModal .phone-mockup {
-    height: 400px;
+    height: 300px;
+}
+
+#waitlistModal input::placeholder{
+    opacity: 0.8;
 }
 
 #waitlistModal h2 {
-    font-size: 18px;
+    font-size: 13px;
 }
 
 #waitlistModal h3 {
-    font-size: 14px;
+    font-size: 12px;
     color: #662D91;
     margin-bottom: 12px;
 }
@@ -448,6 +461,11 @@ body > .page-wrapper {
     /*background-image: url(../images/section-3.png);*/
     /*background-size: 100%;*/
     /*background-position: center top;*/
+}
+
+.btn{
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .btn-primary {
@@ -601,4 +619,5 @@ body > .page-wrapper {
 
 
 #waitlistModal .btn-close {
+
 }
