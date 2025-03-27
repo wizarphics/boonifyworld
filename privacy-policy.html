@@ -21,7 +21,7 @@
 <div class="page-wrapper">
 
     <header class="" id="main-header">
-        <nav class="navbar navbar-dark navbar-expand-lg bg-transparent fixed-top onscroll-hide">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-white d-none d-lg-none fixed-top onscroll-hide">
             <div class="container pt-2 py-md-0">
                 <a class="navbar-brand d-lg-none" href="./index.html" style="filter: none !important;">
                     <img src="assets/images/logo/boonify-logo-white.png" class="bny-logo" alt="">
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-light d-none onscroll-show fixed-top bg-transparent">
+        <nav class="navbar navbar-light d-none d-lg-block onscroll-show fixed-top bg-transparent">
             <div class="container px-0">
                 <div class="bg-white mx-auto rounded-pill overflow-hidden py-2 py-md-3 my-4 px-5 d-flex align-items-center">
                     <a class="navbar-brand me-4" href="./index.html" style="filter: none !important;">
@@ -466,21 +466,5 @@
 <!--Custom JS-->
 <script src="assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
-<script>
-    window.addEventListener("scroll", function () {
-        const header = document.getElementById("main-header");
-        if (window.scrollY > 50) { // Adjust this value as needed
-            header.querySelector(".onscroll-show").classList.remove("d-none");
-            header.querySelector(".onscroll-hide").classList.remove("bg-transparent");
-            header.querySelector(".onscroll-hide").classList.add("d-none");
-            header.querySelector(".onscroll-hide").classList.add("bg-white");
-        } else {
-            header.querySelector(".onscroll-hide").classList.remove("d-none");
-            header.querySelector(".onscroll-show").classList.add("d-none");
-            header.querySelector('.onscroll-hide').classList.remove('bg-white');
-            header.querySelector(".onscroll-hide").classList.add("bg-transparent");
-        }
-    });
-</script>
 </body>
 </html>
