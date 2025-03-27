@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
     <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/theme.min.css"/>
 
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
@@ -20,32 +20,120 @@
       data-bs-smooth-scroll="true">
 
 <div class="page-wrapper">
+
     <header class="" id="main-header">
-        <nav class="navbar navbar-light fixed-top bg-transparent">
-            <div class="container">
-                <div class="bg-white mx-auto rounded-pill overflow-hidden py-3 my-4 px-5 d-flex align-items-center">
-                    <a class="navbar-brand me-2" href="/" style="filter: none !important;">
-                        <img src="assets/images/logo/boonify-Icon.png" style="height: 28px;" alt="">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-transparent fixed-top onscroll-hide">
+            <div class="container pt-2 py-md-0">
+                <a class="navbar-brand d-lg-none" href="./index.html" style="filter: none !important;">
+                    <img src="assets/images/logo/boonify-logo-white.png" class="bny-logo" alt="">
+                    <img src="assets/images/logo/boonify-logo.png" class="bny-logo d-none" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu"
+                        aria-controls="menu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="0" id="menu"
+                     aria-labelledby="menuTitle">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="./index.html" style="filter: none !important;">
+                            <h5 class="offcanvas-title visually-hidden" id="menuTitle">Boonify</h5>
+                            <img src="assets/images/logo/boonify-logo-white.svg" alt="">
+                        </a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body py-4">
+                        <ul class="navbar-nav justify-content-md-center align-items-start gap-0 gap-md-12 flex-md-grow-1 align-items-md-center pe-3">
+                            <li class="nav-item d-none d-md-block">
+                                <a class="navbar-brand" href="./index.html" style="filter: none !important;">
+                                    <img src="assets/images/logo/boonify-logo-white.svg" height="36" alt="">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#why-boonify">Why Boonify </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#what-boonify-offers">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#testimonials">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#waitlistModal" data-bs-toggle="modal"
+                                   data-bs-target="#waitlistModal">
+                                    <span>Get the App</span>
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                              d="M15.5383 3.28813C14.8162 3.19105 13.8583 3.18945 12.4805 3.18945H11.5212C10.1434 3.18945 9.18551 3.19105 8.46343 3.28813C7.76294 3.38231 7.39771 3.55381 7.13884 3.81267C6.87998 4.07154 6.70848 4.43676 6.6143 5.13726C6.51722 5.85934 6.51563 6.81725 6.51563 8.19506L6.51563 15.8692C6.51563 17.247 6.51722 18.2049 6.6143 18.927C6.70848 19.6275 6.87998 19.9927 7.13884 20.2516C7.39771 20.5105 7.76294 20.682 8.46343 20.7761C9.18551 20.8732 10.1434 20.8748 11.5212 20.8748L12.4805 20.8748C13.8583 20.8748 14.8162 20.8732 15.5383 20.7761C16.2388 20.6819 16.604 20.5105 16.8629 20.2516C17.1217 19.9927 17.2932 19.6275 17.3874 18.927C17.4845 18.2049 17.4861 17.247 17.4861 15.8692V8.19506C17.4861 6.81725 17.4845 5.85934 17.3874 5.13726C17.2932 4.43676 17.1217 4.07154 16.8629 3.81267C16.604 3.55381 16.2388 3.38231 15.5383 3.28813ZM15.7382 1.8015C16.605 1.91805 17.3395 2.16799 17.9235 2.75201C18.5076 3.33603 18.7575 4.07056 18.8741 4.93739C18.9861 5.77109 18.9861 6.83025 18.9861 8.14044V15.9238C18.9861 17.234 18.9861 18.2932 18.8741 19.1269C18.7575 19.9937 18.5076 20.7282 17.9235 21.3122C17.3395 21.8963 16.605 22.1462 15.7382 22.2628C14.9045 22.3748 13.8453 22.3748 12.5351 22.3748L11.4667 22.3748C10.1564 22.3748 9.09727 22.3748 8.26356 22.2628C7.39673 22.1462 6.66221 21.8963 6.07818 21.3122C5.49416 20.7282 5.24422 19.9937 5.12768 19.1269C5.01559 18.2932 5.0156 17.234 5.01563 15.9238L5.01563 8.14044C5.0156 6.83025 5.01559 5.77109 5.12767 4.93739C5.24422 4.07056 5.49416 3.33603 6.07818 2.75201C6.66221 2.16799 7.39673 1.91805 8.26356 1.8015C9.09727 1.68941 10.1564 1.68943 11.4666 1.68945H12.5351C13.8453 1.68943 14.9045 1.68942 15.7382 1.8015ZM15.149 5.31728C15.149 5.73149 14.8132 6.06728 14.399 6.06728L9.60262 6.06728C9.1884 6.06728 8.85262 5.73149 8.85262 5.31728C8.85262 4.90307 9.1884 4.56728 9.60262 4.56728H14.399C14.8132 4.56728 15.149 4.90307 15.149 5.31728ZM12.6896 17.3083C12.6896 16.9279 12.3812 16.6194 12.0007 16.6194C11.6202 16.6194 11.3118 16.9279 11.3118 17.3083C11.3118 17.6888 11.6202 17.9972 12.0007 17.9972C12.3812 17.9972 12.6896 17.6888 12.6896 17.3083ZM12.0007 15.1194C13.2096 15.1194 14.1896 16.0994 14.1896 17.3083C14.1896 18.5172 13.2096 19.4972 12.0007 19.4972C10.7918 19.4972 9.81178 18.5172 9.81178 17.3083C9.81178 16.0994 10.7918 15.1194 12.0007 15.1194Z"
+                                              fill="white"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr class="">
+                        <ul class="foot-links navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="./privacy-policy.html">Privacy Policy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="./terms-of-use.html">Terms of Use</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-1" href="#">Help Center</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <div class="d-flex gap-2">
+                                    <a href="" class="">
+                                        <img src="assets/images/social-icons/instagram-alt.svg" alt="">
+                                    </a>
+                                    <a href="" class="">
+                                        <img src="assets/images/social-icons/facebook-alt.svg" alt="">
+                                    </a>
+                                    <a href="" class="">
+                                        <img src="assets/images/social-icons/x-alt.svg" alt="">
+                                    </a>
+                                </div>
+                                <a class="nav-link py-1" href="mailto:support@boonify.com">support@boonify.com</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-light d-none onscroll-show fixed-top bg-transparent">
+            <div class="container px-0">
+                <div class="bg-white mx-auto rounded-pill overflow-hidden py-2 py-md-3 my-4 px-5 d-flex align-items-center">
+                    <a class="navbar-brand me-4" href="./index.html" style="filter: none !important;">
+                        <img src="assets/images/logo/boonify-Icon.png" class="bny-logo-nav" alt="">
                     </a>
-                    <div class="border-end me-1" style="height: 20px;"></div>
-                    <ul class="navbar-nav flex-row justify-content-center gap-3 gap-md-4 flex-grow-1 align-items-center">
+                    <div class="border-end me-4" style="height: 20px;"></div>
+                    <ul class="navbar-nav flex-row justify-content-center gap-5 gap-md-8 flex-grow-1 align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="/">Home</a>
+                            <a class="nav-link text-nowrap active" aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="/#why-boonify">Why Boonify </a>
+                            <a class="nav-link text-nowrap" href="#why-boonify">Why Boonify </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="/#what-boonify-offers">Features</a>
+                            <a class="nav-link text-nowrap" href="#what-boonify-offers">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="/#testimonials">Testimonials</a>
+                            <a class="nav-link text-nowrap" href="#testimonials">Testimonials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-nowrap btn btn-primary text-white rounded-pill py-1 px-2 py-md-2 px-md-3"
-                               href="#">
+                            <a class="nav-link text-nowrap btn btn-primary text-white rounded-pill py-2s px-1 py-md-2 px-md-3"
+                               href="#" data-bs-toggle="modal" data-bs-target="#waitlistModal">
                                 <span>Get the App</span>
-                                <svg width="24" height="25" class="icon-xs" viewBox="0 0 24 25" fill="none"
+                                <svg class="get-app-icon" width="24" height="25" viewBox="0 0 24 25" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                           d="M15.5383 3.28813C14.8162 3.19105 13.8583 3.18945 12.4805 3.18945H11.5212C10.1434 3.18945 9.18551 3.19105 8.46343 3.28813C7.76294 3.38231 7.39771 3.55381 7.13884 3.81267C6.87998 4.07154 6.70848 4.43676 6.6143 5.13726C6.51722 5.85934 6.51563 6.81725 6.51563 8.19506L6.51563 15.8692C6.51563 17.247 6.51722 18.2049 6.6143 18.927C6.70848 19.6275 6.87998 19.9927 7.13884 20.2516C7.39771 20.5105 7.76294 20.682 8.46343 20.7761C9.18551 20.8732 10.1434 20.8748 11.5212 20.8748L12.4805 20.8748C13.8583 20.8748 14.8162 20.8732 15.5383 20.7761C16.2388 20.6819 16.604 20.5105 16.8629 20.2516C17.1217 19.9927 17.2932 19.6275 17.3874 18.927C17.4845 18.2049 17.4861 17.247 17.4861 15.8692V8.19506C17.4861 6.81725 17.4845 5.85934 17.3874 5.13726C17.2932 4.43676 17.1217 4.07154 16.8629 3.81267C16.604 3.55381 16.2388 3.38231 15.5383 3.28813ZM15.7382 1.8015C16.605 1.91805 17.3395 2.16799 17.9235 2.75201C18.5076 3.33603 18.7575 4.07056 18.8741 4.93739C18.9861 5.77109 18.9861 6.83025 18.9861 8.14044V15.9238C18.9861 17.234 18.9861 18.2932 18.8741 19.1269C18.7575 19.9937 18.5076 20.7282 17.9235 21.3122C17.3395 21.8963 16.605 22.1462 15.7382 22.2628C14.9045 22.3748 13.8453 22.3748 12.5351 22.3748L11.4667 22.3748C10.1564 22.3748 9.09727 22.3748 8.26356 22.2628C7.39673 22.1462 6.66221 21.8963 6.07818 21.3122C5.49416 20.7282 5.24422 19.9937 5.12768 19.1269C5.01559 18.2932 5.0156 17.234 5.01563 15.9238L5.01563 8.14044C5.0156 6.83025 5.01559 5.77109 5.12767 4.93739C5.24422 4.07056 5.49416 3.33603 6.07818 2.75201C6.66221 2.16799 7.39673 1.91805 8.26356 1.8015C9.09727 1.68941 10.1564 1.68943 11.4666 1.68945H12.5351C13.8453 1.68943 14.9045 1.68942 15.7382 1.8015ZM15.149 5.31728C15.149 5.73149 14.8132 6.06728 14.399 6.06728L9.60262 6.06728C9.1884 6.06728 8.85262 5.73149 8.85262 5.31728C8.85262 4.90307 9.1884 4.56728 9.60262 4.56728H14.399C14.8132 4.56728 15.149 4.90307 15.149 5.31728ZM12.6896 17.3083C12.6896 16.9279 12.3812 16.6194 12.0007 16.6194C11.6202 16.6194 11.3118 16.9279 11.3118 17.3083C11.3118 17.6888 11.6202 17.9972 12.0007 17.9972C12.3812 17.9972 12.6896 17.6888 12.6896 17.3083ZM12.0007 15.1194C13.2096 15.1194 14.1896 16.0994 14.1896 17.3083C14.1896 18.5172 13.2096 19.4972 12.0007 19.4972C10.7918 19.4972 9.81178 18.5172 9.81178 17.3083C9.81178 16.0994 10.7918 15.1194 12.0007 15.1194Z"
@@ -58,7 +146,6 @@
             </div>
         </nav>
     </header>
-
 
     <main class="container pt-16">
         <div class="col-md-9 mx-4 mx-md-auto">
@@ -1050,21 +1137,25 @@
                 <div class="">
                     <h3 class="">How we may contact you</h3>
                     <p class="">
-                        If we have to contact you, we will do so by telephone or via the email address provided to us by you.
+                        If we have to contact you, we will do so by telephone or via the email address provided to us by
+                        you.
                     </p>
+                </div>
             </div>
         </div>
     </main>
 
+
     <footer class="pt-8 position-relative overflow-hidden">
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
             <img src="assets/images/cloud-bg.jpg" alt="" class="w-100 h-auto">
         </div>
-        <div class="container">
-            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4">
+        <div class="container" data-aos-delay="250" data-aos="fade-up" data-aos-duration="1200">
+            <nav class="d-flex justify-content-between border border-primary border-start-0 border-end-0 py-4"
+                 id="footer-links">
                 <a href="#" class="nav-link text-uppercase text-primary">About Us</a>
-                <a href="/privacy-policy.html" class="nav-link text-uppercase text-primary">Privacy Policy</a>
-                <a href="/terms-of-use.html" class="nav-link text-uppercase text-primary">Terms of Use</a>
+                <a href="./privacy-policy.html" class="nav-link text-uppercase text-primary">Privacy Policy</a>
+                <a href="./terms-of-use.html" class="nav-link text-uppercase text-primary">Terms of Use</a>
                 <a href="#" class="nav-link text-uppercase text-primary">Help Center</a>
             </nav>
             <ul class="d-flex list-unstyled justify-content-center gap-3 my-4">
@@ -1089,14 +1180,39 @@
             </div>
         </div>
         <img src="assets/images/ribbon.png" alt="" class="img-fluid mb-2">
-        <div class="bg-primary py-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
+        <div class="bg-primary py-1 py-md-6 position-absolute bottom-0 w-100" style="z-index: 3"></div>
     </footer>
 </div>
 
 <!--Bootstrap JS-->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/swiper-element-bundle.min.js"></script>
+<script src="assets/js/scrollpsy.js"></script>
+<script>
+    // 👇 usage
+    ScrollSpy(document.body, document.querySelector(`nav`), {})
+</script>
+<script src="assets/js/aos.js"></script>
+<script>
+    AOS.init()
+</script>
 <!--Custom JS-->
 <script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/motion@latest/dist/motion.js"></script>
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.getElementById("main-header");
+        if (window.scrollY > 50) { // Adjust this value as needed
+            header.querySelector(".onscroll-show").classList.remove("d-none");
+            header.querySelector(".onscroll-hide").classList.remove("bg-transparent");
+            header.querySelector(".onscroll-hide").classList.add("d-none");
+            header.querySelector(".onscroll-hide").classList.add("bg-white");
+        } else {
+            header.querySelector(".onscroll-hide").classList.remove("d-none");
+            header.querySelector(".onscroll-show").classList.add("d-none");
+            header.querySelector('.onscroll-hide').classList.remove('bg-white');
+            header.querySelector(".onscroll-hide").classList.add("bg-transparent");
+        }
+    });
+</script>
 </body>
 </html>
