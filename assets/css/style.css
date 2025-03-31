@@ -174,7 +174,7 @@ body > .page-wrapper {
 }
 
 
-.welcome-boonify-text-container {
+.welcome-boonify-text-container span{
     font-size: 50px;
     line-height: 1.5;
     /* overflow: hidden; */
@@ -247,7 +247,7 @@ body > .page-wrapper {
     .btn-bny-sign-me-up{
         font-size: 12px !important;
     }
-    .welcome-boonify-text-container span:first-child{
+    .welcome-boonify-text-container span:first-child span{
         font-size: 1.75rem;
     }
 
