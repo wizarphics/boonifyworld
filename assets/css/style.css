@@ -247,9 +247,13 @@ body > .page-wrapper {
     .btn-bny-sign-me-up{
         font-size: 12px !important;
     }
-    .welcome-boonify-text-container {
-        font-size: 2rem;
-        line-height: 1.2;
+    .welcome-boonify-text-container span:first-child{
+        font-size: 1.75rem;
+    }
+
+    .welcome-boonify-text-container span:not(:first-child) {
+        font-size: 1.4rem;
+        line-height: 1;
     }
     .welcome-boonify-text-container .bny-icon svg {
         height: 30px;
@@ -268,7 +272,7 @@ body > .page-wrapper {
 
     .welcome-boonify-text-container .arrow {
         position: absolute;
-        bottom: -12%;
+        bottom: -26%;
         transform: translateX(-50%);
         left: 50%;
     }
