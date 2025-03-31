@@ -375,6 +375,21 @@ body > .page-wrapper {
         margin-bottom: 12px;
     }
 }
+@media screen and (max-width: 420px) {
+    .welcome-boonify-text-container span:first-child span{
+        font-size: 1.5rem;
+        line-height: 1.1;
+    }
+
+    .welcome-boonify-text-container span:not(:first-child) {
+        font-size: 1.5rem;
+        line-height: 1.1;
+    }
+    .welcome-boonify-text-container .bny-icon svg {
+        height: 25px;
+        margin-right: 0.215rem;
+    }
+}
 
 
 #waitlistModal p {
