@@ -249,11 +249,12 @@ body > .page-wrapper {
     }
     .welcome-boonify-text-container span:first-child span{
         font-size: 1.75rem;
+        line-height: 1.2;
     }
 
     .welcome-boonify-text-container span:not(:first-child) {
-        font-size: 1.4rem;
-        line-height: 1;
+        font-size: 1.75rem;
+        line-height: 1.2;
     }
     .welcome-boonify-text-container .bny-icon svg {
         height: 30px;
