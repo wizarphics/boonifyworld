@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Klarna Text';
+    src: url('../fonts/Klarna-Text-Bold.otf') format('opentype');
+}
+
 html::-webkit-scrollbar, body::-webkit-scrollbar {
     width: 0px;
     height: 0px;
@@ -200,7 +205,7 @@ body > .page-wrapper {
     z-index: 2;
 }
 
-.welcome-boonify-text-container > p {
+.welcome-boonify-text-container > span {
     display: block;
     opacity: 0.6;
     transform: translateY(20px);
@@ -208,12 +213,12 @@ body > .page-wrapper {
     z-index: 1;
 }
 
-.welcome-boonify-text-container > p:not(.active), .welcome-boonify-text-container > p:not(.active) svg > *, .welcome-boonify-text-container > p:not(.active) .text-primary {
+.welcome-boonify-text-container span:not(.active), .welcome-boonify-text-container span:not(.active) svg > *, .welcome-boonify-text-container span:not(.active) .text-primary {
     color: white !important;
     fill: white !important;
 }
 
-.welcome-boonify-text-container > p.active {
+.welcome-boonify-text-container span.active {
     color: black;
     opacity: 1;
     transform: translateY(0);
@@ -243,8 +248,12 @@ body > .page-wrapper {
         font-size: 12px !important;
     }
     .welcome-boonify-text-container {
-        font-size: 2.15rem;
+        font-size: 2rem;
         line-height: 1.2;
+    }
+    .welcome-boonify-text-container .bny-icon svg {
+        height: 30px;
+        margin-right: 0.225rem;
     }
 
     .welcome-boonify-text-container .heart{
